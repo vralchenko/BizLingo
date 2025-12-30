@@ -4,11 +4,16 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'phrase.dart';
 import 'phrases_data.dart';
 
-void main() => runApp(const BizLingoApp());
+void main() {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  runApp(const BizLingoApp());
+}
 
 class BizLingoApp extends StatelessWidget {
   const BizLingoApp({super.key});
@@ -48,6 +53,13 @@ class _TrainingScreenState extends State<TrainingScreen> {
     _loadData();
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    _flutterTts.stop();
+    super.dispose();
+  }
+
   void _initTts() async {
     await _flutterTts.setLanguage("en-US");
     await _flutterTts.setPitch(1.0);
@@ -67,6 +79,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
         _phrases = decode.map((item) => Phrase.fromJson(item)).toList();
       });
     }
+    FlutterNativeSplash.remove();
   }
 
   Future<void> _saveData() async {
