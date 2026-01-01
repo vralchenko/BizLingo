@@ -45,12 +45,31 @@ class _TrainingScreenState extends State<TrainingScreen> {
   bool _isChecking = false;
   int _currentIdxInBuffer = 0;
   final String _appVersion = "1.0.1";
+  
+  // Language selection
+  String _learningLanguage = 'ru'; // Language shown to user
+  String _translationLanguage = 'en'; // Language user needs to translate to
+  
+  final Map<String, String> _languageNames = {
+    'ru': 'Русский',
+    'en': 'English',
+    'de': 'Deutsch',
+    'uk': 'Українська',
+  };
+  
+  final Map<String, String> _ttsLanguageCodes = {
+    'ru': 'ru-RU',
+    'en': 'en-US',
+    'de': 'de-DE',
+    'uk': 'uk-UA',
+  };
 
   @override
   void initState() {
     super.initState();
     _initTts();
     _loadData();
+    _loadLanguageSettings();
   }
 
   @override
@@ -60,10 +79,26 @@ class _TrainingScreenState extends State<TrainingScreen> {
     super.dispose();
   }
 
-  void _initTts() async {
-    await _flutterTts.setLanguage("en-US");
+  Future<void> _initTts() async {
+    await _flutterTts.setLanguage(_ttsLanguageCodes[_translationLanguage] ?? "en-US");
     await _flutterTts.setPitch(1.0);
     await _flutterTts.setSpeechRate(0.5);
+  }
+  
+  Future<void> _loadLanguageSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _learningLanguage = prefs.getString('learning_language') ?? 'ru';
+      _translationLanguage = prefs.getString('translation_language') ?? 'en';
+    });
+    await _initTts();
+  }
+  
+  Future<void> _saveLanguageSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('learning_language', _learningLanguage);
+    await prefs.setString('translation_language', _translationLanguage);
+    await _initTts();
   }
 
   Future<void> _speak(String text) async {
@@ -98,17 +133,17 @@ class _TrainingScreenState extends State<TrainingScreen> {
       final RegExp punctuation = RegExp(r'[^\w\s]');
 
       String user = _controller.text.trim().toLowerCase().replaceAll(punctuation, '');
-      String correct = current.en.toLowerCase().replaceAll(punctuation, '');
+      String correct = current.getText(_translationLanguage).toLowerCase().replaceAll(punctuation, '');
 
       if (user == correct) {
         _resultMessage = "✅ Excellent!";
-        _speak(current.en);
+        _speak(current.getText(_translationLanguage));
         current.successStreak++;
         if (current.successStreak >= 3) current.isLearned = true;
         _saveData();
         Future.delayed(const Duration(seconds: 2), _next);
       } else {
-        _resultMessage = "❌ Wrong. Correct:\n${current.en}";
+        _resultMessage = "❌ Wrong. Correct:\n${current.getText(_translationLanguage)}";
         current.errors++;
         current.successStreak = 0;
         _saveData();
@@ -137,6 +172,72 @@ class _TrainingScreenState extends State<TrainingScreen> {
     });
   }
 
+  void _showLanguageSettings() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Language Settings'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text('Learning Language:', style: TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            DropdownButton<String>(
+              value: _learningLanguage,
+              isExpanded: true,
+              items: _languageNames.entries.map((entry) {
+                return DropdownMenuItem(
+                  value: entry.key,
+                  child: Text(entry.value),
+                );
+              }).toList(),
+              onChanged: (value) {
+                if (value != null && value != _translationLanguage) {
+                  setState(() {
+                    _learningLanguage = value;
+                  });
+                }
+              },
+            ),
+            const SizedBox(height: 20),
+            const Text('Translation Language:', style: TextStyle(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            DropdownButton<String>(
+              value: _translationLanguage,
+              isExpanded: true,
+              items: _languageNames.entries.map((entry) {
+                return DropdownMenuItem(
+                  value: entry.key,
+                  child: Text(entry.value),
+                );
+              }).toList(),
+              onChanged: (value) {
+                if (value != null && value != _learningLanguage) {
+                  setState(() {
+                    _translationLanguage = value;
+                  });
+                }
+              },
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancel'),
+          ),
+          TextButton(
+            onPressed: () {
+              _saveLanguageSettings();
+              Navigator.pop(context);
+            },
+            child: const Text('Save'),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _showStats() {
     showModalBottomSheet(
       context: context,
@@ -156,8 +257,8 @@ class _TrainingScreenState extends State<TrainingScreen> {
                   final p = _phrases[index];
                   return ListTile(
                     leading: Text("${index + 1}"),
-                    title: Text(p.ru),
-                    subtitle: Text("${p.en}\nErrors: ${p.errors} | Streak: ${p.successStreak}/3"),
+                    title: Text(p.getText(_learningLanguage)),
+                    subtitle: Text("${p.getText(_translationLanguage)}\nErrors: ${p.errors} | Streak: ${p.successStreak}/3"),
                     trailing: p.isLearned ? const Icon(Icons.check_circle, color: Colors.green) : null,
                   );
                 },
@@ -180,10 +281,15 @@ class _TrainingScreenState extends State<TrainingScreen> {
         centerTitle: true,
         leading: IconButton(icon: const Icon(Icons.bar_chart), onPressed: _showStats),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.language),
+            onPressed: _showLanguageSettings,
+            tooltip: 'Language Settings',
+          ),
           if (buffer.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.volume_up),
-              onPressed: () => _speak(buffer[_currentIdxInBuffer].en),
+              onPressed: () => _speak(buffer[_currentIdxInBuffer].getText(_translationLanguage)),
             ),
         ],
       ),
@@ -203,7 +309,11 @@ class _TrainingScreenState extends State<TrainingScreen> {
             const Divider(height: 40),
             Text("Phrase Mastery: ${buffer[_currentIdxInBuffer].successStreak}/3", style: const TextStyle(color: Colors.blueGrey)),
             const SizedBox(height: 10),
-            Text(buffer[_currentIdxInBuffer].ru, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+            Text(
+              buffer[_currentIdxInBuffer].getText(_learningLanguage),
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
             const SizedBox(height: 30),
             TextField(
               controller: _controller,
@@ -213,7 +323,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
               onSubmitted: (_) => _check(),
               decoration: InputDecoration(
                 border: const OutlineInputBorder(),
-                labelText: "English Translation",
+                labelText: "${_languageNames[_translationLanguage]} Translation",
                 suffixIcon: IconButton(icon: const Icon(Icons.clear), onPressed: () => _controller.clear()),
               ),
             ),
