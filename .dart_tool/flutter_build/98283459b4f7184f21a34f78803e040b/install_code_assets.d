@@ -1,0 +1,1 @@
+ /Users/viktorr/RiderProjects/BizLingo/.dart_tool/flutter_build/98283459b4f7184f21a34f78803e040b/native_assets.json: 
