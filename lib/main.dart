@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,7 +22,7 @@ class BizLingoApp extends StatelessWidget {
       title: 'BizLingo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorSchemeSeed: Colors.blue,
+        colorSchemeSeed: const Color(0xFF001B3D),
         useMaterial3: true,
       ),
       home: const TrainingScreen(),
@@ -45,6 +44,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
   String _resultMessage = "";
   bool _isChecking = false;
   int _currentIdxInBuffer = 0;
+  final String _appVersion = "1.0.1";
 
   @override
   void initState() {
@@ -185,7 +185,6 @@ class _TrainingScreenState extends State<TrainingScreen> {
               icon: const Icon(Icons.volume_up),
               onPressed: () => _speak(buffer[_currentIdxInBuffer].en),
             ),
-          IconButton(icon: const Icon(Icons.exit_to_app), onPressed: () => SystemNavigator.pop()),
         ],
       ),
       body: Padding(
@@ -226,14 +225,14 @@ class _TrainingScreenState extends State<TrainingScreen> {
               height: 60,
               child: ElevatedButton(
                 onPressed: _check,
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white),
+                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF001B3D), foregroundColor: Colors.white),
                 child: const Text("CHECK", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
               ),
             ),
             const SizedBox(height: 15),
-            const Text(
-                "© 2025-2026 Viktor Ralchenko. All rights reserved.",
-                style: TextStyle(fontSize: 10, color: Colors.grey)
+            Text(
+                "© 2025-2026 Viktor Ralchenko. Version $_appVersion",
+                style: const TextStyle(fontSize: 10, color: Colors.grey)
             ),
             const SizedBox(height: 10),
           ],
