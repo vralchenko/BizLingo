@@ -173,67 +173,76 @@ class _TrainingScreenState extends State<TrainingScreen> {
   }
 
   void _showLanguageSettings() {
+    String tempLearningLanguage = _learningLanguage;
+    String tempTranslationLanguage = _translationLanguage;
+    
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Language Settings'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text('Learning Language:', style: TextStyle(fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            DropdownButton<String>(
-              value: _learningLanguage,
-              isExpanded: true,
-              items: _languageNames.entries.map((entry) {
-                return DropdownMenuItem(
-                  value: entry.key,
-                  child: Text(entry.value),
-                );
-              }).toList(),
-              onChanged: (value) {
-                if (value != null && value != _translationLanguage) {
-                  setState(() {
-                    _learningLanguage = value;
-                  });
-                }
-              },
+      builder: (context) => StatefulBuilder(
+        builder: (context, setDialogState) => AlertDialog(
+          title: const Text('Language Settings'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('Learning Language:', style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 8),
+              DropdownButton<String>(
+                value: tempLearningLanguage,
+                isExpanded: true,
+                items: _languageNames.entries.map((entry) {
+                  return DropdownMenuItem(
+                    value: entry.key,
+                    child: Text(entry.value),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  if (value != null && value != tempTranslationLanguage) {
+                    setDialogState(() {
+                      tempLearningLanguage = value;
+                    });
+                  }
+                },
+              ),
+              const SizedBox(height: 20),
+              const Text('Translation Language:', style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 8),
+              DropdownButton<String>(
+                value: tempTranslationLanguage,
+                isExpanded: true,
+                items: _languageNames.entries.map((entry) {
+                  return DropdownMenuItem(
+                    value: entry.key,
+                    child: Text(entry.value),
+                  );
+                }).toList(),
+                onChanged: (value) {
+                  if (value != null && value != tempLearningLanguage) {
+                    setDialogState(() {
+                      tempTranslationLanguage = value;
+                    });
+                  }
+                },
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Cancel'),
             ),
-            const SizedBox(height: 20),
-            const Text('Translation Language:', style: TextStyle(fontWeight: FontWeight.bold)),
-            const SizedBox(height: 8),
-            DropdownButton<String>(
-              value: _translationLanguage,
-              isExpanded: true,
-              items: _languageNames.entries.map((entry) {
-                return DropdownMenuItem(
-                  value: entry.key,
-                  child: Text(entry.value),
-                );
-              }).toList(),
-              onChanged: (value) {
-                if (value != null && value != _learningLanguage) {
-                  setState(() {
-                    _translationLanguage = value;
-                  });
-                }
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  _learningLanguage = tempLearningLanguage;
+                  _translationLanguage = tempTranslationLanguage;
+                });
+                _saveLanguageSettings();
+                Navigator.pop(context);
               },
+              child: const Text('Save'),
             ),
           ],
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
-          ),
-          TextButton(
-            onPressed: () {
-              _saveLanguageSettings();
-              Navigator.pop(context);
-            },
-            child: const Text('Save'),
-          ),
-        ],
       ),
     );
   }
