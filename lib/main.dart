@@ -7,6 +7,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'phrase.dart';
 import 'phrases_data.dart';
+import 'ai_validation_service.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -40,23 +41,24 @@ class _TrainingScreenState extends State<TrainingScreen> {
   List<Phrase> _phrases = getInitialPhrases();
   final TextEditingController _controller = TextEditingController();
   final FlutterTts _flutterTts = FlutterTts();
+  final AiValidationService _aiValidationService = AiValidationService();
 
   String _resultMessage = "";
   bool _isChecking = false;
+  bool _showNextButton = false;
   int _currentIdxInBuffer = 0;
-  final String _appVersion = "1.0.1";
-  
-  // Language selection
-  String _learningLanguage = 'ru'; // Language shown to user
-  String _translationLanguage = 'en'; // Language user needs to translate to
-  
+  final String _appVersion = "1.1.2-Final";
+
+  String _learningLanguage = 'ru';
+  String _translationLanguage = 'en';
+
   final Map<String, String> _languageNames = {
     'ru': 'Русский',
     'en': 'English',
     'de': 'Deutsch',
     'uk': 'Українська',
   };
-  
+
   final Map<String, String> _ttsLanguageCodes = {
     'ru': 'ru-RU',
     'en': 'en-US',
@@ -70,12 +72,23 @@ class _TrainingScreenState extends State<TrainingScreen> {
     _initTts();
     _loadData();
     _loadLanguageSettings();
+    _initializeAiModel();
+  }
+
+  Future<void> _initializeAiModel() async {
+    try {
+      await _aiValidationService.initialize();
+      if (mounted) setState(() {});
+    } catch (_) {
+      if (mounted) setState(() {});
+    }
   }
 
   @override
   void dispose() {
     _controller.dispose();
     _flutterTts.stop();
+    _aiValidationService.dispose();
     super.dispose();
   }
 
@@ -84,7 +97,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
     await _flutterTts.setPitch(1.0);
     await _flutterTts.setSpeechRate(0.5);
   }
-  
+
   Future<void> _loadLanguageSettings() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -93,7 +106,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
     });
     await _initTts();
   }
-  
+
   Future<void> _saveLanguageSettings() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('learning_language', _learningLanguage);
@@ -119,36 +132,85 @@ class _TrainingScreenState extends State<TrainingScreen> {
 
   Future<void> _saveData() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('bizlingo_v1_data', jsonEncode(_phrases.map((p) => p.toJson()).toList()));
+    await prefs.setString(
+      'bizlingo_v1_data',
+      jsonEncode(_phrases.map((p) => p.toJson()).toList()),
+    );
   }
 
-  List<Phrase> get _activeBuffer => _phrases.where((p) => !p.isLearned).take(5).toList();
+  List<Phrase> get _activeBuffer =>
+      _phrases.where((p) => !p.isLearned).take(5).toList();
 
-  void _check() {
-    if (_isChecking || _activeBuffer.isEmpty) return;
+  Future<void> _check() async {
+    if (_isChecking || _showNextButton || _activeBuffer.isEmpty || _aiValidationService.isInitializing) return;
+
+    final current = _activeBuffer[_currentIdxInBuffer];
+    final userInput = _controller.text.trim();
+    if (userInput.isEmpty) return;
+
+    final correctTranslation = current.getText(_translationLanguage);
+    final originalText = current.getText(_learningLanguage);
 
     setState(() {
       _isChecking = true;
-      final current = _activeBuffer[_currentIdxInBuffer];
-      final RegExp punctuation = RegExp(r'[^\w\s]');
+      _resultMessage = _aiValidationService.isInitialized
+          ? "🤖 AI is checking..."
+          : "Checking...";
+    });
 
-      String user = _controller.text.trim().toLowerCase().replaceAll(punctuation, '');
-      String correct = current.getText(_translationLanguage).toLowerCase().replaceAll(punctuation, '');
+    final RegExp punctuation = RegExp(r'[^\w\s]');
+    final normalizedUser = userInput.toLowerCase().replaceAll(punctuation, '');
+    final normalizedCorrect = correctTranslation.toLowerCase().replaceAll(punctuation, '');
 
-      if (user == correct) {
-        _resultMessage = "✅ Excellent!";
-        _speak(current.getText(_translationLanguage));
-        current.successStreak++;
-        if (current.successStreak >= 3) current.isLearned = true;
-        _saveData();
-        Future.delayed(const Duration(seconds: 2), _next);
+    if (normalizedUser == normalizedCorrect) {
+      _handleSuccess(current, correctTranslation, "✅ Perfect match!");
+      return;
+    }
+
+    if (!_aiValidationService.isInitialized) {
+      _handleFailure(current, correctTranslation, "❌ Try again!");
+      return;
+    }
+
+    try {
+      final result = await _aiValidationService.validateTranslation(
+        originalText: originalText,
+        userTranslation: userInput,
+        correctTranslation: correctTranslation,
+        learningLanguage: _learningLanguage,
+        translationLanguage: _translationLanguage,
+      );
+
+      if (result.isValid) {
+        _handleSuccess(current, correctTranslation, "✅ ${result.feedback}");
       } else {
-        _resultMessage = "❌ Wrong. Correct:\n${current.getText(_translationLanguage)}";
-        current.errors++;
-        current.successStreak = 0;
-        _saveData();
-        _isChecking = false;
+        _handleFailure(current, correctTranslation, "❌ ${result.feedback}");
       }
+    } catch (_) {
+      _handleFailure(current, correctTranslation, "❌ AI error.");
+    }
+  }
+
+  void _handleSuccess(Phrase current, String translation, String message) {
+    setState(() {
+      _resultMessage = message;
+      _speak(translation);
+      current.successStreak++;
+      if (current.successStreak >= 3) current.isLearned = true;
+      _saveData();
+      _isChecking = false;
+      _showNextButton = true;
+    });
+  }
+
+  void _handleFailure(Phrase current, String translation, String message) {
+    setState(() {
+      _resultMessage = "$message\n\nCorrect answer: $translation";
+      current.errors++;
+      current.successStreak = 0;
+      _saveData();
+      _isChecking = false;
+      _showNextButton = true;
     });
   }
 
@@ -158,7 +220,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
       _controller.clear();
       _resultMessage = "";
       _isChecking = false;
-
+      _showNextButton = false;
       final bufferSize = _activeBuffer.length;
       if (bufferSize > 1) {
         int nextIdx;
@@ -175,53 +237,33 @@ class _TrainingScreenState extends State<TrainingScreen> {
   void _showLanguageSettings() {
     String tempLearningLanguage = _learningLanguage;
     String tempTranslationLanguage = _translationLanguage;
-    
+
     showDialog(
       context: context,
       builder: (context) => StatefulBuilder(
         builder: (context, setDialogState) => AlertDialog(
-          title: const Text('Language Settings'),
+          title: const Text('Settings'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('Learning Language:', style: TextStyle(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 8),
+              const Text('Original:', style: TextStyle(fontWeight: FontWeight.bold)),
               DropdownButton<String>(
                 value: tempLearningLanguage,
                 isExpanded: true,
-                items: _languageNames.entries.map((entry) {
-                  return DropdownMenuItem(
-                    value: entry.key,
-                    child: Text(entry.value),
-                  );
-                }).toList(),
-                onChanged: (value) {
-                  if (value != null && value != tempTranslationLanguage) {
-                    setDialogState(() {
-                      tempLearningLanguage = value;
-                    });
-                  }
-                },
+                items: _languageNames.entries
+                    .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
+                    .toList(),
+                onChanged: (v) => setDialogState(() => tempLearningLanguage = v!),
               ),
               const SizedBox(height: 20),
-              const Text('Translation Language:', style: TextStyle(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 8),
+              const Text('Target:', style: TextStyle(fontWeight: FontWeight.bold)),
               DropdownButton<String>(
                 value: tempTranslationLanguage,
                 isExpanded: true,
-                items: _languageNames.entries.map((entry) {
-                  return DropdownMenuItem(
-                    value: entry.key,
-                    child: Text(entry.value),
-                  );
-                }).toList(),
-                onChanged: (value) {
-                  if (value != null && value != tempLearningLanguage) {
-                    setDialogState(() {
-                      tempTranslationLanguage = value;
-                    });
-                  }
-                },
+                items: _languageNames.entries
+                    .map((e) => DropdownMenuItem(value: e.key, child: Text(e.value)))
+                    .toList(),
+                onChanged: (v) => setDialogState(() => tempTranslationLanguage = v!),
               ),
             ],
           ),
@@ -247,38 +289,6 @@ class _TrainingScreenState extends State<TrainingScreen> {
     );
   }
 
-  void _showStats() {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (context) => Container(
-        height: MediaQuery.of(context).size.height * 0.8,
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            const Text("Statistics", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            const Divider(),
-            Expanded(
-              child: ListView.builder(
-                itemCount: _phrases.length,
-                itemBuilder: (context, index) {
-                  final p = _phrases[index];
-                  return ListTile(
-                    leading: Text("${index + 1}"),
-                    title: Text(p.getText(_learningLanguage)),
-                    subtitle: Text("${p.getText(_translationLanguage)}\nErrors: ${p.errors} | Streak: ${p.successStreak}/3"),
-                    trailing: p.isLearned ? const Icon(Icons.check_circle, color: Colors.green) : null,
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final buffer = _activeBuffer;
@@ -287,74 +297,92 @@ class _TrainingScreenState extends State<TrainingScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("BizLingo"),
-        centerTitle: true,
-        leading: IconButton(icon: const Icon(Icons.bar_chart), onPressed: _showStats),
         actions: [
           IconButton(
             icon: const Icon(Icons.language),
             onPressed: _showLanguageSettings,
-            tooltip: 'Language Settings',
           ),
           if (buffer.isNotEmpty)
             IconButton(
               icon: const Icon(Icons.volume_up),
-              onPressed: () => _speak(buffer[_currentIdxInBuffer].getText(_translationLanguage)),
+              onPressed: () => _speak(
+                buffer[_currentIdxInBuffer].getText(_translationLanguage),
+              ),
             ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: buffer.isEmpty
-            ? const Center(child: Text("All Done! 🏆", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)))
-            : Column(
-          children: [
-            LinearProgressIndicator(
-              value: learnedCount / _phrases.length,
-              minHeight: 10,
-              borderRadius: BorderRadius.circular(10),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: buffer.isEmpty
+                ? const Center(child: Text("All phrases learned! 🏆"))
+                : Column(
+              children: [
+                LinearProgressIndicator(
+                  value: learnedCount / _phrases.length,
+                  minHeight: 10,
+                ),
+                const SizedBox(height: 40),
+                Text(
+                  buffer[_currentIdxInBuffer].getText(_learningLanguage),
+                  style: const TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 30),
+                TextField(
+                  controller: _controller,
+                  enabled: !_showNextButton,
+                  textInputAction: TextInputAction.send,
+                  onSubmitted: (_) => _check(),
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: "Translation",
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  _resultMessage,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 40),
+                SizedBox(
+                  width: double.infinity,
+                  height: 60,
+                  child: _aiValidationService.isInitializing
+                      ? const Center(child: CircularProgressIndicator())
+                      : ElevatedButton(
+                    onPressed: _isChecking ? null : (_showNextButton ? _next : _check),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF001B3D),
+                      foregroundColor: Colors.white,
+                    ),
+                    child: Text(_isChecking ? "AI..." : (_showNextButton ? "NEXT" : "CHECK")),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Text(
+                  "V $_appVersion",
+                  style: const TextStyle(
+                    fontSize: 10,
+                    color: Colors.grey,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                const Text(
+                  "© 2025-2026 Viktor Ralchenko. All rights reserved.",
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: Colors.grey,
+                  ),
+                ),
+                const SizedBox(height: 10),
+              ],
             ),
-            const SizedBox(height: 10),
-            Text("Overall Progress: $learnedCount / ${_phrases.length}", style: const TextStyle(fontWeight: FontWeight.bold)),
-            const Divider(height: 40),
-            Text("Phrase Mastery: ${buffer[_currentIdxInBuffer].successStreak}/3", style: const TextStyle(color: Colors.blueGrey)),
-            const SizedBox(height: 10),
-            Text(
-              buffer[_currentIdxInBuffer].getText(_learningLanguage),
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 30),
-            TextField(
-              controller: _controller,
-              maxLines: 1,
-              autofocus: true,
-              textInputAction: TextInputAction.send,
-              onSubmitted: (_) => _check(),
-              decoration: InputDecoration(
-                border: const OutlineInputBorder(),
-                labelText: "${_languageNames[_translationLanguage]} Translation",
-                suffixIcon: IconButton(icon: const Icon(Icons.clear), onPressed: () => _controller.clear()),
-              ),
-            ),
-            const SizedBox(height: 20),
-            Text(_resultMessage, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
-            const Spacer(),
-            SizedBox(
-              width: double.infinity,
-              height: 60,
-              child: ElevatedButton(
-                onPressed: _check,
-                style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF001B3D), foregroundColor: Colors.white),
-                child: const Text("CHECK", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-              ),
-            ),
-            const SizedBox(height: 15),
-            Text(
-                "© 2025-2026 Viktor Ralchenko. Version $_appVersion",
-                style: const TextStyle(fontSize: 10, color: Colors.grey)
-            ),
-            const SizedBox(height: 10),
-          ],
+          ),
         ),
       ),
     );

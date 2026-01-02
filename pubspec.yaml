@@ -14,6 +14,7 @@ dependencies:
   flutter_tts: ^4.2.3
   flutter_native_splash: ^2.4.7
   share_plus: ^12.0.1
+  js: ^0.6.7
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +26,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icon.png
+    - assets/models/Llama-3.2-1B.Q4_K_M.gguf
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -36,8 +38,9 @@ flutter_launcher_icons:
 flutter_native_splash:
   color: "#001B3D"
   image: assets/icon.png
+  android: true
   android_12:
     image: assets/icon.png
     color: "#001B3D"
-  web: false
+  web: true
   fullscreen: true
