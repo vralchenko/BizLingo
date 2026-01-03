@@ -22,7 +22,6 @@
         .progress-bar { width: 280px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
         #progress-fill { width: 0%; height: 100%; background: #4facfe; transition: width 0.3s; }
         #status-text { font-size: 11px; margin-top: 10px; color: #00f2fe; text-align: center; max-width: 80%; }
-        #error-log { color: #ff4f4f; font-size: 10px; margin-top: 15px; padding: 10px; text-align: center; display: none; }
     </style>
     <script type="module">
         import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.80/lib/index.min.js";
@@ -32,8 +31,9 @@
         window.engine = null;
         window.isReady = false;
         window.is_webllm_ready = function() { return window.isReady; };
+
         window.webllm_validate = async function(userText, targetText) {
-            if (!window.engine) return "YES (No Engine)";
+            if (!window.engine) return "AI_OFF";
             try {
                 const out = await window.engine.chat.completions.create({
                     messages: [
@@ -46,13 +46,18 @@
                     temperature: 0.3
                 });
                 return out.choices[0].message.content;
-            } catch (e) { return "Error during validation: " + e; }
+            } catch (e) { return "AI_OFF"; }
         };
+
+        function hideSplash() {
+            const splash = document.getElementById('custom-splash');
+            if (splash) splash.remove();
+        }
+
         async function initWebLLM() {
             const statusLabel = document.getElementById("status-text");
-            const errorLabel = document.getElementById("error-log");
             if (!navigator.gpu) {
-                statusLabel.innerHTML = "WebGPU is not supported.<br>Please use Chrome or Edge on Desktop.";
+                hideSplash();
                 return;
             }
             try {
@@ -64,11 +69,9 @@
                 };
                 window.engine = await window.WebLLM.CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC", { initProgressCallback });
                 window.isReady = true;
-                setTimeout(() => { document.getElementById('custom-splash').remove(); }, 1000);
+                hideSplash();
             } catch (e) {
-                statusLabel.textContent = "Initialization failed.";
-                errorLabel.style.display = "block";
-                errorLabel.textContent = e.message;
+                hideSplash();
             }
         }
         window.addEventListener("load", initWebLLM);
@@ -79,7 +82,6 @@
     <img id="splash-img" src="icon.png">
     <div class="progress-bar"><div id="progress-fill"></div></div>
     <div id="status-text">Readying AI...</div>
-    <div id="error-log"></div>
 </div>
 <script src="flutter_bootstrap.js" async></script>
 </body>
