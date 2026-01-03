@@ -9,38 +9,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
   shared_preferences: ^2.5.4
   flutter_tts: ^4.2.3
-  flutter_native_splash: ^2.4.7
-  share_plus: ^12.0.1
   js: ^0.6.7
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
-  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
   assets:
     - assets/icon.png
-    - assets/models/Llama-3.2-1B.Q4_K_M.gguf
-
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/icon.png"
-  adaptive_icon_background: "#001B3D"
-  adaptive_icon_foreground: "assets/icon.png"
-
-flutter_native_splash:
-  color: "#001B3D"
-  image: assets/icon.png
-  android: true
-  android_12:
-    image: assets/icon.png
-    color: "#001B3D"
-  web: true
-  fullscreen: true
+    - assets/phrases.json

@@ -33,7 +33,7 @@ class AiValidationService {
     final cleanTarget = target.trim().toLowerCase();
 
     if (cleanUser == cleanTarget) {
-      return ValidationResult(true, "Точное совпадение.");
+      return ValidationResult(true, "Exact match found.");
     }
 
     try {
@@ -49,7 +49,7 @@ class AiValidationService {
 
       return ValidationResult(isYes, explanation);
     } catch (e) {
-      return ValidationResult(false, "Ошибка валидации: $e");
+      return ValidationResult(false, "Validation error: $e");
     }
   }
 }

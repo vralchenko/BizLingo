@@ -1,0 +1,2102 @@
+[
+  {
+    "category": "General Business",
+    "ru": "Давайте согласуем следующие шаги, чтобы обеспечить плавное продвижение.",
+    "en": "Let's align on the next steps to ensure smooth progress.",
+    "de": "Lassen Sie uns die nächsten Schritte abstimmen, um einen reibungslosen Fortgang zu gewährleisten.",
+    "uk": "Давайте узгодимо наступні кроки, щоб забезпечити плавне просування."
+  },
+  {
+    "category": "General Business",
+    "ru": "Я ценю вашу открытость, это помогает нам принимать обоснованные решения.",
+    "en": "I appreciate your transparency, it helps us make informed decisions.",
+    "de": "Ich schätze Ihre Transparenz, sie hilft uns, fundierte Entscheidungen zu treffen.",
+    "uk": "Я ціную вашу відкритість, це допомагає нам приймати обґрунтовані рішення."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно оптимизировать наши внутренние процессы.",
+    "en": "We need to streamline our internal processes.",
+    "de": "Wir müssen unsere internen Prozesse optimieren.",
+    "uk": "Нам потрібно оптимізувати наші внутрішні процеси."
+  },
+  {
+    "category": "General Business",
+    "ru": "Не могли бы вы уточнить ключевые приоритеты на этот квартал?",
+    "en": "Could you clarify the key priorities for this quarter?",
+    "de": "Könnten Sie die wichtigsten Prioritäten für dieses Quartal klären?",
+    "uk": "Чи не могли б ви уточнити ключові пріоритети на цей квартал?"
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно запланировать повторную встречу, чтобы обсудить отзывы.",
+    "en": "We need to schedule a follow-up meeting to discuss the feedback.",
+    "de": "Wir müssen einen Folgetermin vereinbaren, um das Feedback zu besprechen.",
+    "uk": "Нам потрібно запланувати повторну зустріч, щоб обговорити відгуки."
+  },
+  {
+    "category": "General Business",
+    "ru": "Я хотел бы обсудить потенциальное сотрудничество между нашими компаниями.",
+    "en": "I would like to discuss potential collaboration between our companies.",
+    "de": "Ich würde gerne eine potenzielle Zusammenarbeit zwischen unseren Unternehmen besprechen.",
+    "uk": "Я хотів би обговорити потенційну співпрацю між нашими компаніями."
+  },
+  {
+    "category": "General Business",
+    "ru": "Давайте перейдем к делу и обсудим основные условия.",
+    "en": "Let's get down to business and discuss the main terms.",
+    "de": "Kommen wir zur Sache und besprechen die wichtigsten Bedingungen.",
+    "uk": "Давайте перейдемо до справи і обговоримо основні умови."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно найти компромисс, который устроит обе стороны.",
+    "en": "We need to find a compromise that works for both parties.",
+    "de": "Wir müssen einen Kompromiss finden, der für beide Seiten funktioniert.",
+    "uk": "Нам потрібно знайти компроміс, який влаштує обидві сторони."
+  },
+  {
+    "category": "General Business",
+    "ru": "Как это повлияет на наш бюджет в долгосрочной перспективе?",
+    "en": "How will this affect our budget in the long run?",
+    "de": "Wie wird sich das langfristig auf unser Budget auswirken?",
+    "uk": "Як це вплине на наш бюджет у довгостроковій перспективі?"
+  },
+  {
+    "category": "General Business",
+    "ru": "Я полностью согласен с вашим предложением по улучшению эффективности.",
+    "en": "I completely agree with your proposal to improve efficiency.",
+    "de": "Ich stimme Ihrem Vorschlag zur Effizienzsteigerung voll und ganz zu.",
+    "uk": "Я повністю згодний з вашою пропозицією щодо покращення ефективності."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно провести рефакторинг этого модуля для улучшения масштабируемости.",
+    "en": "We need to refactor this module to improve scalability.",
+    "de": "Wir müssen dieses Modul refaktorieren, um die Skalierbarkeit zu verbessern.",
+    "uk": "Нам потрібно провести рефакторинг цього модуля для покращення масштабованості."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Этот подход позволит нам принести измеримую ценность в краткосрочной перспективе.",
+    "en": "This approach will allow us to deliver measurable value in the short term.",
+    "de": "Dieser Ansatz wird es uns ermöglichen, kurzfristig einen messbaren Mehrwert zu liefern.",
+    "uk": "Цей підхід дозволить нам принести вимірювану цінність у короткостроковій перспективі."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Развертывание прошло успешно, и все тесты пройдены.",
+    "en": "The deployment was successful, and all tests passed.",
+    "de": "Das Deployment war erfolgreich und alle Tests wurden bestanden.",
+    "uk": "Розгортання пройшло успішно, і всі тести пройдені."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно устранить это критическое баг до конца дня.",
+    "en": "We need to fix this critical bug by the end of the day.",
+    "de": "Wir müssen diesen kritischen Fehler bis zum Ende des Tages beheben.",
+    "uk": "Нам потрібно усунути цей критичний баг до кінця дня."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Мы планируем выпустить новую версию приложения на следующей неделе.",
+    "en": "We plan to release a new version of the app next week.",
+    "de": "Wir planen, nächste Woche eine neue Version der App zu veröffentlichen.",
+    "uk": "Ми плануємо випустити нову версію додатка наступного тижня."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Безопасность данных является нашим высшим приоритетом.",
+    "en": "Data security is our top priority.",
+    "de": "Datensicherheit hat für uns oberste Priorität.",
+    "uk": "Безпека даних є нашим вищим пріоритетом."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Пользовательский интерфейс должен быть интуитивно понятным.",
+    "en": "The user interface should be intuitive.",
+    "de": "Die Benutzeroberfläche sollte intuitiv sein.",
+    "uk": "Інтерфейс користувача повинен бути інтуїтивно зрозумілим."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно интегрировать сторонний API для обработки платежей.",
+    "en": "We need to integrate a third-party API for payment processing.",
+    "de": "Wir müssen eine Drittanbieter-API für die Zahlungsabwicklung integrieren.",
+    "uk": "Нам потрібно інтегрувати сторонній API для обробки платежів."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Документация кода необходима для поддержки проекта.",
+    "en": "Code documentation is essential for project maintenance.",
+    "de": "Die Codedokumentation ist für die Projektpflege unerlässlich.",
+    "uk": "Документація коду необхідна для підтримки проєкту."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Мы используем гибкие методологии для управления разработкой.",
+    "en": "We use agile methodologies to manage development.",
+    "de": "Wir nutzen agile Methoden, um die Entwicklung zu steuern.",
+    "uk": "Ми використовуємо гнучкі методології для управління розробкою."
+  },
+  {
+    "category": "Sales & Marketing",
+    "ru": "Нам нужно определить целевую аудиторию для этой кампании.",
+    "en": "We need to identify the target audience for this campaign.",
+    "de": "Wir müssen die Zielgruppe für diese Kampagne identifizieren.",
+    "uk": "Нам потрібно визначити цільову аудиторію для цієї кампанії."
+  },
+  {
+    "category": "Sales & Marketing",
+    "ru": "Какова наша уникальное торговое предложение по сравнению с конкурентами?",
+    "en": "What is our unique selling proposition compared to competitors?",
+    "de": "Was ist unser Alleinstellungsmerkmal im Vergleich zu Wettbewerbern?",
+    "uk": "Яка наша унікальна торгова пропозиція порівняно з конкурентами?"
+  },
+  {
+    "category": "Sales & Marketing",
+    "ru": "Мы должны увеличить нашу узнаваемость бренда в социальных сетях.",
+    "en": "We must increase our brand awareness on social media.",
+    "de": "Wir müssen unsere Markenbekanntheit in den sozialen Medien steigern.",
+    "uk": "Ми повинні збільшити нашу впізнаваність бренду в соціальних мережах."
+  },
+  {
+    "category": "Sales & Marketing",
+    "ru": "У нас есть сильная воронка продаж на следующий квартал.",
+    "en": "We have a strong sales pipeline for the next quarter.",
+    "de": "Wir haben eine starke Sales-Pipeline für das nächste Quartal.",
+    "uk": "У нас є сильна воронка продажів на наступний квартал."
+  },
+  {
+    "category": "Sales & Marketing",
+    "ru": "Ваши отзывы помогут нам улучшить качество нашего обслуживания.",
+    "en": "Your feedback will help us improve our service quality.",
+    "de": "Ihr Feedback wird uns helfen, unsere Servicequalität zu verbessern.",
+    "uk": "Ваші відгуки допоможуть нам покращити якість нашого обслуговування."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно реализовать механизм кэширования для снижения задержки базы данных.",
+    "en": "We need to implement a caching mechanism to reduce database latency.",
+    "de": "Wir müssen einen Caching-Mechanismus implementieren, um die Datenbank-Latenz zu verringern.",
+    "uk": "Нам потрібно реалізувати механізм кешування для зменшення затримки бази даних."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Этот pull request содержит критические изменения, требующие тщательного код-ревью.",
+    "en": "This pull request contains breaking changes that require a thorough code review.",
+    "de": "Dieser Pull-Request enthält Breaking Changes, die eine gründliche Code-Review erfordern.",
+    "uk": "Цей pull request містить критичні зміни, що потребують ретельного код-рев'ю."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует использовать переменные окружения для хранения конфиденциальных данных.",
+    "en": "We should use environment variables to store sensitive credentials.",
+    "de": "Wir sollten Umgebungsvariablen verwenden, um sensible Zugangsdaten zu speichern.",
+    "uk": "Нам слід використовувати змінні оточення для зберігання конфіденційних даних."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Архитектура микросервисов обеспечит лучшую отказоустойчивость нашей системы.",
+    "en": "A microservices architecture will provide better fault tolerance for our system.",
+    "de": "Eine Microservices-Architektur wird eine bessere Fehlertoleranz für unser System bieten.",
+    "uk": "Архітектура мікросервісів забезпечить кращу відмовостійкість нашої системи."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Мы столкнулись с утечкой памяти в производственной среде.",
+    "en": "We've encountered a memory leak in the production environment.",
+    "de": "Wir haben ein Speicherleck in der Produktionsumgebung festgestellt.",
+    "uk": "Ми зіткнулися з витоком пам'яті у виробничому середовищі."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте проведем ретроспективу, чтобы проанализировать узкие места последнего спринта.",
+    "en": "Let's hold a retrospective to analyze the bottlenecks of the last sprint.",
+    "de": "Lassen Sie uns eine Retrospektive abhalten, um die Engpässe des letzten Sprints zu analysieren.",
+    "uk": "Давайте проведемо ретроспективу, щоб проаналізувати вузькі місця останнього спринту."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно управлять ожиданиями стейкхолдеров относительно даты релиза.",
+    "en": "We need to manage stakeholder expectations regarding the release date.",
+    "de": "Wir müssen die Erwartungen der Stakeholder in Bezug auf das Veröffentlichungsdatum managen.",
+    "uk": "Нам потрібно управляти очікуваннями стейкхолдерів щодо дати релізу."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Это изменение выходит за рамки текущего проекта (scope creep).",
+    "en": "This change is beyond the current project scope.",
+    "de": "Diese Änderung liegt außerhalb des aktuellen Projektumfangs.",
+    "uk": "Ця зміна виходить за межі поточного проєкту."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Кто будет ответственным за выполнение этой задачи?",
+    "en": "Who will be the assignee for this specific task?",
+    "de": "Wer wird der Verantwortliche für diese spezifische Aufgabe sein?",
+    "uk": "Хто буде відповідальним за виконання цього завдання?"
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно расставить приоритеты в бэклоге в соответствии с бизнес-ценностью.",
+    "en": "We need to prioritize the backlog according to business value.",
+    "de": "Wir müssen das Backlog nach dem Geschäftswert priorisieren.",
+    "uk": "Нам потрібно розставити пріоритети в беклозі відповідно до бізнес-цінності."
+  },
+  {
+    "category": "Finance",
+    "ru": "Наш годовой доход значительно вырос благодаря новым контрактам.",
+    "en": "Our annual revenue has increased significantly due to new contracts.",
+    "de": "Unser Jahresumsatz ist aufgrund neuer Verträge deutlich gestiegen.",
+    "uk": "Наш річний дохід значно зріс завдяки новим контрактам."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно сократить операционные расходы, чтобы повысить рентабельность.",
+    "en": "We need to reduce operating expenses to improve profit margins.",
+    "de": "Wir müssen die Betriebskosten senken, um die Gewinnmargen zu verbessern.",
+    "uk": "Нам потрібно скоротити операційні витрати, щоб підвищити рентабельність."
+  },
+  {
+    "category": "Finance",
+    "ru": "Инвесторы обеспокоены текущим уровнем расходования средств (burn rate).",
+    "en": "Investors are concerned about the current burn rate.",
+    "de": "Die Investoren sind über die aktuelle Burn-Rate besorgt.",
+    "uk": "Інвестори стурбовані поточним рівнем витрачання коштів."
+  },
+  {
+    "category": "Finance",
+    "ru": "Мы ожидаем положительный возврат инвестиций в течение двух лет.",
+    "en": "We expect a positive return on investment within two years.",
+    "de": "Wir erwarten innerhalb von zwei Jahren eine positive Kapitalrendite.",
+    "uk": "Ми очікуємо позитивний повернення інвестицій протягом двох років."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам необходимо провести аудит нашей финансовой отчетности.",
+    "en": "We need to conduct an audit of our financial statements.",
+    "de": "Wir müssen eine Prüfung unserer Jahresabschlüsse durchführen.",
+    "uk": "Нам необхідно провести аудит нашої фінансової звітності."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно автоматизировать процесс CI/CD для ускорения поставок.",
+    "en": "We need to automate our CI/CD pipeline to speed up delivery.",
+    "de": "Wir müssen unsere CI/CD-Pipeline automatisieren, um die Auslieferung zu beschleunigen.",
+    "uk": "Нам потрібно автоматизувати наш CI/CD конвеєр для прискорення поставок."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Технический долг мешает нам внедрять новые фичи.",
+    "en": "Technical debt is preventing us from implementing new features.",
+    "de": "Technische Schulden hindern uns daran, neue Funktionen zu implementieren.",
+    "uk": "Технічний борг заважає нам впроваджувати нові фічі."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Этот API имеет ограничение по количеству запросов (rate limiting).",
+    "en": "This API has a strict rate limiting policy.",
+    "de": "Diese API hat eine strenge Rate-Limiting-Richtlinie.",
+    "uk": "Цей API має сувору політику обмеження частоти запитів."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует покрыть этот модуль юнит-тестами.",
+    "en": "We should cover this module with unit tests.",
+    "de": "Wir sollten dieses Modul mit Unit-Tests abdecken.",
+    "uk": "Нам слід покрити цей модуль юніт-тестами."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Масштабируемость системы является ключевым фактором успеха.",
+    "en": "System scalability is a key success factor.",
+    "de": "Die Skalierbarkeit des Systems ist ein entscheidender Erfolgsfaktor.",
+    "uk": "Масштабованість системи є ключовим фактором успіху."
+  },
+  {
+    "category": "General Business",
+    "ru": "Давайте назначим встречу, чтобы обсудить условия контракта.",
+    "en": "Let's set up a meeting to discuss the terms and conditions.",
+    "de": "Lassen Sie uns einen Termin vereinbaren, um die Geschäftsbedingungen zu besprechen.",
+    "uk": "Давайте призначимо зустріч, щоб обговорити умови контракту."
+  },
+  {
+    "category": "General Business",
+    "ru": "Мы стремимся к долгосрочному партнерству с вашим агентством.",
+    "en": "We are looking for a long-term partnership with your agency.",
+    "de": "Wir streben eine langfristige Partnerschaft mit Ihrer Agentur an.",
+    "uk": "Ми прагнемо до довгострокового партнерства з вашим агентством."
+  },
+  {
+    "category": "General Business",
+    "ru": "Ваше предложение конкурентоспособно, но нам нужно обсудить цену.",
+    "en": "Your proposal is competitive, but we need to negotiate the price.",
+    "de": "Ihr Vorschlag ist wettbewerbsfähig, aber wir müssen über den Preis verhandeln.",
+    "uk": "Ваша пропозиція є конкурентоспроможною, але нам потрібно обговорити ціну."
+  },
+  {
+    "category": "Finance",
+    "ru": "Мы выделили бюджет на обучение сотрудников в этом году.",
+    "en": "We have allocated a budget for employee training this year.",
+    "de": "Wir haben in diesem Jahr ein Budget für Mitarbeiterschulungen bereitgestellt.",
+    "uk": "Ми виділили бюджет на навчання співробітників цього року."
+  },
+  {
+    "category": "Finance",
+    "ru": "Колебания валютных курсов могут повлиять на нашу прибыль.",
+    "en": "Currency fluctuations might impact our bottom line.",
+    "de": "Währungsschwankungen könnten sich auf unser Gesamtergebnis auswirken.",
+    "uk": "Коливання валютних курсів можуть вплинути на наш прибуток."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно внедрить многофакторную аутентификацию для защиты учетных записей пользователей.",
+    "en": "We need to implement multi-factor authentication to secure user accounts.",
+    "de": "Wir müssen eine Multi-Faktor-Authentifizierung implementieren, um Benutzerkonten zu sichern.",
+    "uk": "Нам потрібно впровадити багатофакторну автентифікацію для захисту облікових записів користувачів."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Эта облачная инфраструктура позволяет нам масштабироваться по требованию.",
+    "en": "This cloud infrastructure allows us to scale on demand.",
+    "de": "Diese Cloud-Infrastruktur ermöglicht es uns, bei Bedarf zu skalieren.",
+    "uk": "Ця хмарна інфраструктура дозволяє нам масштабуватися на вимогу."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует использовать асинхронную обработку для тяжелых задач.",
+    "en": "We should use asynchronous processing for heavy tasks.",
+    "de": "Wir sollten asynchrone Verarbeitung für rechenintensive Aufgaben verwenden.",
+    "uk": "Нам слід використовувати асинхронну обробку для важких завдань."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Обратная совместимость важна для наших существующих клиентов.",
+    "en": "Backward compatibility is essential for our existing clients.",
+    "de": "Abwärtskompatibilität ist für unsere bestehenden Kunden unerlässlich.",
+    "uk": "Зворотна сумісність важлива для наших існуючих клієнтів."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно оптимизировать фронтенд для сокращения времени первой отрисовки.",
+    "en": "We need to optimize the frontend to reduce the time to first paint.",
+    "de": "Wir müssen das Frontend optimieren, um die Time to First Paint zu reduzieren.",
+    "uk": "Нам потрібно оптимізувати фронтенд для скорочення часу першого відтворення."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте определим критический путь, чтобы избежать задержек в проекте.",
+    "en": "Let's define the critical path to avoid project delays.",
+    "de": "Lassen Sie uns den kritischen Pfad definieren, um Projektverzögerungen zu vermeiden.",
+    "uk": "Давайте визначимо критичний шлях, щоб уникнути затримок у проєкті."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам необходимо провести оценку рисков перед началом разработки.",
+    "en": "We need to conduct a risk assessment before starting development.",
+    "de": "Wir müssen eine Risikobewertung durchführen, bevor wir mit der Entwicklung beginnen.",
+    "uk": "Нам необхідно провести оцінку ризиків перед початком розробки."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Эта задача заблокирована из-за зависимостей от другой команды.",
+    "en": "This task is blocked due to dependencies on another team.",
+    "de": "Diese Aufgabe ist aufgrund von Abhängigkeiten von einem anderen Team blockiert.",
+    "uk": "Це завдання заблоковане через залежність від іншої команди."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Мы работаем по двухнедельным спринтам с ежедневными созвонами.",
+    "en": "We work in two-week sprints with daily stand-up meetings.",
+    "de": "Wir arbeiten in zweiwöchigen Sprints mit täglichen Stand-up-Meetings.",
+    "uk": "Ми працюємо двотижневими спринтами з щоденними зідзвонами."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно обновить дорожную карту продукта на следующий год.",
+    "en": "We need to update the product roadmap for the next year.",
+    "de": "Wir müssen die Produkt-Roadmap für das nächste Jahr aktualisieren.",
+    "uk": "Нам потрібно оновити дорожню карту продукту на наступний рік."
+  },
+  {
+    "category": "Finance",
+    "ru": "Проект превысил бюджет из-за непредвиденных расходов.",
+    "en": "The project is over budget due to unforeseen expenses.",
+    "de": "Das Projekt liegt aufgrund unvorhergesehener Ausgaben über dem Budget.",
+    "uk": "Проєкт перевищив бюджет через непередбачені витрати."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно проанализировать коэффициенты ликвидности нашей компании.",
+    "en": "We need to analyze our company's liquidity ratios.",
+    "de": "Wir müssen die Liquiditätskennzahlen unseres Unternehmens analysieren.",
+    "uk": "Нам потрібно проаналізувати коефіцієнти ліквідності нашої компанії."
+  },
+  {
+    "category": "Finance",
+    "ru": "Какова точка безубыточности для этой новой линейки продуктов?",
+    "en": "What is the break-even point for this new product line?",
+    "de": "Wo liegt die Gewinnschwelle für diese neue Produktlinie?",
+    "uk": "Яка точка беззбитковості для цієї нової лінійки продуктів?"
+  },
+  {
+    "category": "Finance",
+    "ru": "Мы планируем привлечь дополнительные средства через раунд финансирования.",
+    "en": "We plan to raise additional funds through a funding round.",
+    "de": "Wir planen, im Rahmen einer Finanzierungsrunde zusätzliche Mittel aufzunehmen.",
+    "uk": "Ми плануємо залучити додаткові кошти через раунд фінансування."
+  },
+  {
+    "category": "Finance",
+    "ru": "Этот квартальный отчет показывает положительный денежный поток.",
+    "en": "This quarterly report shows a positive cash flow.",
+    "de": "Dieser Quartalsbericht zeigt einen positiven Cashflow.",
+    "uk": "Цей квартальний звіт показує позитивний грошовий потік."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно составить соглашение о неразглашении (NDA).",
+    "en": "We need to draft a non-disclosure agreement (NDA).",
+    "de": "Wir müssen eine Geheimhaltungsvereinbarung (NDA) entwerfen.",
+    "uk": "Нам потрібно скласти угоду про нерозголошення (NDA)."
+  },
+  {
+    "category": "General Business",
+    "ru": "Этот рынок высококонкурентен, но имеет большой потенциал.",
+    "en": "This market is highly competitive but has great potential.",
+    "de": "Dieser Markt ist hart umkämpft, hat aber großes Potenzial.",
+    "uk": "Цей ринок висококонкурентний, але має великий потенціал."
+  },
+  {
+    "category": "General Business",
+    "ru": "Давайте делегируем эту задачу отделу маркетинга.",
+    "en": "Let's delegate this task to the marketing department.",
+    "de": "Lassen Sie uns diese Aufgabe an die Marketingabteilung delegieren.",
+    "uk": "Давайте делегуємо це завдання відділу маркетингу."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно улучшить показатели удержания клиентов.",
+    "en": "We need to improve our customer retention rates.",
+    "de": "Wir müssen unsere Kundenbindungsraten verbessern.",
+    "uk": "Нам потрібно покращити показники утримання клієнтів."
+  },
+  {
+    "category": "General Business",
+    "ru": "Какова ваша стратегия выхода на этот новый рынок?",
+    "en": "What is your go-to-market strategy for this new territory?",
+    "de": "Was ist Ihre Markteintrittsstrategie für dieses neue Gebiet?",
+    "uk": "Яка ваша стратегія виходу на цей новий ринок?"
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно мигрировать нашу базу данных на более мощный сервер.",
+    "en": "We need to migrate our database to a more powerful server.",
+    "de": "Wir müssen unsere Datenbank auf einen leistungsstärkeren Server migrieren.",
+    "uk": "Нам потрібно мігрувати нашу базу даних на більш потужний сервер."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Эта утилита командной строки упрощает наш рабочий процесс.",
+    "en": "This command-line utility simplifies our workflow.",
+    "de": "Dieses Kommandozeilenprogramm vereinfacht unseren Arbeitsablauf.",
+    "uk": "Ця утиліта командного рядка спрощує наш робочий процес."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно обеспечить соответствие требованиям GDPR.",
+    "en": "We need to ensure compliance with GDPR requirements.",
+    "de": "Wir müssen die Einhaltung der DSGVO-Anforderungen sicherstellen.",
+    "uk": "Нам потрібно забезпечити відповідність вимогам GDPR."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте обсудим распределение ресурсов на следующий квартал.",
+    "en": "Let's discuss resource allocation for the next quarter.",
+    "de": "Lassen Sie uns die Ressourcenallokation für das nächste Quartal besprechen.",
+    "uk": "Давайте обговоримо розподіл ресурсів на наступний квартал."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно минимизировать влияние этого изменения на сроки.",
+    "en": "We need to minimize the impact of this change on the timeline.",
+    "de": "Wir müssen die Auswirkungen dieser Änderung auf den Zeitplan minimieren.",
+    "uk": "Нам потрібно мінімізувати вплив цієї зміни на терміни."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно провести тест на проникновение, чтобы выявить уязвимости системы.",
+    "en": "We need to conduct a penetration test to identify system vulnerabilities.",
+    "de": "Wir müssen einen Penetrationstest durchführen, um Systemschwachstellen zu identifizieren.",
+    "uk": "Нам потрібно провести тест на проникнення, щоб виявити вразливості системи."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Этот алгоритм значительно оптимизирует скорость обработки данных.",
+    "en": "This algorithm significantly optimizes data processing speed.",
+    "de": "Dieser Algorithmus optimiert die Datenverarbeitungsgeschwindigkeit erheblich.",
+    "uk": "Цей алгоритм значно оптимізує швидкість обробки даних."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует внедрить стратегию резервного копирования на случай сбоя.",
+    "en": "We should implement a backup strategy in case of a system failure.",
+    "de": "Wir sollten eine Backup-Strategie für den Fall eines Systemausfalls implementieren.",
+    "uk": "Нам слід впровадити стратегію резервного копіювання на випадок збою."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Контейнеризация помогает нам поддерживать идентичность сред разработки и продакшена.",
+    "en": "Containerization helps us maintain consistency between dev and prod environments.",
+    "de": "Containerisierung hilft uns, die Konsistenz zwischen Entwicklungs- und Produktionsumgebungen zu wahren.",
+    "uk": "Контейнеризація допомагає нам підтримувати ідентичність середовищ розробки та продакшену."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно настроить мониторинг в реальном времени для отслеживания ошибок.",
+    "en": "We need to set up real-time monitoring to track errors.",
+    "de": "Wir müssen ein Echtzeit-Monitoring einrichten, um Fehler zu verfolgen.",
+    "uk": "Нам потрібно налаштувати моніторинг у реальному часі для відстеження помилок."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте уточним критерии приемки для этой пользовательской истории.",
+    "en": "Let's clarify the acceptance criteria for this user story.",
+    "de": "Lassen Sie uns die Akzeptanzkriterien für diese User Story klären.",
+    "uk": "Давайте уточнимо критерії приймання для цієї користувацької історії."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно сократить время выхода на рынок для этого продукта.",
+    "en": "We need to reduce the time-to-market for this product.",
+    "de": "Wir müssen die Zeit bis zur Markteinführung für dieses Produkt verkürzen.",
+    "uk": "Нам потрібно скоротити час виходу на ринок для цього продукту."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Каков текущий статус выполнения ключевых этапов проекта?",
+    "en": "What is the current status of the project milestones?",
+    "de": "Wie ist der aktuelle Status der Projektmeilensteine?",
+    "uk": "Який поточний статус виконання ключових етапів проєкту?"
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно избежать дублирования усилий в разных командах.",
+    "en": "We need to avoid duplication of effort across different teams.",
+    "de": "Wir müssen Doppelarbeit in verschiedenen Teams vermeiden.",
+    "uk": "Нам потрібно уникнути дублювання зусиль у різних командах."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Эта функция имеет низкий приоритет в текущем бэклоге.",
+    "en": "This feature is a low priority in the current backlog.",
+    "de": "Diese Funktion hat im aktuellen Backlog eine niedrige Priorität.",
+    "uk": "Ця функція має низький пріоритет у поточному беклозі."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно оценить амортизацию наших основных средств.",
+    "en": "We need to calculate the depreciation of our fixed assets.",
+    "de": "Wir müssen die Abschreibung unserer Sachanlagen berechnen.",
+    "uk": "Нам потрібно оцінити амортизацію наших основних засобів."
+  },
+  {
+    "category": "Finance",
+    "ru": "Каковы налоговые последствия этой международной сделки?",
+    "en": "What are the tax implications of this international transaction?",
+    "de": "Was sind die steuerlichen Auswirkungen dieser internationalen Transaktion?",
+    "uk": "Які податкові наслідки цієї міжнародної угоди?"
+  },
+  {
+    "category": "Finance",
+    "ru": "Мы достигли порога прибыльности в этом месяце.",
+    "en": "We have reached the profitability threshold this month.",
+    "de": "Wir haben in diesem Monat die Gewinnschwelle erreicht.",
+    "uk": "Ми досягли порогу прибутковості цього місяця."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно диверсифицировать наш инвестиционный портфель.",
+    "en": "We need to diversify our investment portfolio.",
+    "de": "Wir müssen unser Investmentportfolio diversifizieren.",
+    "uk": "Нам потрібно диверсифікувати наш інвестиційний портфель."
+  },
+  {
+    "category": "Finance",
+    "ru": "Компания планирует провести IPO в ближайшие два года.",
+    "en": "The company plans to go public within the next two years.",
+    "de": "Das Unternehmen plant, innerhalb der nächsten zwei Jahre an die Börse zu gehen.",
+    "uk": "Компанія планує провести IPO протягом найближчих двох років."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно адаптировать наше ценностное предложение под новый сегмент.",
+    "en": "We need to tailor our value proposition to a new segment.",
+    "de": "Wir müssen unser Wertversprechen auf ein neues Segment zuschneiden.",
+    "uk": "Нам потрібно адаптувати нашу ціннісну пропозицію під новий сегмент."
+  },
+  {
+    "category": "General Business",
+    "ru": "Этот контракт включает пункт о расторжении с уведомлением за 30 дней.",
+    "en": "This contract includes a termination clause with 30 days' notice.",
+    "de": "Dieser Vertrag enthält eine Kündigungsklausel mit einer Frist von 30 Tagen.",
+    "uk": "Цей контракт містить пункт про розірвання з повідомленням за 30 днів."
+  },
+  {
+    "category": "General Business",
+    "ru": "Давайте проведем мозговой штурм для поиска инновационных идей.",
+    "en": "Let's brainstorm to find innovative ideas.",
+    "de": "Lassen Sie uns ein Brainstorming durchführen, um innovative Ideen zu finden.",
+    "uk": "Давайте проведемо мозковий штурм для пошуку інноваційних ідей."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно укрепить нашу позицию на европейском рынке.",
+    "en": "We need to strengthen our position in the European market.",
+    "de": "Wir müssen unsere Position auf dem europäischen Markt stärken.",
+    "uk": "Нам потрібно зміцнити нашу позицію на європейському ринку."
+  },
+  {
+    "category": "General Business",
+    "ru": "Какова ваша долгосрочная стратегия устойчивого развития?",
+    "en": "What is your long-term sustainability strategy?",
+    "de": "Was ist Ihre langfristige Nachhaltigkeitsstrategie?",
+    "uk": "Яка ваша довгострокова стратегія сталого розвитку?"
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно обеспечить высокую доступность нашей серверной части.",
+    "en": "We need to ensure high availability for our backend.",
+    "de": "Wir müssen eine hohe Verfügbarkeit für unser Backend sicherstellen.",
+    "uk": "Нам потрібно забезпечити високу доступність нашої серверної частини."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Этот патч исправляет несколько критических уязвимостей.",
+    "en": "This patch fixes several critical security vulnerabilities.",
+    "de": "Dieser Patch behebt mehrere kritische Sicherheitslücken.",
+    "uk": "Цей патч виправляє кілька критичних уязвимостей."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует рассмотреть возможность использования бессерверной архитектуры.",
+    "en": "We should consider using a serverless architecture.",
+    "de": "Wir sollten die Verwendung einer serverlosen Architektur in Betracht ziehen.",
+    "uk": "Нам слід розглянути можливість використання бессерверної архітектури."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте зафиксируем результаты сегодняшней встречи в протоколе.",
+    "en": "Let's record today's meeting results in the minutes.",
+    "de": "Lassen Sie uns die heutigen Besprechungsergebnisse im Protokoll festhalten.",
+    "uk": "Давайте зафіксуємо результати сьогоднішньої зустрічі в протоколі."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно оптимизировать налоговую нагрузку нашей компании.",
+    "en": "We need to optimize our company's tax burden.",
+    "de": "Wir müssen die Steuerlast unseres Unternehmens optimieren.",
+    "uk": "Нам потрібно оптимізувати податкове навантаження нашої компанії."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно внедрить оркестрацию контейнеров для управления нашими сервисами в облаке.",
+    "en": "We need to implement container orchestration to manage our cloud services.",
+    "de": "Wir müssen eine Container-Orchestrierung implementieren, um unsere Cloud-Dienste zu verwalten.",
+    "uk": "Нам потрібно впровадити оркестрацію контейнерів для управління нашими сервісами у хмарі."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Этот алгоритм минимизирует использование памяти при обработке больших данных.",
+    "en": "This algorithm minimizes memory usage during big data processing.",
+    "de": "Dieser Algorithmus minimiert den Speicherverbrauch bei der Verarbeitung von Big Data.",
+    "uk": "Цей алгоритм мінімізує використання пам'яті при обробці великих даних."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует настроить политики автоматического масштабирования для обработки пиковых нагрузок.",
+    "en": "We should configure auto-scaling policies to handle peak loads.",
+    "de": "Wir sollten Auto-Scaling-Richtlinien konfigurieren, um Spitzenlasten zu bewältigen.",
+    "uk": "Нам слід налаштувати політики автоматичного масштабування для обробки пікових навантажень."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Шифрование данных в покое необходимо для соблюдения требований безопасности.",
+    "en": "Data encryption at rest is essential for security compliance.",
+    "de": "Datenverschlüsselung im Ruhezustand ist für die Einhaltung der Sicherheitsvorschriften unerlässlich.",
+    "uk": "Шифрування даних у спокої необхідне для дотримання вимог безпеки."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно оптимизировать время отклика API для улучшения пользовательского опыта.",
+    "en": "We need to optimize API response times to improve user experience.",
+    "de": "Wir müssen die API-Antwortzeiten optimieren, um die Benutzererfahrung zu verbessern.",
+    "uk": "Нам потрібно оптимізувати час відгуку API для покращення досвіду користувача."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно обеспечить прозрачность всех этапов разработки для заказчика.",
+    "en": "We need to ensure transparency across all development stages for the client.",
+    "de": "Wir müssen Transparenz in allen Entwicklungsphasen für den Kunden gewährleisten.",
+    "uk": "Нам потрібно забезпечити прозорість усіх етапів розробки для замовника."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Каков план на случай непредвиденных обстоятельств при возникновении задержек?",
+    "en": "What is the contingency plan in case of delays?",
+    "de": "Wie sieht der Notfallplan im Falle von Verzögerungen aus?",
+    "uk": "Який план на випадок непередбачених обставин при виникненні затримок?"
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно сбалансировать нагрузку между всеми участниками команды.",
+    "en": "We need to balance the workload among all team members.",
+    "de": "Wir müssen die Arbeitslast auf alle Teammitglieder gleichmäßig verteilen.",
+    "uk": "Нам потрібно збалансувати навантаження між усіма учасниками команди."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте проведем демонстрацию продукта для стейкхолдеров в эту пятницу.",
+    "en": "Let's hold a product demo for the stakeholders this Friday.",
+    "de": "Lassen Sie uns diesen Freitag eine Produktdemo für die Stakeholder abhalten.",
+    "uk": "Давайте проведемо демонстрацію продукту для стейкхолдерів цієї п'ятниці."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно уточнить критерии готовности (Definition of Done) для этого спринта.",
+    "en": "We need to clarify the Definition of Done for this sprint.",
+    "de": "Wir müssen die Definition of Done für diesen Sprint klären.",
+    "uk": "Нам потрібно уточнити критерії готовності (Definition of Done) для цього спринту."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно оценить коэффициент окупаемости инвестиций для этой инициативы.",
+    "en": "We need to evaluate the ROI for this initiative.",
+    "de": "Wir müssen den ROI für diese Initiative bewerten.",
+    "uk": "Нам потрібно оцінити коефіцієнт окупності інвестицій для цієї ініціативи."
+  },
+  {
+    "category": "Finance",
+    "ru": "Компания стремится достичь положительной чистой прибыли в следующем году.",
+    "en": "The company aims to achieve positive net income next year.",
+    "de": "Das Unternehmen strebt im nächsten Jahr einen positiven Nettogewinn an.",
+    "uk": "Компанія прагне досягти позитивного чистого прибутку наступного року."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно проанализировать структуру затрат, чтобы выявить возможности для экономии.",
+    "en": "We need to analyze the cost structure to identify savings opportunities.",
+    "de": "Wir müssen die Kostenstruktur analysieren, um Einsparpotenziale zu identifizieren.",
+    "uk": "Нам потрібно проаналізувати структуру витрат, щоб виявити можливості для економії."
+  },
+  {
+    "category": "Finance",
+    "ru": "Акционеры ожидают отчет о финансовой деятельности за прошлый квартал.",
+    "en": "Shareholders are expecting a financial performance report for the last quarter.",
+    "de": "Die Aktionäre erwarten einen Finanzbericht für das letzte Quartal.",
+    "uk": "Акціонери очікують звіт про фінансову діяльність за минулий квартал."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам необходимо подготовить прогноз денежных потоков на следующие шесть месяцев.",
+    "en": "We need to prepare a cash flow forecast for the next six months.",
+    "de": "Wir müssen eine Cashflow-Prognose für die nächsten sechs Monate erstellen.",
+    "uk": "Нам необхідно підготувати прогноз грошових потоків на наступні шість місяців."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно выстроить доверительные отношения с нашими зарубежными партнерами.",
+    "en": "We need to build a relationship of trust with our foreign partners.",
+    "de": "Wir müssen eine Vertrauensbeziehung zu unseren ausländischen Partnern aufbauen.",
+    "uk": "Нам потрібно побудувати довірчі відносини з нашими зарубіжними партнерами."
+  },
+  {
+    "category": "General Business",
+    "ru": "Этот контракт защищает наши права на интеллектуальную собственность.",
+    "en": "This contract protects our intellectual property rights.",
+    "de": "Dieser Vertrag schützt unsere Rechte an geistigem Eigentum.",
+    "uk": "Цей контракт захищає наші права на інтелектуальну власність."
+  },
+  {
+    "category": "General Business",
+    "ru": "Давайте проанализируем сильные и слабые стороны нашего предложения.",
+    "en": "Let's analyze the strengths and weaknesses of our proposal.",
+    "de": "Lassen Sie uns die Stärken und Schwächen unseres Vorschlags analysieren.",
+    "uk": "Давайте проаналізуємо сильні та слабкі сторони нашої пропозиції."
+  },
+  {
+    "category": "General Business",
+    "ru": "Нам нужно адаптироваться к быстро меняющимся рыночным условиям.",
+    "en": "We need to adapt to rapidly changing market conditions.",
+    "de": "Wir müssen uns an die sich schnell ändernden Marktbedingungen anpassen.",
+    "uk": "Нам потрібно адаптуватися до швидко мінливих ринкових умов."
+  },
+  {
+    "category": "General Business",
+    "ru": "Какова ваша основная компетенция на этом конкурентном рынке?",
+    "en": "What is your core competency in this competitive market?",
+    "de": "Was ist Ihre Kernkompetenz in diesem wettbewerbsintensiven Markt?",
+    "uk": "Яка ваша основна компетенція на цьому конкурентному ринку?"
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно обеспечить бесперебойную интеграцию этих двух систем.",
+    "en": "We need to ensure a seamless integration between these two systems.",
+    "de": "Wir müssen eine nahtlose Integration zwischen diesen beiden Systemen sicherstellen.",
+    "uk": "Нам потрібно забезпечити безперебійну інтеграцію цих двох систем."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Эта технология позволяет нам создавать кроссплатформенные приложения с единой кодовой базой.",
+    "en": "This technology allows us to build cross-platform apps with a single codebase.",
+    "de": "Diese Technologie ermöglicht es uns, plattformübergreifende Apps mit einer einzigen Codebasis zu erstellen.",
+    "uk": "Ця технологія дозволяє нам створювати кросплатформні додатки з єдиною кодовою базою."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам следует внедрить автоматизированное тестирование для предотвращения регрессий.",
+    "en": "We should implement automated testing to prevent regressions.",
+    "de": "Wir sollten automatisierte Tests implementieren, um Regressionen zu verhindern.",
+    "uk": "Нам слід впровадити автоматизоване тестування для запобігання регресіям."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно эффективно управлять ресурсами, чтобы соблюсти установленные сроки.",
+    "en": "We need to manage resources effectively to meet the deadlines.",
+    "de": "Wir müssen die Ressourcen effektiv verwalten, um die Fristen einzuhalten.",
+    "uk": "Нам потрібно ефективно управляти ресурсами, щоб дотриматися встановлених термінів."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно оценить влияние инфляции на нашу закупочную способность.",
+    "en": "We need to assess the impact of inflation on our purchasing power.",
+    "de": "Wir müssen die Auswirkungen der Inflation auf unsere Kaufkraft bewerten.",
+    "uk": "Нам потрібно оцінити вплив інфляції на нашу купівельну спроможність."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Я специализируюсь на разработке масштабируемых бэкенд-систем с использованием современных фреймворков.",
+    "en": "I specialize in developing scalable backend systems using modern frameworks.",
+    "de": "Ich spezialisiere mich auf die Entwicklung skalierbarer Backend-Systeme unter Verwendung moderner Frameworks.",
+    "uk": "Я спеціалізуюся на розробці масштабованих бекенд-систем з використанням сучасних фреймворків."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "За последние три года я успешно реализовал более пяти высоконагруженных проектов.",
+    "en": "Over the last three years, I have successfully delivered over five high-load projects.",
+    "de": "In den letzten drei Jahren habe ich erfolgreich über fünf Hochlastprojekte umgesetzt.",
+    "uk": "За останні три роки я успішно реалізував понад п'ять високонавантажених проєктів."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Моя главная цель — создавать продукты, которые приносят реальную пользу бизнесу и пользователям.",
+    "en": "My primary goal is to build products that deliver tangible value to both business and users.",
+    "de": "Mein Hauptziel ist es, Produkte zu entwickeln, die sowohl für das Unternehmen als auch für die Nutzer einen spürbaren Mehrwert bieten.",
+    "uk": "Моя головна мета — створювати продукти, які приносять реальну користь бізнесу та користувачам."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Я помогаю технологическим стартапам сокращать время выхода на рынок за счет оптимизации CI/CD процессов.",
+    "en": "I help tech startups reduce time-to-market by optimizing CI/CD pipelines.",
+    "de": "Ich helfe Tech-Startups, die Markteinführungszeit durch die Optimierung von CI/CD-Pipelines zu verkürzen.",
+    "uk": "Я допомагаю технологічним стартапам скорочувати час виходу на ринок за рахунок оптимізації CI/CD процесів."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "В настоящее время я работаю над инновационным решением для автоматизации финансовой отчетности.",
+    "en": "I am currently working on an innovative solution for automating financial reporting.",
+    "de": "Ich arbeite derzeit an einer innovativen Lösung zur Automatisierung der Finanzberichterstattung.",
+    "uk": "Наразі я працюю над інноваційним рішенням для автоматизації фінансової звітності."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Одним из моих самых удачных проектов было создание системы обработки данных в реальном времени.",
+    "en": "One of my most successful projects was building a real-time data processing system.",
+    "de": "Eines meiner erfolgreichsten Projekte war der Aufbau eines Echtzeit-Datenverarbeitungssystems.",
+    "uk": "Одним із моїх найбільш вдалих проєктів було створення системи обробки даних у реальному часі."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Мне пришлось принять сложное решение о миграции на другую архитектуру в середине проекта.",
+    "en": "I had to make a tough decision to migrate to a different architecture mid-project.",
+    "de": "Ich musste mitten im Projekt die schwierige Entscheidung treffen, auf eine andere Architektur umzustellen.",
+    "uk": "Мені довелося прийняти складне рішення про міграцію на іншу архітектуру посеред проєкту."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Это решение позволило нам повысить производительность системы на сорок процентов.",
+    "en": "This decision allowed us to increase system performance by forty percent.",
+    "de": "Diese Entscheidung ermöglichte es uns, die Systemleistung um vierzig Prozent zu steigern.",
+    "uk": "Це рішення дозволило нам підвищити продуктивність системи на сорок відсотків."
+  },
+  {
+    "category": "Interview: Problem Solving",
+    "ru": "Когда я сталкиваюсь с критическим багом, я в первую очередь изолирую проблему и анализирую логи.",
+    "en": "When I encounter a critical bug, I first isolate the issue and analyze the logs.",
+    "de": "Wenn ich auf einen kritischen Fehler stoße, isoliere ich zuerst das Problem und analysiere die Logs.",
+    "uk": "Коли я стикаюся з критичним багом, я насамперед ізолюю проблему та аналізую логи."
+  },
+  {
+    "category": "Interview: Teamwork",
+    "ru": "Я верю в силу открытого общения и конструктивной обратной связи внутри команды.",
+    "en": "I believe in the power of open communication and constructive feedback within the team.",
+    "de": "Ich glaube an die Kraft offener Kommunikation und konstruktiven Feedbacks innerhalb des Teams.",
+    "uk": "Я вірю в силу відкритого спілкування та конструктивного зворотного зв'язку всередині команди."
+  },
+  {
+    "category": "Interview: Goals",
+    "ru": "В ближайшие два года я планирую углубить свои знания в области облачных вычислений.",
+    "en": "In the next two years, I plan to deepen my knowledge in the field of cloud computing.",
+    "de": "In den nächsten zwei Jahren plane ich, meine Kenntnisse im Bereich Cloud-Computing zu vertiefen.",
+    "uk": "У найближчі два роки я планую поглибити свої знання у сфері хмарних обчислень."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "У меня есть опыт работы в распределенных международных командах с использованием Agile-методологий.",
+    "en": "I have experience working in distributed international teams using Agile methodologies.",
+    "de": "Ich habe Erfahrung in der Arbeit in verteilten internationalen Teams unter Verwendung von Agile-Methoden.",
+    "uk": "Я маю досвід роботи в розподілених міжнародних командах з використанням Agile-методологій."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Я взял на себя инициативу по рефакторингу устаревшего кода, что сократило технический долг.",
+    "en": "I took the initiative to refactor legacy code, which reduced technical debt.",
+    "de": "Ich habe die Initiative ergriffen, Legacy-Code zu refaktorieren, was die technischen Schulden reduzierte.",
+    "uk": "Я взяв на себе ініціативу щодо рефакторингу застарілого коду, що скоротило технічний борг."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Мы разрабатываем мобильное приложение, которое помогает пользователям учить языки с помощью ИИ.",
+    "en": "We are developing a mobile app that helps users learn languages using AI.",
+    "de": "Wir entwickeln eine mobile App, die Nutzern hilft, Sprachen mithilfe von KI zu lernen.",
+    "uk": "Ми розробляємо мобільний додаток, який допомагає користувачам вчити мови за допомогою ШІ."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "В случае разногласий я стараюсь найти компромисс, исходя из интересов проекта.",
+    "en": "In case of disagreements, I try to find a compromise based on the project's interests.",
+    "de": "Bei Unstimmigkeiten versuche ich, einen Kompromiss im Interesse des Projekts zu finden.",
+    "uk": "У разі розбіжностей я намагаюся знайти компроміс, виходячи з інтересів проєкту."
+  },
+  {
+    "category": "Interview: Strengths",
+    "ru": "Одной из моих сильных сторон является способность быстро осваивать новые технологии.",
+    "en": "One of my strengths is the ability to quickly master new technologies.",
+    "de": "Eine meiner Stärken ist die Fähigkeit, neue Technologien schnell zu erlernen.",
+    "uk": "Однією з моїх сильних сторін є здатність швидко опановувати нові технології."
+  },
+  {
+    "category": "Interview: Weaknesses",
+    "ru": "Иногда я слишком глубоко погружаюсь в детали, но я учусь расставлять приоритеты.",
+    "en": "Sometimes I dive too deep into details, but I am learning to prioritize.",
+    "de": "Manchmal verliere ich mich zu sehr in Details, aber ich lerne, Prioritäten zu setzen.",
+    "uk": "Іноді я занадто глибоко занурююсь у деталі, але я вчуся розставляти пріоритети."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Я активно участвую в сообществе открытого исходного кода и делюсь своими знаниями.",
+    "en": "I actively participate in the open-source community and share my knowledge.",
+    "de": "Ich nehme aktiv an der Open-Source-Community teil und teile mein Wissen.",
+    "uk": "Я активно беру участь у спільноті відкритого вихідного коду та ділюся своїми знаннями."
+  },
+  {
+    "category": "Interview: Motivation",
+    "ru": "Меня вдохновляют сложные задачи, требующие нестандартного мышления.",
+    "en": "I am inspired by challenging tasks that require out-of-the-box thinking.",
+    "de": "Mich inspirieren anspruchsvolle Aufgaben, die Querdenken erfordern.",
+    "uk": "Мене надихають складні завдання, що потребують нестандартного мислення."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Наш продукт автоматизирует проверку переводов, экономя время преподавателей.",
+    "en": "Our product automates translation validation, saving time for instructors.",
+    "de": "Unser Produkt automatisiert die Validierung von Übersetzungen und spart Lehrkräften Zeit.",
+    "uk": "Наш продукт автоматизує перевірку перекладів, заощаджуючи час викладачів."
+  },
+  {
+    "category": "Interview: Problem Solving",
+    "ru": "Я всегда провожу тщательное тестирование перед тем, как отправить код в продакшн.",
+    "en": "I always perform thorough testing before pushing code to production.",
+    "de": "Ich führe immer gründliche Tests durch, bevor ich Code in die Produktion schiebe.",
+    "uk": "Я завжди проводжу ретельне тестування перед тим, как відправити код у продакшн."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Я успешно оптимизировал запросы к базе данных, что сократило время отклика в два раза.",
+    "en": "I successfully optimized database queries, reducing response time by half.",
+    "de": "Ich habe Datenbankabfragen erfolgreich optimiert und die Antwortzeit um die Hälfte reduziert.",
+    "uk": "Я успішно оптимізував запити до бази даних, що скоротило час відгуку вдвічі."
+  },
+  {
+    "category": "Interview: Teamwork",
+    "ru": "Я всегда готов помочь коллегам и поделиться своим опытом.",
+    "en": "I am always ready to help colleagues and share my experience.",
+    "de": "Ich bin immer bereit, Kollegen zu helfen und meine Erfahrungen zu teilen.",
+    "uk": "Я завжди готовий допомогти колегам і поділитися своїм досвідом."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Мое владение английским языком позволяет мне эффективно работать в международной среде.",
+    "en": "My English proficiency allows me to work effectively in an international environment.",
+    "de": "Meine Englischkenntnisse ermöglichen es mir, effektiv in einem internationalen Umfeld zu arbeiten.",
+    "uk": "Моє володіння англійською мовою дозволяє мені ефективно працювати в міжнародному середовищі."
+  },
+  {
+    "category": "Interview: Goals",
+    "ru": "Я ищу возможности для роста и внесения вклада в инновационные проекты.",
+    "en": "I am looking for opportunities to grow and contribute to innovative projects.",
+    "de": "Ich suche nach Möglichkeiten zu wachsen und zu innovativen Projekten beizutragen.",
+    "uk": "Я шукаю можливості для зростання та внесення вкладу в інноваційні проєкти."
+  },
+  {
+    "category": "Interview: Soft Skills",
+    "ru": "Я умею адаптировать свой стиль общения в зависимости от аудитории, будь то разработчики или стейкхолдеры.",
+    "en": "I can adapt my communication style depending on the audience, whether it's developers or stakeholders.",
+    "de": "Ich kann meinen Kommunikationsstil je nach Zielgruppe anpassen, egal ob es sich um Entwickler oder Stakeholder handelt.",
+    "uk": "Я вмію адаптувати свій стиль спілкування залежно від аудиторії, чи то розробники, чи то стейкхолдери."
+  },
+  {
+    "category": "Interview: Soft Skills",
+    "ru": "Активное слушание — это ключ к пониманию истинных потребностей бизнеса.",
+    "en": "Active listening is the key to understanding the true needs of the business.",
+    "de": "Aktives Zuhören ist der Schlüssel, um die wahren Bedürfnisse des Unternehmens zu verstehen.",
+    "uk": "Активне слухання — це ключ до розуміння справжніх потреб бізнесу."
+  },
+  {
+    "category": "Interview: Productivity",
+    "ru": "Я использую метод блокировки времени для управления задачами и повышения продуктивности.",
+    "en": "I use the time-blocking method to manage tasks and increase productivity.",
+    "de": "Ich nutze die Time-Blocking-Methode, um Aufgaben zu verwalten und die Produktivität zu steigern.",
+    "uk": "Я використовую метод блокування часу для управління завданнями та підвищення продуктивності."
+  },
+  {
+    "category": "Interview: Productivity",
+    "ru": "При работе над несколькими проектами я всегда расставляю приоритеты на основе их влияния на бизнес.",
+    "en": "When working on multiple projects, I always prioritize based on their business impact.",
+    "de": "Wenn ich an mehreren Projekten arbeite, setze ich die Prioritäten immer basierend auf deren Geschäftsauswirkungen.",
+    "uk": "При роботі над декількома проєктами я завжди розставляю пріоритети на основі їхнього впливу на бізнес."
+  },
+  {
+    "category": "Interview: Mentorship",
+    "ru": "Мне нравится менторить младших разработчиков и помогать им расти профессионально.",
+    "en": "I enjoy mentoring junior developers and helping them grow professionally.",
+    "de": "Es macht mir Spaß, Junior-Entwickler zu mentoren und ihnen beim professionellen Wachsen zu helfen.",
+    "uk": "Мені подобається менторити молодших розробників і допомагати їм рости професійно."
+  },
+  {
+    "category": "Interview: Mentorship",
+    "ru": "Я регулярно провожу сессии по обмену знаниями, чтобы повысить общую экспертизу команды.",
+    "en": "I regularly conduct knowledge-sharing sessions to boost the team's overall expertise.",
+    "de": "Ich führe regelmäßig Wissenstransfer-Sitzungen durch, um die Gesamtexpertise des Teams zu steigern.",
+    "uk": "Я регулярно проводжу сесії з обміну знаннями, щоб підвищити загальну експертизу команди."
+  },
+  {
+    "category": "Interview: Expectations",
+    "ru": "Мои зарплатные ожидания основаны на моем опыте и текущих рыночных стандартах.",
+    "en": "My salary expectations are based on my experience and current market standards.",
+    "de": "Meine Gehaltsvorstellungen basieren auf meiner Erfahrung und den aktuellen Marktstandards.",
+    "uk": "Мої зарплатні очікування ґрунтуються на моєму досвіді та поточних ринкових стандартах."
+  },
+  {
+    "category": "Interview: Expectations",
+    "ru": "Я открыт к обсуждению пакета вознаграждения, включая бонусы и льготы.",
+    "en": "I am open to discussing the total compensation package, including bonuses and benefits.",
+    "de": "Ich bin offen für die Diskussion des gesamten Vergütungspakets, einschließlich Boni und Zusatzleistungen.",
+    "uk": "Я відкритий до обговорення пакета винагороди, включаючи бонуси та пільги."
+  },
+  {
+    "category": "Interview: Expectations",
+    "ru": "Для меня важно работать в компании, которая поддерживает баланс между работой и личной жизнью.",
+    "en": "It is important for me to work in a company that supports work-life balance.",
+    "de": "Es ist mir wichtig, in einem Unternehmen zu arbeiten, das die Work-Life-Balance unterstützt.",
+    "uk": "Для мене важливо працювати в компанії, яка підтримує баланс між роботою та особистим життям."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно внедрить протокол мониторинга для обнаружения аномалий в реальном времени.",
+    "en": "We need to implement a monitoring protocol to detect anomalies in real-time.",
+    "de": "Wir müssen ein Monitoring-Protokoll implementieren, um Anomalien in Echtzeit zu erkennen.",
+    "uk": "Нам потрібно впровадити протокол моніторингу для виявлення аномалій у реальному часі."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Безопасность типов в коде помогает избежать многих ошибок на этапе компиляции.",
+    "en": "Type safety in code helps avoid many errors at the compilation stage.",
+    "de": "Typsicherheit im Code hilft, viele Fehler in der Kompilierungsphase zu vermeiden.",
+    "uk": "Безпека типів у коді допомагає уникнути багатьох помилок на етапі компиляції."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Я обладаю аналитическим складом ума и всегда ищу наиболее эффективное решение задачи.",
+    "en": "I have an analytical mindset and always look for the most efficient solution to a task.",
+    "de": "Ich habe eine analytische Denkweise und suche immer nach der effizientesten Lösung für eine Aufgabe.",
+    "uk": "Я маю аналітичний склад розуму і завжди шукаю найефективніше рішення завдання."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Мой опыт включает работу с высоконагруженными системами и облачными провайдерами.",
+    "en": "My experience includes working with high-load systems and cloud providers.",
+    "de": "Meine Erfahrung umfasst die Arbeit mit Hochlastsystemen und Cloud-Anbietern.",
+    "uk": "Мій досвід включає роботу з високонавантаженими системами та хмарними провайдерами."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Мы создаем платформу, которая объединяет фрилансеров и крупные ИТ-компании.",
+    "en": "We are building a platform that connects freelancers and large IT companies.",
+    "de": "Wir bauen eine Plattform auf, die Freelancer und große IT-Unternehmen verbindet.",
+    "uk": "Ми створюємо платформу, яка об'єднує фрілансерів та великі ІТ-компанії."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Наше решение сокращает расходы на инфраструктуру на тридцать процентов.",
+    "en": "Our solution reduces infrastructure costs by thirty percent.",
+    "de": "Unsere Lösung reduziert die Infrastrukturkosten um dreißig Prozent.",
+    "uk": "Наше рішення скорочує витрати на інфраструктуру на тридцять відсотків."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "В конфликтных ситуациях я остаюсь профессионалом и фокусируюсь на фактах, а не на эмоциях.",
+    "en": "In conflict situations, I remain professional and focus on facts rather than emotions.",
+    "de": "In Konfliktsituationen bleibe ich professionell und konzentriere mich auf Fakten statt auf Emotionen.",
+    "uk": "У конфліктних ситуаціях я залишаюся професіоналом і фокусуюся на фактах, а не на емоціях."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "Я всегда стараюсь выслушать точку зрения другой стороны, прежде чем делать выводы.",
+    "en": "I always try to listen to the other party's point of view before drawing conclusions.",
+    "de": "Ich versuche immer, den Standpunkt der anderen Seite anzuhören, bevor ich Schlussfolgerungen ziehe.",
+    "uk": "Я завжди намагаюся вислухати точку зору іншої сторони, перш ніж робити висновки."
+  },
+  {
+    "category": "Interview: Strengths",
+    "ru": "Моя способность сохранять спокойствие под давлением помогает команде в критические моменты.",
+    "en": "My ability to stay calm under pressure helps the team during critical moments.",
+    "de": "Meine Fähigkeit, unter Druck ruhig zu bleiben, hilft dem Team in kritischen Momenten.",
+    "uk": "Моя здатність зберігати спокій під тиском допомагає команді в критичні моменти."
+  },
+  {
+    "category": "Interview: Weaknesses",
+    "ru": "Раньше мне было сложно делегировать задачи, но теперь я доверяю экспертизе своих коллег.",
+    "en": "Previously, I found it hard to delegate tasks, but now I trust the expertise of my colleagues.",
+    "de": "Früher fiel es mir schwer, Aufgaben zu delegieren, aber jetzt vertraue ich der Expertise meiner Kollegen.",
+    "uk": "Раніше мені було складно делегувати завдання, але тепер я довіряю експертизі своїх колег."
+  },
+  {
+    "category": "Interview: Motivation",
+    "ru": "Меня мотивирует возможность видеть, как мой код влияет на успех конечного продукта.",
+    "en": "I am motivated by seeing how my code impacts the success of the final product.",
+    "de": "Mich motiviert es zu sehen, wie mein Code den Erfolg des Endprodukts beeinflusst.",
+    "uk": "Мене мотивує можливість бачити, як мій код впливає на успіх кінцевого продукту."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Я руководил командой из пяти человек и отвечал за архитектуру всей системы.",
+    "en": "I led a team of five and was responsible for the architecture of the entire system.",
+    "de": "Ich habe ein fünfköpfiges Team geleitet und war für die Architektur des gesamten Systems verantwortlich.",
+    "uk": "Я керував командою з п'яти осіб і відповідав за архітектуру всієї системи."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Мы перешли на модульную архитектуру, что упростило процесс тестирования и развертывания.",
+    "en": "We switched to a modular architecture, which simplified the testing and deployment process.",
+    "de": "Wir sind auf eine modulare Architektur umgestiegen, was den Test- und Deployment-Prozess vereinfacht hat.",
+    "uk": "Ми перейшли на модульну архітектуру, що спростило процес тестування та розгортання."
+  },
+  {
+    "category": "Interview: Problem Solving",
+    "ru": "При поиске решения я всегда учитываю долгосрочные последствия для технического долга.",
+    "en": "When looking for a solution, I always consider the long-term impact on technical debt.",
+    "de": "Bei der Suche nach einer Lösung berücksichtige ich immer die langfristigen Auswirkungen auf die technischen Schulden.",
+    "uk": "При пошуку рішення я завжди враховую довгострокові наслідки для технічного боргу."
+  },
+  {
+    "category": "Interview: Teamwork",
+    "ru": "Для меня командный успех важнее личных достижений.",
+    "en": "For me, team success is more important than personal achievements.",
+    "de": "Für mich ist der Teamerfolg wichtiger als persönliche Leistungen.",
+    "uk": "Для мене командний успіх важливіший за особисті досягнення."
+  },
+  {
+    "category": "Interview: Goals",
+    "ru": "Я ищу компанию, где я смогу реализовать свой потенциал лидера.",
+    "en": "I am looking for a company where I can realize my potential as a leader.",
+    "de": "Ich suche ein Unternehmen, in dem ich mein Potenzial als Führungskraft entfalten kann.",
+    "uk": "Я шукаю компанію, де я зможу реалізувати свій потенціал лідера."
+  },
+  {
+    "category": "Interview: Critical Thinking",
+    "ru": "Я всегда ставлю под сомнение текущие решения, чтобы найти возможности для оптимизации.",
+    "en": "I always challenge current solutions to find optimization opportunities.",
+    "de": "Ich hinterfrage ständig bestehende Lösungen, um Optimierungsmöglichkeiten zu finden.",
+    "uk": "Я завжди ставлю під сумнів поточні рішення, щоб знайти можливості для оптимізації."
+  },
+  {
+    "category": "Interview: Critical Thinking",
+    "ru": "Анализ данных помогает мне принимать объективные решения, основанные на фактах.",
+    "en": "Data analysis helps me make objective, fact-based decisions.",
+    "de": "Datenanalysen helfen mir, objektive, faktenbasierte Entscheidungen zu treffen.",
+    "uk": "Аналіз даних допомагає мені приймати об'єктивні рішення, засновані на фактах."
+  },
+  {
+    "category": "Interview: Remote Work",
+    "ru": "Я привык работать в распределенных командах и эффективно использовать инструменты для совместной работы.",
+    "en": "I am used to working in distributed teams and effectively using collaboration tools.",
+    "de": "Ich bin es gewohnt, in verteilten Teams zu arbeiten und Kollaborations-Tools effektiv zu nutzen.",
+    "uk": "Я звик працювати в розподілених командах і ефективно використовувати інструменти для спільної роботи."
+  },
+  {
+    "category": "Interview: Remote Work",
+    "ru": "Самодисциплина и четкая коммуникация являются ключом к успеху при удаленной работе.",
+    "en": "Self-discipline and clear communication are key to success when working remotely.",
+    "de": "Selbstdisziplin und klare Kommunikation sind der Schlüssel zum Erfolg bei der Fernarbeit.",
+    "uk": "Самодисципліна та чітка комунікація є ключем до успіху при віддаленій роботі."
+  },
+  {
+    "category": "Interview: Salary & Offer",
+    "ru": "Могу ли я ожидать официальное предложение о работе в ближайшее время?",
+    "en": "Can I expect a formal job offer in the near future?",
+    "de": "Kann ich in naher Zukunft mit einem formellen Stellenangebot rechnen?",
+    "uk": "Чи можу я очікувати на офіційну пропозицію про роботу найближчим часом?"
+  },
+  {
+    "category": "Interview: Salary & Offer",
+    "ru": "Мне нужно время, чтобы обдумать условия контракта и проконсультироваться с семьей.",
+    "en": "I need some time to review the contract terms and consult with my family.",
+    "de": "Ich benötige etwas Zeit, um die Vertragsbedingungen zu prüfen und mich mit meiner Familie zu beraten.",
+    "uk": "Мені потрібен час, щоб обдумати умови контракту та порадитися з сім'єю."
+  },
+  {
+    "category": "Interview: Salary & Offer",
+    "ru": "Каков социальный пакет и условия медицинского страхования в вашей компании?",
+    "en": "What is the benefits package and health insurance policy in your company?",
+    "de": "Wie sehen das Leistungspaket und die Krankenversicherung in Ihrem Unternehmen aus?",
+    "uk": "Який соціальний пакет та умови медичного страхування у вашій компанії?"
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Нам нужно внедрить логирование на стороне сервера для диагностики проблем пользователей.",
+    "en": "We need to implement server-side logging to diagnose user issues.",
+    "de": "Wir müssen serverseitiges Logging implementieren, um Benutzerprobleme zu diagnostizieren.",
+    "uk": "Нам потрібно впровадити логування на стороні сервера для діагностики проблем користувачів."
+  },
+  {
+    "category": "IT & Software",
+    "ru": "Использование типизированных интерфейсов упрощает поддержку крупномасштабных приложений.",
+    "en": "Using typed interfaces simplifies the maintenance of large-scale applications.",
+    "de": "Die Verwendung von typisierten Schnittstellen vereinfacht die Wartung umfangreicher Anwendungen.",
+    "uk": "Використання типізованих інтерфейсів спрощує підтримку масштабних додатків."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Я постоянно совершенствую свои навыки, посещая профильные конференции и курсы.",
+    "en": "I constantly improve my skills by attending specialized conferences and courses.",
+    "de": "Ich verbessere meine Fähigkeiten ständig durch den Besuch von Fachkonferenzen und Kursen.",
+    "uk": "Я постійно вдосконалюю свої навички, відвідуючи профільні конференції та курси."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Мой подход к разработке ориентирован на чистоту кода и легкость его тестирования.",
+    "en": "My development approach focuses on clean code and testability.",
+    "de": "Mein Entwicklungsansatz konzentriert sich auf sauberen Code und Testbarkeit.",
+    "uk": "Мій підхід до розробки орієнтований на чистоту коду та легкість його тестування."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Мы создаем экосистему, которая упрощает процесс найма для ИТ-специалистов.",
+    "en": "We are creating an ecosystem that simplifies the hiring process for IT professionals.",
+    "de": "Wir schaffen ein Ökosystem, das den Einstellungsprozess für IT-Fachkräfte vereinfacht.",
+    "uk": "Ми створюємо екосистему, яка спрощує процес найму для ІТ-фахівців."
+  },
+  {
+    "category": "Elevator Pitch",
+    "ru": "Наш ИИ-помощник сокращает время на проверку документации в три раза.",
+    "en": "Our AI assistant reduces documentation review time threefold.",
+    "de": "Unser KI-Assistent reduziert die Zeit für die Prüfung der Dokumentation um das Dreifache.",
+    "uk": "Наш ШІ-помічник скорочує час на перевірку документації втричі."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "В случае конфликта интересов я всегда ищу решение, которое минимизирует риски для бизнеса.",
+    "en": "In a conflict of interest, I always look for a solution that minimizes business risks.",
+    "de": "Bei Interessenkonflikten suche ich immer nach einer Lösung, die die Geschäftsrisiken minimiert.",
+    "uk": "У разі конфлікту інтересів я завжди шукаю рішення, яке мінімізує ризики для бізнесу."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "Конструктивная критика помогает мне видеть свои слепые зоны и развиваться.",
+    "en": "Constructive criticism helps me see my blind spots and grow.",
+    "de": "Konstruktive Kritik hilft mir, meine blinden Flecken zu erkennen und mich weiterzuentwickeln.",
+    "uk": "Конструктивна критика допомагає мені бачити свої сліпі зони та розвиватися."
+  },
+  {
+    "category": "Interview: Strengths",
+    "ru": "Моя способность быстро переключаться между задачами без потери качества — это мой конек.",
+    "en": "My ability to quickly switch between tasks without losing quality is my forte.",
+    "de": "Meine Fähigkeit, schnell zwischen Aufgaben zu wechseln, ohne an Qualität zu verlieren, ist meine Stärke.",
+    "uk": "Моя здатність швидко перемикатися між завданнями без втрати якості — це мій коник."
+  },
+  {
+    "category": "Interview: Weaknesses",
+    "ru": "Я работаю над тем, чтобы не брать на себя слишком много обязательств одновременно.",
+    "en": "I am working on not taking on too many commitments at once.",
+    "de": "Ich arbeite daran, nicht zu viele Verpflichtungen gleichzeitig einzugehen.",
+    "uk": "Я працюю над тим, щоб не брати на себе занадто багато зобов'язань одночасно."
+  },
+  {
+    "category": "Interview: Motivation",
+    "ru": "Я горю желанием внедрять передовые технологии в повседневные бизнес-процессы.",
+    "en": "I am eager to implement cutting-edge technologies into everyday business processes.",
+    "de": "Ich brenne darauf, Spitzentechnologien in alltägliche Geschäftsprozesse zu implementieren.",
+    "uk": "Я прагну впроваджувати передові технології у повсякденні бізнес-процеси."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Я отвечал за интеграцию платежной системы, которая обрабатывает тысячи транзакций в секунду.",
+    "en": "I was responsible for integrating a payment system that handles thousands of transactions per second.",
+    "de": "Ich war für die Integration eines Zahlungssystems verantwortlich, das Tausende von Transaktionen pro Sekunde verarbeitet.",
+    "uk": "Я відповідав за інтеграцію платіжної системи, яка обробляє тисячі транзакцій на секунду."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Мы внедрили автоматическое тестирование UI, что позволило сократить время релиза на два дня.",
+    "en": "We implemented automated UI testing, which cut release time by two days.",
+    "de": "Wir haben automatisierte UI-Tests eingeführt, wodurch die Release-Zeit um zwei Tage verkürzt wurde.",
+    "uk": "Ми впровадили автоматичне тестування UI, що дозволило скоротити час релізу на два дні."
+  },
+  {
+    "category": "Interview: Problem Solving",
+    "ru": "При возникновении инцидента я сохраняю холодную голову и действую согласно протоколу.",
+    "en": "When an incident occurs, I stay cool-headed and act according to protocol.",
+    "de": "Wenn ein Vorfall auftritt, bewahre ich einen kühlen Kopf und handle gemäß dem Protokoll.",
+    "uk": "При виникненні інциденту я зберігаю холодну голову і дію згідно з протоколом."
+  },
+  {
+    "category": "Interview: Teamwork",
+    "ru": "Я всегда поддерживаю атмосферу психологической безопасности в своей команде.",
+    "en": "I always support an atmosphere of psychological safety in my team.",
+    "de": "Ich unterstütze immer eine Atmosphäre der psychologischen Sicherheit in meinem Team.",
+    "uk": "Я завжди підтримую атмосферу психологічної безпеки у своїй команді."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Мои лидерские качества помогают мне мотивировать команду на достижение общих целей.",
+    "en": "My leadership skills help me motivate the team to achieve common goals.",
+    "de": "Meine Führungskompetenzen helfen mir, das Team zu motivieren, gemeinsame Ziele zu erreichen.",
+    "uk": "Мої лідерські якості допомагають мені мотивувати команду на досягнення спільних цілей."
+  },
+  {
+    "category": "Interview: Goals",
+    "ru": "Я хочу стать частью компании, где ценят инновации и смелые идеи.",
+    "en": "I want to be part of a company that values innovation and bold ideas.",
+    "de": "Ich möchte Teil eines Unternehmens sein, das Innovationen und mutige Ideen schätzt.",
+    "uk": "Я хочу стати частиною компанії, де цінують інновації та сміливі ідеї."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно оценить волатильность рынка перед принятием окончательного решения.",
+    "en": "We need to assess market volatility before making a final decision.",
+    "de": "Wir müssen die Marktvolatilität bewerten, bevor wir eine endgültige Entscheidung treffen.",
+    "uk": "Нам потрібно оцінити волатильність ринку перед прийняттям остаточного рішення."
+  },
+  {
+    "category": "Interview: Ethics",
+    "ru": "Я всегда придерживаюсь высоких этических стандартов и обеспечиваю конфиденциальность данных.",
+    "en": "I always adhere to high ethical standards and ensure data confidentiality.",
+    "de": "Ich halte mich stets an hohe ethische Standards und gewährleiste die Vertraulichkeit von Daten.",
+    "uk": "Я завжди дотримуюсь високих етичних стандартів і забезпечую конфіденційність даних."
+  },
+  {
+    "category": "Interview: Ethics",
+    "ru": "Прозрачность и честность — основа моего профессионального взаимодействия с коллегами.",
+    "en": "Transparency and honesty are the foundation of my professional interaction with colleagues.",
+    "de": "Transparenz und Ehrlichkeit sind das Fundament meiner beruflichen Interaktion mit Kollegen.",
+    "uk": "Прозорість і чесність — основа моєї професійної взаємодії з колегами."
+  },
+  {
+    "category": "IT: Quality Assurance",
+    "ru": "Нам нужно внедрить систему автоматизированного нагрузочного тестирования.",
+    "en": "We need to implement an automated load testing system.",
+    "de": "Wir müssen ein automatisiertes Lasttestsystem implementieren.",
+    "uk": "Нам потрібно впровадити систему автоматизованого навантажувального тестування."
+  },
+  {
+    "category": "IT: Quality Assurance",
+    "ru": "Этот баг воспроизводится только в специфических условиях окружения.",
+    "en": "This bug is reproducible only under specific environment conditions.",
+    "de": "Dieser Fehler ist nur unter spezifischen Umgebungsbedingungen reproduzierbar.",
+    "uk": "Цей баг відтворюється тільки в специфічних умовах оточення."
+  },
+  {
+    "category": "IT: Quality Assurance",
+    "ru": "Мы стремимся к стопроцентному покрытию кода тестами в этом квартале.",
+    "en": "We aim for one hundred percent code coverage with tests this quarter.",
+    "de": "Wir streben in diesem Quartal eine hundertprozentige Testabdeckung des Codes an.",
+    "uk": "Ми прагнемо до стовідсоткового покриття коду тестами в цьому кварталі."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно оценить влияние этих изменений на критический путь проекта.",
+    "en": "We need to assess the impact of these changes on the project's critical path.",
+    "de": "Wir müssen die Auswirkungen dieser Änderungen auf den kritischen Pfad des Projekts bewerten.",
+    "uk": "Нам потрібно оцінити вплив цих змін на критичний шлях проєкту."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Эта задача имеет высокий приоритет, так как является блокирующей для других команд.",
+    "en": "This task is a high priority as it is a blocker for other teams.",
+    "de": "Diese Aufgabe hat hohe Priorität, da sie ein Blocker für andere Teams ist.",
+    "uk": "Це завдання має високий пріоритет, оскільки є блокуючим для інших команд."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно пересмотреть план распределения ресурсов для завершения спринта вовремя.",
+    "en": "We need to revise the resource allocation plan to finish the sprint on time.",
+    "de": "Wir müssen den Ressourcenallokationsplan überarbeiten, um den Sprint pünktlich abzuschließen.",
+    "uk": "Нам потрібно переглянути план розподілу ресурсів для завершення спринту вчасно."
+  },
+  {
+    "category": "Strategy",
+    "ru": "Наша цель — стать лидером на рынке облачных решений для финтех-сектора.",
+    "en": "Our goal is to become a leader in the market for cloud solutions in the fintech sector.",
+    "de": "Unser Ziel ist es, Marktführer für Cloud-Lösungen im Fintech-Sektor zu werden.",
+    "uk": "Наша мета — стати лідером на ринку хмарних рішень для фінтех-сектору."
+  },
+  {
+    "category": "Strategy",
+    "ru": "Мы планируем диверсифицировать наши услуги для охвата новых сегментов рынка.",
+    "en": "We plan to diversify our services to reach new market segments.",
+    "de": "Wir planen, unsere Dienstleistungen zu diversifizieren, um neue Marktsegmente zu erreichen.",
+    "uk": "Ми плануємо диверсифікувати наші послуги для охоплення нових сегментів ринку."
+  },
+  {
+    "category": "Strategy",
+    "ru": "Инновации являются ключевым драйвером нашего долгосрочного роста.",
+    "en": "Innovation is a key driver of our long-term growth.",
+    "de": "Innovation ist ein wichtiger Treiber für unser langfristiges Wachstum.",
+    "uk": "Інновації є ключовим драйвером нашого довгострокового зростання."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно проанализировать структуру переменных затрат.",
+    "en": "We need to analyze the variable cost structure.",
+    "de": "Wir müssen die Struktur der variablen Kosten analysieren.",
+    "uk": "Нам потрібно проаналізувати структуру змінних витрат."
+  },
+  {
+    "category": "Finance",
+    "ru": "Этот проект имеет очень привлекательный период окупаемости.",
+    "en": "This project has a very attractive payback period.",
+    "de": "Dieses Projekt hat eine sehr attraktive Amortisationszeit.",
+    "uk": "Цей проєкт має дуже привабливий період окупності."
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам необходимо минимизировать налоговые риски при проведении этой сделки.",
+    "en": "We need to minimize tax risks during this transaction.",
+    "de": "Wir müssen die steuerlichen Risiken bei dieser Transaktion minimieren.",
+    "uk": "Нам необхідно мінімізувати податкові ризики при проведенні цієї угоди."
+  },
+  {
+    "category": "Interview: Motivation",
+    "ru": "Меня привлекает ваша корпоративная культура и акцент на профессиональном росте.",
+    "en": "I am attracted by your corporate culture and the focus on professional growth.",
+    "de": "Mich reizen Ihre Unternehmenskultur und der Fokus auf berufliches Wachstum.",
+    "uk": "Мене приваблює ваша корпоративна культура та акцент на професійному зростанні."
+  },
+  {
+    "category": "Interview: Motivation",
+    "ru": "Я хочу работать над продуктом, который решает реальные проблемы миллионов людей.",
+    "en": "I want to work on a product that solves real problems for millions of people.",
+    "de": "Ich möchte an einem Produkt arbeiten, das reale Probleme für Millionen von Menschen löst.",
+    "uk": "Я хочу працювати над продуктом, який вирішує реальні проблеми мільйонів людей."
+  },
+  {
+    "category": "Interview: Motivation",
+    "ru": "Ваша компания известна своими инновационными подходами, и я хочу быть их частью.",
+    "en": "Your company is known for its innovative approaches, and I want to be part of them.",
+    "de": "Ihr Unternehmen ist für seine innovativen Ansätze bekannt, und ich möchte Teil davon sein.",
+    "uk": "Ваша компанія відома своїми інноваційними підходами, і я хочу бути їх частиною."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Я обладаю глубоким пониманием жизненного цикла разработки программного обеспечения.",
+    "en": "I have a deep understanding of the software development lifecycle.",
+    "de": "Ich verfüge über ein tiefes Verständnis des Softwareentwicklungs-Lebenszyklus.",
+    "uk": "Я маю глибоке розуміння життєвого циклу розробки програмного забезпечення."
+  },
+  {
+    "category": "Self-Presentation",
+    "ru": "Моя экспертиза в области информационной безопасности поможет защитить ваш продукт.",
+    "en": "My expertise in information security will help protect your product.",
+    "de": "Meine Expertise im Bereich Informationssicherheit wird dazu beitragen, Ihr Produkt zu schützen.",
+    "uk": "Моя експертиза в галузі інформаційної безпеки допоможе захистити ваш проєкт."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "Я всегда стремлюсь к деэскалации конфликта и поиску взаимовыгодного решения.",
+    "en": "I always strive for conflict de-escalation and finding a win-win solution.",
+    "de": "Ich strebe immer eine Deeskalation von Konflikten und eine Win-Win-Lösung an.",
+    "uk": "Я завжди прагну до деескалації конфлікту та пошуку взаємовигідного рішення."
+  },
+  {
+    "category": "Interview: Conflict",
+    "ru": "Разногласия в команде — это возможность посмотреть на задачу под другим углом.",
+    "en": "Disagreements in a team are an opportunity to look at a task from a different angle.",
+    "de": "Unstimmigkeiten in einem Team sind eine Chance, eine Aufgabe aus einem anderen Blickwinkel zu betrachten.",
+    "uk": "Розбіжності в команді — це можливість подивитися на завдання під іншим кутом."
+  },
+  {
+    "category": "IT: DevOps",
+    "ru": "Нам нужно сократить время сборки проекта для повышения эффективности разработки.",
+    "en": "We need to reduce the build time to increase development efficiency.",
+    "de": "Wir müssen die Build-Zeit verkürzen, um die Entwicklungseffizienz zu steigern.",
+    "uk": "Нам потрібно скоротити час збірки проєкту для підвищення ефективності розробки."
+  },
+  {
+    "category": "IT: DevOps",
+    "ru": "Инфраструктура как код (IaC) позволяет нам автоматизировать развертывание сред.",
+    "en": "Infrastructure as Code (IaC) allows us to automate environment deployment.",
+    "de": "Infrastructure as Code (IaC) ermöglicht es uns, das Deployment von Umgebungen zu automatisieren.",
+    "uk": "Інфраструктура як код (IaC) дозволяє нам автоматизувати розгортання середовищ."
+  },
+  {
+    "category": "IT: DevOps",
+    "ru": "Нам нужно внедрить инструменты для анализа безопасности кода в нашем конвейере.",
+    "en": "We need to implement code security analysis tools in our pipeline.",
+    "de": "Wir müssen Tools zur Code-Sicherheitsanalyse in unsere Pipeline integrieren.",
+    "uk": "Нам потрібно впровадити інструменти для аналізу безпеки коду в нашому конвеєрі."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте утвердим финальный план проекта на сегодняшнем совещании.",
+    "en": "Let's approve the final project plan during today's meeting.",
+    "de": "Lassen Sie uns den endgültigen Projektplan während der heutigen Sitzung verabschieden.",
+    "uk": "Давайте затвердимо фінальний план проєкту на сьогоднішній нараді."
+  },
+  {
+    "category": "Leadership",
+    "ru": "Мой стиль руководства основан на расширении возможностей членов команды и доверии к их профессионализму.",
+    "en": "My leadership style is based on empowering team members and trusting their expertise.",
+    "de": "Mein Führungsstil basiert darauf, Teammitglieder zu befähigen und auf ihre Expertise zu vertrauen.",
+    "uk": "Мій стиль керівництва базується на розширенні можливостей членів команди та довірі до їхнього професіоналізму."
+  },
+  {
+    "category": "Leadership",
+    "ru": "Нам нужно создать среду, в которой ошибки рассматриваются как возможность для обучения.",
+    "en": "We need to create an environment where mistakes are seen as learning opportunities.",
+    "de": "Wir müssen ein Umfeld schaffen, in dem Fehler als Lernchancen gesehen werden.",
+    "uk": "Нам потрібно створити середовище, в якому помилки розглядаються як можливість для навчання."
+  },
+  {
+    "category": "AI & Future Tech",
+    "ru": "Интеграция ИИ в наш рабочий процесс позволит автоматизировать рутинные задачи кодирования.",
+    "en": "Integrating AI into our workflow will automate routine coding tasks.",
+    "de": "Die Integration von KI in unseren Workflow wird routinemäßige Codierungsaufgaben automatisieren.",
+    "uk": "Інтеграція ШІ в наш робочий процес дозволить автоматизувати рутинні завдання з написання коду."
+  },
+  {
+    "category": "AI & Future Tech",
+    "ru": "Нам следует изучить возможности больших языковых моделей для улучшения поддержки клиентов.",
+    "en": "We should explore the potential of large language models to improve customer support.",
+    "de": "Wir sollten das Potenzial großer Sprachmodelle zur Verbesserung des Kundensupports untersuchen.",
+    "uk": "Нам слід вивчити потенціал великих мовних моделей для покращення підтримки клієнтів."
+  },
+  {
+    "category": "Crisis Management",
+    "ru": "В случае сбоя системы нашим приоритетом является быстрое восстановление обслуживания.",
+    "en": "In the event of a system outage, our priority is to restore service quickly.",
+    "de": "Im Falle eines Systemausfalls ist es unsere Priorität, den Service schnell wiederherzustellen.",
+    "uk": "У разі збою системи нашим пріоритетом є швидке відновлення обслуговування."
+  },
+  {
+    "category": "Crisis Management",
+    "ru": "Нам нужно проанализировать коренную причину инцидента, чтобы предотвратить его повторение.",
+    "en": "We need to analyze the root cause of the incident to prevent it from happening again.",
+    "de": "Wir müssen die Ursache des Vorfalls analysieren, um eine Wiederholung zu verhindern.",
+    "uk": "Нам потрібно проаналізувати першопричину інциденту, щоб запобігти його повторенню."
+  },
+  {
+    "category": "Corporate Culture",
+    "ru": "Инклюзивность и разнообразие являются основополагающими ценностями нашей компании.",
+    "en": "Inclusivity and diversity are core values of our company.",
+    "de": "Inklusivität und Vielfalt sind Grundwerte unseres Unternehmens.",
+    "uk": "Інклюзивність та різноманітність є основними цінностями нашої компанії."
+  },
+  {
+    "category": "Corporate Culture",
+    "ru": "Мы поощряем баланс между работой и личной жизнью для поддержания благополучия сотрудников.",
+    "en": "We encourage work-life balance to maintain employee well-being.",
+    "de": "Wir fördern die Work-Life-Balance, um das Wohlbefinden der Mitarbeiter zu erhalten.",
+    "uk": "Ми заохочуємо баланс між роботою та особистим життям для підтримки благополуччя співробітників."
+  },
+  {
+    "category": "IT: Software Engineering",
+    "ru": "Нам нужно внедрить строгие стандарты кодирования для обеспечения поддерживаемости проекта.",
+    "en": "We need to implement strict coding standards to ensure project maintainability.",
+    "de": "Wir müssen strenge Codierungsstandards implementieren, um die Wartbarkeit des Projekts zu gewährleisten.",
+    "uk": "Нам потрібно впровадити суворі стандарти кодування для забезпечення підтримуваності проєкту."
+  },
+  {
+    "category": "IT: Software Engineering",
+    "ru": "Этот рефакторинг направлен на устранение циклической зависимости между компонентами.",
+    "en": "This refactoring aims to eliminate circular dependency between components.",
+    "de": "Dieses Refactoring zielt darauf ab, kreisförmige Abhängigkeiten zwischen Komponenten zu beseitigen.",
+    "uk": "Цей рефакторинг спрямований на усунення циклічної залежності між компонентами."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Давайте проведем планирование спринта, чтобы определить задачи на следующие две недели.",
+    "en": "Let's hold a sprint planning session to define tasks for the next two weeks.",
+    "de": "Lassen Sie uns eine Sprint-Planungssitzung abhalten, um die Aufgaben für die nächsten zwei Wochen festzulegen.",
+    "uk": "Давайте проведемо планування спринту, щоб визначити завдання на наступні два тижні."
+  },
+  {
+    "category": "Project Management",
+    "ru": "Нам нужно отслеживать скорость команды, чтобы более точно планировать будущие релизы.",
+    "en": "We need to track team velocity to plan future releases more accurately.",
+    "de": "Wir müssen die Teamgeschwindigkeit verfolgen, um zukünftige Veröffentlichungen genauer zu planen.",
+    "uk": "Нам потрібно відстежувати швидкість команди, щоб точніше планувати майбутні релізи."
+  },
+  {
+    "category": "Finance",
+    "ru": "Какова прогнозируемая маржа прибыли для этого финансового года?",
+    "en": "What is the projected profit margin for this fiscal year?",
+    "de": "Wie hoch ist die prognostizierte Gewinnmarge für dieses Geschäftsjahr?",
+    "uk": "Яка прогнозована маржа прибутку на цей фінансовий рік?"
+  },
+  {
+    "category": "Finance",
+    "ru": "Нам нужно оценить финансовые риски, связанные с расширением на азиатский рынок.",
+    "en": "We need to assess the financial risks associated with expanding into the Asian market.",
+    "de": "Wir müssen die finanziellen Risiken bewerten, die mit der Expansion in den asiatischen Markt verbunden sind.",
+    "uk": "Нам потрібно оцінити фінансові ризики, пов'язані з розширенням на азійський ринок."
+  },
+  {
+    "category": "Interview: Soft Skills",
+    "ru": "Я всегда готов взять на себя ответственность за принятые решения и их результаты.",
+    "en": "I am always ready to take responsibility for my decisions and their outcomes.",
+    "de": "Ich bin immer bereit, Verantwortung für meine Entscheidungen und deren Ergebnisse zu übernehmen.",
+    "uk": "Я завжди готовий взяти на себе відповідальність за прийняті рішення та їх результати."
+  },
+  {
+    "category": "Interview: Soft Skills",
+    "ru": "Моя способность эффективно работать под давлением подтверждена моим прошлым опытом.",
+    "en": "My ability to work effectively under pressure is proven by my past experience.",
+    "de": "Meine Fähigkeit, unter Druck effektiv zu arbeiten, ist durch meine bisherige Erfahrung bewiesen.",
+    "uk": "Моя здатність ефективно працювати під тиском підтверджена моїм минулим досвідом."
+  },
+  {
+    "category": "Strategy",
+    "ru": "Нам нужно провести SWOT-анализ, чтобы лучше понять наше положение на рынке.",
+    "en": "We need to conduct a SWOT analysis to better understand our market position.",
+    "de": "Wir müssen eine SWOT-Analyse durchführen, um unsere Marktposition besser zu verstehen.",
+    "uk": "Нам потрібно провести SWOT-аналіз, щоб краще зрозуміти наше положення на ринку."
+  },
+  {
+    "category": "Strategy",
+    "ru": "Партнерство с крупными игроками рынка поможет нам ускорить рост.",
+    "en": "Partnering with major market players will help us accelerate growth.",
+    "de": "Partnerschaften mit großen Marktteilnehmern werden uns helfen, das Wachstum zu beschleunigen.",
+    "uk": "Партнерство з великими гравцями ринку допоможе нам прискорити зростання."
+  },
+  {
+    "category": "IT: Security",
+    "ru": "Нам нужно внедрить сканирование образов контейнеров на наличие известных уязвимостей.",
+    "en": "We need to implement container image scanning for known vulnerabilities.",
+    "de": "Wir müssen das Scannen von Container-Images auf bekannte Schwachstellen implementieren.",
+    "uk": "Нам потрібно впровадити сканування образів контейнерів на наявність відомих уязвимостей."
+  },
+  {
+    "category": "IT: Security",
+    "ru": "Принцип наименьших привилегий должен применяться ко всем доступам в системе.",
+    "en": "The principle of least privilege should be applied to all system access.",
+    "de": "Das Prinzip der geringsten Rechte sollte auf alle Systemzugriffe angewendet werden.",
+    "uk": "Принцип найменших привілеїв повинен застосовуватися до всіх доступів у системі."
+  },
+  {
+    "category": "Leadership",
+    "ru": "Я верю, что лучшим лидером является тот, кто служит своей команде.",
+    "en": "I believe that the best leader is the one who serves their team.",
+    "de": "Ich glaube, dass die beste Führungskraft diejenige ist, die ihrem Team dient.",
+    "uk": "Я вірю, що найкращим лідером є той, хто служить своїй команді."
+  },
+  {
+    "category": "Interview: Experience",
+    "ru": "Я внедрил процесс код-ревью, что значительно повысило качество выпускаемого продукта.",
+    "en": "I implemented a code review process, which significantly improved the quality of the released product.",
+    "de": "Ich habe einen Code-Review-Prozess eingeführt, der die Qualität des veröffentlichten Produkts erheblich verbessert hat.",
+    "uk": "Я впровадив процес код-рев'ю, що значно підвищило якість продукту, що випускається."
+  },
+  {
+    "category": "Corporate Culture",
+    "ru": "Наши общие ценности объединяют нас и помогают преодолевать любые трудности.",
+    "en": "Our shared values unite us and help us overcome any challenges.",
+    "de": "Unsere gemeinsamen Werte einen uns und helfen uns, alle Herausforderungen zu meistern.",
+    "uk": "Наші спільні цінності об'єднують нас і допомагають долати будь-які труднощі."
+  },
+  {
+    "category": "AI & Future Tech",
+    "ru": "Использование машинного обучения поможет нам предсказывать поведение пользователей.",
+    "en": "Using machine learning will help us predict user behavior.",
+    "de": "Der Einsatz von maschinellem Lernen wird uns helfen, das Benutzerverhalten vorherzusagen.",
+    "uk": "Використання машинного навчання допоможе нам передбачати поведінку користувачів."
+  },
+  {
+    "category": "General Business",
+    "ru": "Давайте сосредоточимся на наших основных задачах, чтобы достичь поставленных целей к концу года.",
+    "en": "Let's focus on our core objectives to achieve our goals by the end of the year.",
+    "de": "Lassen Sie uns auf unsere Kernziele konzentrieren, um unsere Ziele bis zum Jahresende zu erreichen.",
+    "uk": "Давайте зосередимося на наших основних завданнях, щоб досягти поставлених цілей до кінця року."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Мы применяем принципы чистой архитектуры и DDD для обеспечения долгосрочной поддержки проекта.",
+    "en": "We apply Clean Architecture and DDD principles to ensure long-term project maintainability.",
+    "de": "Wir wenden Clean Architecture- und DDD-Prinzipien an, um die langfristige Wartbarkeit des Projekts zu gewährleisten.",
+    "uk": "Ми застосовуємо принципи чистої архітектури та DDD для забезпечення довгострокової підтримки проєкту."
+  },
+  {
+    "category": "IT: QA Automation",
+    "ru": "Я разработал фреймворк для автоматизации тестирования на Playwright, что сократило время регрессии на 60%.",
+    "en": "I designed a test automation framework using Playwright, reducing regression time by 60%.",
+    "de": "Ich habe ein Testautomatisierungs-Framework mit Playwright entwickelt, das die Regressionszeit um 60 % сократило.",
+    "uk": "Я розробив фреймворк для автоматизації тестування на Playwright, що скоротило час регресії на 60%."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Нам нужно оптимизировать сложные SQL-запросы и хранимые процедуры для повышения производительности.",
+    "en": "We need to optimize complex SQL queries and stored procedures to boost performance.",
+    "de": "Wir müssen komplexe SQL-Abfragen und gespeicherte Prozeduren optimieren, um die Leistung zu steigern.",
+    "uk": "Нам потрібно оптимізувати складні SQL-запити та збережені процедури для підвищення продуктивності."
+  },
+  {
+    "category": "IT: Industrial Automation",
+    "ru": "Я разработал надежные коннекторы для интеграции промышленного оборудования с нашей платформой данных.",
+    "en": "I developed robust connectors to integrate industrial hardware with our data platform.",
+    "de": "Ich habe robuste Konnektoren entwickelt, um industrielle Hardware in unsere Datenplattform zu integrieren.",
+    "uk": "Я розробив надійні конектори для інтеграції промислового обладнання з нашою платформою даних."
+  },
+  {
+    "category": "IT: QA Automation",
+    "ru": "Покрытие кода тестами превысило 80% благодаря внедрению модульных и интеграционных тестов.",
+    "en": "Code coverage exceeded 80% due to the implementation of unit and integration tests.",
+    "de": "Die Code-Abdeckung überstieg 80 % dank der Implementierung von Unit- und Integrationstests.",
+    "uk": "Покриття коду тестами перевищило 80% завдяки впровадженню модульних та інтеграційних тестів."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Использование Entity Framework Core позволяет нам эффективно работать с базой данных через LINQ.",
+    "en": "Using Entity Framework Core allows us to efficiently interact with the database via LINQ.",
+    "de": "Die Verwendung von Entity Framework Core ermöglicht uns eine effiziente Interaktion mit der Datenbank über LINQ.",
+    "uk": "Використання Entity Framework Core дозволяє нам ефективно працювати з базою даних через LINQ."
+  },
+  {
+    "category": "IT: Cloud & DevOps",
+    "ru": "Настройка CI/CD конвейеров в Azure DevOps помогла нам автоматизировать деплой и уменьшить количество ошибок.",
+    "en": "Setting up CI/CD pipelines in Azure DevOps helped us automate deployment and reduce errors.",
+    "de": "Die Einrichtung von CI/CD-Pipelines in Azure DevOps half uns, das Deployment zu automatisieren und Fehler zu reduzieren.",
+    "uk": "Налаштування CI/CD конвеєрів в Azure DevOps допомогло нам автоматизувати деплой та зменшити кількість помилок."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Мы мигрируем наши устаревшие системы на .NET 8 для повышения безопасности и производительности.",
+    "en": "We are migrating our legacy systems to .NET 8 to improve security and performance.",
+    "de": "Wir migrieren unsere Legacy-Systeme auf .NET 8, um Sicherheit und Leistung zu verbessern.",
+    "uk": "Ми мігруємо наші застарілі системи на .NET 8 для підвищення безпеки та продуктивності."
+  },
+  {
+    "category": "IT: QA Automation",
+    "ru": "Я использую Moq и FluentAssertions для создания надежных и читаемых модульных тестов.",
+    "en": "I use Moq and FluentAssertions to create robust and readable unit tests.",
+    "de": "Ich verwende Moq und FluentAssertions, um robuste und lesbare Unit-Tests zu erstellen.",
+    "uk": "Я використовую Moq та FluentAssertions для створення надійних та читних модульних тестів."
+  },
+  {
+    "category": "IT: Industrial Automation",
+    "ru": "Проектирование адаптеров для станков лазерной резки требует глубокого понимания протоколов связи.",
+    "en": "Designing adapters for laser cutting machines requires a deep understanding of communication protocols.",
+    "de": "Das Entwerfen von Adaptern für Laserschneidmaschinen erfordert ein tiefes Verständnis der Kommunikationsprotokolle.",
+    "uk": "Проєктування адаптерів для верстатів лазерного різання вимагає глибокого розуміння протоколів зв'язку."
+  },
+  {
+    "category": "IT: Cloud & DevOps",
+    "ru": "Контейнеризация приложений с помощью Docker упрощает перенос сервисов между окружениями.",
+    "en": "Containerizing applications with Docker simplifies service migration between environments.",
+    "de": "Die Containerisierung von Anwendungen mit Docker vereinfacht die Migration von Diensten zwischen Umgebungen.",
+    "uk": "Контейнеризація додатків за допомогою Docker спрощує перенесення сервісів між оточеннями."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Реализация асинхронных методов в Web API предотвращает блокировку потоков при высоких нагрузках.",
+    "en": "Implementing asynchronous methods in Web API prevents thread blocking under high loads.",
+    "de": "Die Implementierung asynchroner Methoden in der Web-API verhindert Thread-Blocking bei hohen Lasten.",
+    "uk": "Реалізація асинхронних методів у Web API запобігає блокуванню потоків при високих навантаженнях."
+  },
+  {
+    "category": "IT: Full-stack Development",
+    "ru": "Интеграция Cloudinary позволила нам масштабировать хранилище изображений вне локальной системы.",
+    "en": "Cloudinary integration allowed us to scale image storage outside the local system.",
+    "de": "Die Integration von Cloudinary ermöglichte es uns, den Bilderspeicher außerhalb des lokalen Systems zu skalieren.",
+    "uk": "Інтеграція Cloudinary дозволила нам масштабувати сховище зображень поза локальною системою."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Нам нужно устранить узкие места в производительности ASP.NET приложений.",
+    "en": "We need to identify and resolve performance bottlenecks in ASP.NET applications.",
+    "de": "Wir müssen Leistungsengpässe in ASP.NET-Anwendungen identifizieren und beheben.",
+    "uk": "Нам потрібно усунути вузькі місця в продуктивності ASP.NET додатків."
+  },
+  {
+    "category": "IT: Project Experience",
+    "ru": "В рамках NASA Space Apps Challenge я работал в интернациональной команде над прототипом решения.",
+    "en": "As part of the NASA Space Apps Challenge, I worked in an international team on a project prototype.",
+    "de": "Im Rahmen der NASA Space Apps Challenge arbeitete ich in einem internationalen Team an einem Projektprototyp.",
+    "uk": "У рамках NASA Space Apps Challenge я працював в інтернаціональній команді над прототипом рішення."
+  },
+  {
+    "category": "IT: QA Automation",
+    "ru": "Использование Playwright для сквозного тестирования позволяет выявлять ошибки интеграции до продакшена.",
+    "en": "Using Playwright for end-to-end testing helps identify integration issues before production.",
+    "de": "Die Verwendung von Playwright für End-to-End-Tests hilft, Integrationsprobleme vor der Produktion zu identifizieren.",
+    "uk": "Використання Playwright для наскрізного тестування дозволяє виявляти помилки інтеграції до продакшену."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Я отвечал за разработку архитектуры CMS-системы на базе микросервисов.",
+    "en": "I was responsible for designing the architecture of a microservices-based CMS system.",
+    "de": "Ich war für den Entwurf der Architektur eines Mikroservice-basierten CMS-Systems verantwortlich.",
+    "uk": "Я відповідав за розробку архітектури CMS-системи на базі мікросервісів."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Миграция с Oracle на PostgreSQL помогла нам существенно сократить расходы на лицензии.",
+    "en": "Migrating from Oracle to PostgreSQL helped us significantly reduce license costs.",
+    "de": "Die Migration von Oracle zu PostgreSQL hat uns geholfen, die Lizenzkosten erheblich zu senken.",
+    "uk": "Міграція з Oracle на PostgreSQL допомогла нам суттєво скоротити витрати на ліцензії."
+  },
+  {
+    "category": "IT: Full-stack Development",
+    "ru": "Разработка фронтенда на React с использованием Material-UI обеспечивает современный пользовательский опыт.",
+    "en": "Developing the frontend in React using Material-UI provides a modern user experience.",
+    "de": "Die Entwicklung des Frontends in React mit Material-UI bietet eine moderne Benutzererfahrung.",
+    "uk": "Розробка фронтенду на React з використанням Material-UI забезпечує сучасний досвід користувача."
+  },
+  {
+    "category": "IT: QA Automation",
+    "ru": "Автоматизация более 700 тестов значительно повысила уверенность команды при каждом релизе.",
+    "en": "Automating over 700 tests significantly boosted the team's confidence during each release.",
+    "de": "Die Automatisierung von über 700 Tests hat das Vertrauen des Teams bei jedem Release erheblich gestärkt.",
+    "uk": "Автоматизація понад 700 тестів значно підвищила впевненість команди при кожному релізі."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Нам нужно внедрить кастомные утилиты для валидации сложных бизнес-сценариев.",
+    "en": "We need to implement custom utilities for validating complex business scenarios.",
+    "de": "Wir müssen benutzerdefinierte Dienstprogramme zur Validierung komplexer Business-Szenarien implementieren.",
+    "uk": "Нам потрібно впровадити кастомні утиліти для валідації складних бізнес-сценаріїв."
+  },
+  {
+    "category": "IT: Project Experience",
+    "ru": "Моя работа позволила сократить время регрессионного тестирования на 60%.",
+    "en": "My work has resulted in cutting regression testing time by 60%.",
+    "de": "Meine Arbeit hat dazu geführt, dass die Zeit für Regressionstests um 60 % verkürzt wurde.",
+    "uk": "Моя робота дозволила скоротити час регресійного тестування на 60%."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Я специализируюсь на создании высокопроизводительных платформ данных на базе SQL Server.",
+    "en": "I specialize in engineering high-performance data platforms based on SQL Server.",
+    "de": "Ich spezialisiere mich auf das Engineering von Hochleistungs-Datenplattformen auf Basis von SQL Server.",
+    "uk": "Я спеціалізуюся на створенні високопродуктивних платформ даних на базі SQL Server."
+  },
+  {
+    "category": "IT: Cloud & DevOps",
+    "ru": "Использование GitHub Actions позволяет нам полностью автоматизировать процесс сборки и деплоя.",
+    "en": "Using GitHub Actions allows us to fully automate the build and deployment process.",
+    "de": "Die Verwendung von GitHub Actions ermöglicht es uns, den Build- und Deployment-Prozess vollständig zu automatisieren.",
+    "uk": "Використання GitHub Actions дозволяє нам повністю автоматизувати процес збірки та деплою."
+  },
+  {
+    "category": "IT: Backend & Architecture",
+    "ru": "Применение принципа единственной ответственности делает наш код более гибким и тестируемым.",
+    "en": "Applying the Single Responsibility Principle makes our code more flexible and testable.",
+    "de": "Die Anwendung des Single Responsibility Principle macht unseren Code flexibler und testbarer.",
+    "uk": "Застосування принципу єдиної відповідальності робить наш код більш гнучким та таким, що піддається тестуванню."
+  },
+  {
+    "category": "IT: Senior Leadership",
+    "ru": "Я руковожу разработкой масштабируемых решений, обеспечивая стабильность систем в производственной среде.",
+    "en": "I lead the development of scalable solutions, ensuring system stability in production environments.",
+    "de": "Ich leite die Entwicklung skalierbarer Lösungen und gewährleiste die Systemstabilität in Produktionsumgebungen.",
+    "uk": "Я керую розробкою масштабованих рішень, забезпечуючи стабільність систем у виробничому середовищі."
+  },
+  {
+    "category": "IT: QA & Reliability",
+    "ru": "Мой подход к автоматизации тестирования позволил сократить время регрессии на шестьдесят процентов.",
+    "en": "My approach to test automation has resulted in cutting regression testing time by sixty percent.",
+    "de": "Mein Ansatz zur Testautomatisierung hat dazu geführt, dass die Zeit für Regressionstests um sechzig Prozent verkürzt wurde.",
+    "uk": "Мій підхід до автоматизації тестування дозволив скоротити час регресії на шістдесят відсотків."
+  },
+  {
+    "category": "IT: Industrial Automation",
+    "ru": "Я успешно интегрировал промышленные станки лазерной резки с нашей центральной платформой данных.",
+    "en": "I successfully integrated industrial laser cutting machines with our central data platform.",
+    "de": "Ich habe industrielle Laserschneidmaschinen erfolgreich in unsere zentrale Datenplattform integriert.",
+    "uk": "Я успішно інтегрував промислові верстати лазерного різання з нашою центральною платформою даних."
+  },
+  {
+    "category": "IT: Backend Architecture",
+    "ru": "Мы внедрили чистую архитектуру для минимизации зависимостей и упрощения поддержки кода.",
+    "en": "We implemented Clean Architecture to minimize dependencies and simplify code maintenance.",
+    "de": "Wir haben Clean Architecture implementiert, um Abhängigkeiten zu minimieren und die Codewartung zu vereinfachen.",
+    "uk": "Ми впровадили чисту архітектуру для мінімізації залежностей та спрощення підтримки коду."
+  },
+  {
+    "category": "IT: Cloud & DevOps",
+    "ru": "Я использую GitHub Actions для автоматизации сборки и развертывания приложений на Vercel и Render.",
+    "en": "I use GitHub Actions to automate the build and deployment of applications to Vercel and Render.",
+    "de": "Ich verwende GitHub Actions, um den Build und das Deployment von Anwendungen auf Vercel und Render zu automatisieren.",
+    "uk": "Я використовую GitHub Actions для автоматизації збірки та розгортання додатків на Vercel та Render."
+  },
+  {
+    "category": "IT: QA & Reliability",
+    "ru": "Написание более семисот автоматизированных тестов значительно снизило количество дефектов в продакшене.",
+    "en": "Authoring more than seven hundred automated tests significantly reduced production defects.",
+    "de": "Das Erstellen von mehr als siebenhundert automatisierten Tests hat die Produktionsfehler erheblich reduziert.",
+    "uk": "Написання понад семисот автоматизованих тестів значно знизило кількість дефектів у продакшені."
+  },
+  {
+    "category": "IT: Backend Architecture",
+    "ru": "Оптимизация запросов к базе данных SQL Server позволила нам устранить критические узкие места.",
+    "en": "Optimizing SQL Server database queries allowed us to resolve critical performance bottlenecks.",
+    "de": "Die Optimierung von SQL Server-Datenbankabfragen ermöglichte es uns, kritische Leistungsengpässe zu beheben.",
+    "uk": "Оптимізація запитів до бази даних SQL Server дозволила нам усунути критичні вузькі місця в продуктивності."
+  },
+  {
+    "category": "IT: Full-stack Development",
+    "ru": "Я разработал отзывчивый интерфейс на React, используя Material-UI для современного пользовательского опыта.",
+    "en": "I developed a responsive React interface using Material-UI for a modern user experience.",
+    "de": "Ich habe eine responsive React-Benutzeroberfläche mit Material-UI für eine moderne Benutzererfahrung entwickelt.",
+    "uk": "Я розробив чуйний інтерфейс на React, використовуючи Material-UI для сучасного досвіду користувача."
+  },
+  {
+    "category": "Career: Achievements",
+    "ru": "В октябре две тысячи двадцать пятого года я принял участие в хакатоне NASA Space Apps в Цюрихе.",
+    "en": "In October twenty twenty-five, I participated in the NASA Space Apps hackathon in Zurich.",
+    "de": "Im Oktober zweitausendfünfundzwanzig nahm ich am NASA Space Apps Hackathon in Zürich teil.",
+    "uk": "У жовтні дві тисячі двадцять п'ятого року я взяв участь у хакатоні NASA Space Apps у Цюриху."
+  },
+  {
+    "category": "IT: Senior Leadership",
+    "ru": "Я обладаю двадцатилетним опытом разработки надежных и бизнес-критичных решений.",
+    "en": "I possess twenty years of hands-on experience delivering reliable and business-critical solutions.",
+    "de": "Ich verfüge über zwanzig Jahre praktische Erfahrung in der Bereitstellung zuverlässiger und geschäftskritischer Lösungen.",
+    "uk": "Я маю двадцятирічний досвід розробки надійних та бізнес-критичних рішень."
+  },
+  {
+    "category": "IT: QA & Reliability",
+    "ru": "Использование Playwright для сквозного тестирования гарантирует надежность критических бизнес-процессов.",
+    "en": "Using Playwright for end-to-end testing ensures the reliability of critical business flows.",
+    "de": "Die Verwendung von Playwright für End-to-End-Tests gewährleistet die Zuverlässigkeit kritischer Geschäftsprozesse.",
+    "uk": "Використання Playwright для наскрізного тестування гарантує надійність критичних бізнес-процесів."
+  },
+  {
+    "category": "IT: Backend Architecture",
+    "ru": "Я специализируюсь на архитектуре микросервисов и высокопроизводительных платформах данных.",
+    "en": "I specialize in microservices architecture and high-performance data platforms.",
+    "de": "Ich spezialisiere mich auf Microservices-Architektur und Hochleistungs-Datenplattformen.",
+    "uk": "Я спеціалізуюся на архітектурі мікросервісів та високопродуктивних платформах даних."
+  },
+  {
+    "category": "IT: Full-stack Development",
+    "ru": "Интеграция сторонних API, таких как Cloudinary, позволила нам реализовать масштабируемое хранение данных.",
+    "en": "Integrating third-party APIs like Cloudinary allowed us to implement scalable data storage.",
+    "de": "Die Integration von Drittanbieter-APIs wie Cloudinary ermöglichte uns die Implementierung eines skalierbaren Datenspeichers.",
+    "uk": "Інтеграція сторонніх API, таких як Cloudinary, дозволила нам реалізувати масштабоване зберігання даних."
+  },
+  {
+    "category": "IT: Senior Leadership",
+    "ru": "Я успешно руковожу модернизацией устаревших систем, переводя их на современные технологии .NET.",
+    "en": "I successfully lead the modernization of legacy systems, migrating them to modern .NET technologies.",
+    "de": "Ich leite erfolgreich die Modernisierung von Legacy-Systemen und migriere sie auf moderne .NET-Technologien.",
+    "uk": "Я успішно керую модернізацією застарілих систем, переводячи їх на сучасні технології .NET."
+  },
+  {
+    "category": "IT: QA & Reliability",
+    "ru": "Моя работа в качестве инженера по автоматизации QA напрямую повышает уверенность команды перед релизом.",
+    "en": "My work as a QA Automation Engineer directly increases team confidence before release.",
+    "de": "Meine Arbeit als QA-Automatisierungsingenieur stärkt das Vertrauen des Teams vor dem Release direkt.",
+    "uk": "Моя робота як інженера з автоматизації QA безпосередньо підвищує впевненість команди перед релізом."
+  },
+  {
+    "category": "IT: Backend Architecture",
+    "ru": "Применение объектно-ориентированного проектирования помогает создавать гибкий и расширяемый программный продукт.",
+    "en": "Applying object-oriented design helps create flexible and extensible software products.",
+    "de": "Die Anwendung von objektorientiertem Design hilft, flexible und erweiterbare Softwareprodukte zu erstellen.",
+    "uk": "Застосування об'єктно-орієнтованого проєктування допомагає створювати гнучкий та розширюваний програмний продукт."
+  },
+  {
+    "category": "IT: Industrial Automation",
+    "ru": "Разработка коннекторов для систем ЧПУ требует точной обработки данных и высокой производительности.",
+    "en": "Developing connectors for CNC systems requires precise data handling and high performance.",
+    "de": "Die Entwicklung von Konnektoren für CNC-Systeme erfordert eine präzise Datenverarbeitung und hohe Leistung.",
+    "uk": "Розробка конекторів для систем ЧПК потребує точної обробки даних та високої продуктивності."
+  },
+  {
+    "category": "IT: Cloud & DevOps",
+    "ru": "Я имею опыт работы с облачными провайдерами Azure и AWS для развертывания отказоустойчивых сервисов.",
+    "en": "I have experience with Azure and AWS cloud providers for deploying fault-tolerant services.",
+    "de": "Ich habe Erfahrung mit den Cloud-Anbietern Azure und AWS bei der Bereitstellung fehlertoleranter Dienste.",
+    "uk": "Я маю досвід роботи з хмарними провайдерами Azure та AWS для розгортання відмовостійких сервісів."
+  },
+  {
+    "category": "Career: Achievements",
+    "ru": "Я проживаю в Валлизеллене, Швейцария, и имею разрешение на работу категории S.",
+    "en": "I live in Wallisellen, Switzerland, and hold a Work Permit S.",
+    "de": "Ich wohne in Wallisellen, Schweiz, und besitze eine Arbeitsbewilligung S.",
+    "uk": "Я проживаю у Валлізеллені, Швейцарія, та маю дозвіл на роботу категорії S."
+  },
+  {
+    "category": "IT: QA & Reliability",
+    "ru": "Внедрение автоматизированного тестирования API с помощью Postman гарантирует точность бэкенд-сервисов.",
+    "en": "Implementing automated API testing with Postman ensures the accuracy of backend services.",
+    "de": "Die Implementierung automatisierter API-Tests mit Postman gewährleistet die Genauigkeit der Backend-Dienste.",
+    "uk": "Впровадження автоматизованого тестування API за допомогою Postman гарантує точність бекенд-сервісів."
+  },
+  {
+    "category": "IT: Senior Leadership",
+    "ru": "Я активно участвую в планировании спринтов, способствуя четкому разделению задач и оценке усилий.",
+    "en": "I actively participate in sprint planning, contributing to clear story breakdown and effort estimation.",
+    "de": "Ich nehme aktiv an der Sprintplanung teil und trage zur klaren Aufgabenverteilung und Aufwandsschätzung bei.",
+    "uk": "Я беру активну участь у плануванні спринтів, сприяючи чіткому розподілу завдань та оцінці зусиль."
+  },
+  {
+    "category": "IT: Backend Architecture",
+    "ru": "Разработка Windows-сервисов для обработки XML-данных была частью моей ответственности в компании Axxos.",
+    "en": "Developing Windows services for XML data processing was part of my responsibility at Axxos.",
+    "de": "Die Entwicklung von Windows-Diensten zur XML-Datenverarbeitung gehörte zu meinem Verantwortungsbereich bei Axxos.",
+    "uk": "Розробка Windows-сервісів для обробки XML-даних була частиною моєї відповідальності в компанії Axxos."
+  },
+  {
+    "category": "IT: Full-stack Development",
+    "ru": "Мой стек технологий включает C#, TypeScript, Python и современные фронтенд-фреймворки.",
+    "en": "My tech stack includes C#, TypeScript, Python, and modern frontend frameworks.",
+    "de": "Mein Tech-Stack umfasst C#, TypeScript, Python und moderne Frontend-Frameworks.",
+    "uk": "Мій стек технологій включає C#, TypeScript, Python та сучасні фронтенд-фреймворки."
+  },
+  {
+    "category": "IT: Senior Leadership",
+    "ru": "Я стремлюсь создавать программное обеспечение, которое соответствует бизнес-целям и ожиданиям пользователей.",
+    "en": "I consistently deliver high-quality software that meets business goals and user expectations.",
+    "de": "Ich liefere konsistent hochwertige Software, die den Geschäftszielen und Nutzererwartungen entspricht.",
+    "uk": "Я прагну створювати програмне забезпечення, яке відповідає бізнес-цілям та очікуванням користувачів."
+  },
+  {
+    "category": "IT: QA & Reliability",
+    "ru": "Я обладаю глубокими знаниями в области автоматизации тестирования и обеспечения качества ПО.",
+    "en": "I have deep expertise in test automation and software quality assurance.",
+    "de": "Ich verfüge über fundierte Fachkenntnisse in der Testautomatisierung und Softwarequalitätssicherung.",
+    "uk": "Я маю глибокі знання у сфері автоматизації тестування та забезпечення якості ПЗ."
+  }
+]
