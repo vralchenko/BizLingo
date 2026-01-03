@@ -1,106 +1,68 @@
-import 'phrase.dart';
-
-List<Phrase> getInitialPhrases() {
-  return [
-    Phrase(ru: "Дайте нам знать, если что-то изменится", en: "Let us know if anything changes", de: "Lassen Sie uns wissen, wenn sich etwas ändert", uk: "Повідомте нас, якщо щось зміниться"),
-    Phrase(ru: "Жду вашего ответа", en: "I look forward to hearing from you", de: "Ich freue mich auf Ihre Antwort", uk: "Очікую на вашу відповідь"),
-    Phrase(ru: "Мы ценим сотрудничество", en: "We appreciate your cooperation", de: "Wir schätzen Ihre Zusammenarbeit", uk: "Ми цінуємо співпрацю"),
-    Phrase(ru: "Свяжитесь при возможности", en: "Contact me at your convenience", de: "Kontaktieren Sie mich, wenn es Ihnen passt", uk: "Зв'яжіться зі мною, коли зручно"),
-    Phrase(ru: "Я скоро отвечу вам", en: "I will get back to you soon", de: "Ich werde mich bald bei Ihnen melden", uk: "Я незабаром відповім вам"),
-    Phrase(ru: "Давайте подведем итоги", en: "Let's wrap this up", de: "Lassen Sie uns das zusammenfassen", uk: "Давайте підведемо підсумки"),
-    Phrase(ru: "Мы на одной волне", en: "We are on the same page", de: "Wir sind auf einer Wellenlänge", uk: "Ми на одній хвилі"),
-    Phrase(ru: "Это беспроигрышный вариант", en: "It is a win-win situation", de: "Das ist eine Win-Win-Situation", uk: "Це безпрограшний варіант"),
-    Phrase(ru: "Можете пояснить это?", en: "Could you clarify that?", de: "Könnten Sie das klären?", uk: "Чи можете ви пояснити це?"),
-    Phrase(ru: "В долгосрочной перспективе", en: "In the long run", de: "Auf lange Sicht", uk: "У довгостроковій перспективі"),
-    Phrase(ru: "Прийти к соглашению", en: "Reach an agreement", de: "Eine Einigung erzielen", uk: "Дійти до згоди"),
-    Phrase(ru: "Принять решение", en: "Make a decision", de: "Eine Entscheidung treffen", uk: "Прийняти рішення"),
-    Phrase(ru: "Внести вклад", en: "Make a contribution", de: "Einen Beitrag leisten", uk: "Внести внесок"),
-    Phrase(ru: "Уложиться в дедлайн", en: "Meet a deadline", de: "Eine Frist einhalten", uk: "Вкластися в дедлайн"),
-    Phrase(ru: "Провести встречу", en: "Hold a meeting", de: "Ein Meeting abhalten", uk: "Провести зустріч"),
-    Phrase(ru: "Обратить внимание на детали", en: "Pay attention to details", de: "Auf Details achten", uk: "Звернути увагу на деталі"),
-    Phrase(ru: "Это не входит в мои обязанности", en: "This is outside my responsibilities", de: "Das liegt außerhalb meiner Verantwortung", uk: "Це не входить до моїх обов'язків"),
-    Phrase(ru: "Давайте перейдем к делу", en: "Let's get down to business", de: "Kommen wir zur Sache", uk: "Давайте перейдемо до справи"),
-    Phrase(ru: "Вкратце", en: "In a nutshell", de: "Kurz gesagt", uk: "Коротко кажучи"),
-    Phrase(ru: "Сдвинуть с мертвой точки", en: "Get the ball rolling", de: "Den Ball ins Rollen bringen", uk: "Зрушити з місця"),
-    Phrase(ru: "Я полностью согласен", en: "I couldn't agree more", de: "Ich stimme voll und ganz zu", uk: "Я повністю згоден"),
-    Phrase(ru: "У меня другое мнение", en: "I have a different opinion", de: "Ich habe eine andere Meinung", uk: "У мене інша думка"),
-    Phrase(ru: "Давайте обсудим это позже", en: "Let's discuss it later", de: "Lassen Sie uns das später besprechen", uk: "Давайте обговоримо це пізніше"),
-    Phrase(ru: "Это главный приоритет", en: "This is a top priority", de: "Das hat oberste Priorität", uk: "Це головний пріоритет"),
-    Phrase(ru: "Мы немного отклонились от темы", en: "We are getting a bit off track", de: "Wir kommen etwas vom Thema ab", uk: "Ми трохи відхилилися від теми"),
-    Phrase(ru: "Вернемся к обсуждению", en: "Let's get back to the point", de: "Kommen wir zum Punkt zurück", uk: "Повернемося до обговорення"),
-    Phrase(ru: "Я подготовлю отчет", en: "I will prepare a report", de: "Ich werde einen Bericht vorbereiten", uk: "Я підготую звіт"),
-    Phrase(ru: "Нам нужно сократить расходы", en: "We need to cut costs", de: "Wir müssen die Kosten senken", uk: "Нам потрібно скоротити витрати"),
-    Phrase(ru: "Это стоит обдумать", en: "It is worth considering", de: "Es ist überlegenswert", uk: "Це варто обдумати"),
-    Phrase(ru: "Я уточню это", en: "I will look into that", de: "Ich werde mich darum kümmern", uk: "Я уточню це"),
-    Phrase(ru: "Это зависит от ситуации", en: "It depends on the situation", de: "Es hängt von der Situation ab", uk: "Це залежить від ситуації"),
-    Phrase(ru: "Насколько я знаю", en: "As far as I know", de: "Soweit ich weiß", uk: "Наскільки я знаю"),
-    Phrase(ru: "Честно говоря", en: "To be honest", de: "Um ehrlich zu sein", uk: "Чесно кажучи"),
-    Phrase(ru: "С моей точки зрения", en: "From my point of view", de: "Aus meiner Sicht", uk: "З мого погляду"),
-    Phrase(ru: "Я ценю вашу помощь", en: "I appreciate your help", de: "Ich schätze Ihre Hilfe", uk: "Я ціную вашу допомогу"),
-    Phrase(ru: "Давайте назначим встречу", en: "Let's schedule a meeting", de: "Lassen Sie uns ein Meeting vereinbaren", uk: "Давайте призначимо зустріч"),
-    Phrase(ru: "Я перезвоню вам", en: "I will call you back", de: "Ich rufe Sie zurück", uk: "Я передзвоню вам"),
-    Phrase(ru: "Приятно познакомиться", en: "It is a pleasure to meet you", de: "Es ist eine Freude, Sie kennenzulernen", uk: "Приємно познайомитися"),
-    Phrase(ru: "Как дела в бизнесе?", en: "How is business going?", de: "Wie läuft das Geschäft?", uk: "Як справи в бізнесі?"),
-    Phrase(ru: "Мы должны сосредоточиться на", en: "We should focus on", de: "Wir sollten uns auf konzentrieren", uk: "Ми повинні зосередитися на"),
-    Phrase(ru: "Это сложный вопрос", en: "This is a tough question", de: "Das ist eine schwierige Frage", uk: "Це складне питання"),
-    Phrase(ru: "Я не совсем понимаю", en: "I don't quite understand", de: "Ich verstehe nicht ganz", uk: "Я не зовсім розумію"),
-    Phrase(ru: "Не могли бы вы повторить?", en: "Could you please repeat that?", de: "Könnten Sie das bitte wiederholen?", uk: "Чи не могли б ви повторити?"),
-    Phrase(ru: "Спасибо за ваше время", en: "Thank you for your time", de: "Vielen Dank für Ihre Zeit", uk: "Дякую за ваш час"),
-    Phrase(ru: "Все под контролем", en: "Everything is under control", de: "Alles ist unter Kontrolle", uk: "Все під контролем"),
-    Phrase(ru: "Мы должны действовать быстро", en: "We must act quickly", de: "Wir müssen schnell handeln", uk: "Ми повинні діяти швидко"),
-    Phrase(ru: "Это отличная возможность", en: "This is a great opportunity", de: "Das ist eine großartige Gelegenheit", uk: "Це чудова можливість"),
-    Phrase(ru: "Я открыт для предложений", en: "I am open to suggestions", de: "Ich bin offen für Vorschläge", uk: "Я відкритий для пропозицій"),
-    Phrase(ru: "Давайте взвесим все за и против", en: "Let's weigh the pros and cons", de: "Lassen Sie uns die Vor- und Nachteile abwägen", uk: "Давайте зважимо всі за і проти"),
-    Phrase(ru: "Это может сработать", en: "This might work", de: "Das könnte funktionieren", uk: "Це може спрацювати"),
-    Phrase(ru: "Я сомневаюсь в этом", en: "I doubt that", de: "Ich bezweifle das", uk: "Я сумніваюся в цьому"),
-    Phrase(ru: "Нам нужно больше данных", en: "We need more data", de: "Wir brauchen mehr Daten", uk: "Нам потрібно більше даних"),
-    Phrase(ru: "Результаты впечатляют", en: "The results are impressive", de: "Die Ergebnisse sind beeindruckend", uk: "Результати вражають"),
-    Phrase(ru: "Это пустая трата времени", en: "It is a waste of time", de: "Das ist Zeitverschwendung", uk: "Це марна трата часу"),
-    Phrase(ru: "Я беру ответственность", en: "I take responsibility", de: "Ich übernehme die Verantwortung", uk: "Я беру відповідальність"),
-    Phrase(ru: "Проект идет по плану", en: "The project is on track", de: "Das Projekt ist auf Kurs", uk: "Проект йде за планом"),
-    Phrase(ru: "У нас возникла проблема", en: "We have run into a problem", de: "Wir sind auf ein Problem gestoßen", uk: "У нас виникла проблема"),
-    Phrase(ru: "Как продвигается проект?", en: "How is the project coming along?", de: "Wie kommt das Projekt voran?", uk: "Як просувається проект?"),
-    Phrase(ru: "Это выходит за рамки бюджета", en: "It is over budget", de: "Es überschreitet das Budget", uk: "Це виходить за рамки бюджету"),
-    Phrase(ru: "Нам нужно найти решение", en: "We need to find a solution", de: "Wir müssen eine Lösung finden", uk: "Нам потрібно знайти рішення"),
-    Phrase(ru: "Это имеет смысл", en: "That makes sense", de: "Das macht Sinn", uk: "Це має сенс"),
-    Phrase(ru: "Я бы хотел добавить", en: "I would like to add", de: "Ich möchte hinzufügen", uk: "Я хотів би додати"),
-    Phrase(ru: "Позвольте мне объяснить", en: "Let me explain", de: "Lassen Sie mich erklären", uk: "Дозвольте мені пояснити"),
-    Phrase(ru: "В конечном итоге", en: "At the end of the day", de: "Am Ende des Tages", uk: "В кінцевому підсумку"),
-    Phrase(ru: "Держать в курсе", en: "Keep someone in the loop", de: "Jemanden auf dem Laufenden halten", uk: "Тримати в курсі"),
-    Phrase(ru: "Справиться с задачей", en: "Manage a task", de: "Eine Aufgabe bewältigen", uk: "Впоратися з завданням"),
-    Phrase(ru: "Расставить приоритеты", en: "Set priorities", de: "Prioritäten setzen", uk: "Розставити пріоритети"),
-    Phrase(ru: "Общая картина", en: "The big picture", de: "Das große Ganze", uk: "Загальна картина"),
-    Phrase(ru: "Достичь цели", en: "Achieve a goal", de: "Ein Ziel erreichen", uk: "Досягти мети"),
-    Phrase(ru: "Провести исследование", en: "Carry out research", de: "Forschung durchführen", uk: "Провести дослідження"),
-    Phrase(ru: "Принять вызов", en: "Take on a challenge", de: "Eine Herausforderung annehmen", uk: "Прийняти виклик"),
-    Phrase(ru: "Повысить эффективность", en: "Improve efficiency", de: "Die Effizienz steigern", uk: "Підвищити ефективність"),
-    Phrase(ru: "Расширить рынок", en: "Expand the market", de: "Den Markt erweitern", uk: "Розширити ринок"),
-    Phrase(ru: "Привлечь клиентов", en: "Attract customers", de: "Kunden gewinnen", uk: "Залучити клієнтів"),
-    Phrase(ru: "Запустить продукт", en: "Launch a product", de: "Ein Produkt auf den Markt bringen", uk: "Запустити продукт"),
-    Phrase(ru: "Предварительный план", en: "A tentative plan", de: "Ein vorläufiger Plan", uk: "Попередній план"),
-    Phrase(ru: "Разногласия", en: "A point of disagreement", de: "Ein Streitpunkt", uk: "Розбіжності"),
-    Phrase(ru: "Конкурентное преимущество", en: "Competitive advantage", de: "Wettbewerbsvorteil", uk: "Конкурентна перевага"),
-    Phrase(ru: "Корпоративная культура", en: "Corporate culture", de: "Unternehmenskultur", uk: "Корпоративна культура"),
-    Phrase(ru: "Основная компетенция", en: "Core competency", de: "Kernkompetenz", uk: "Основна компетенція"),
-    Phrase(ru: "Денежный поток", en: "Cash flow", de: "Cashflow", uk: "Грошовий потік"),
-    Phrase(ru: "Целевая аудитория", en: "Target audience", de: "Zielgruppe", uk: "Цільова аудиторія"),
-    Phrase(ru: "Обратная связь", en: "Feedback", de: "Feedback", uk: "Зворотний зв'язок"),
-    Phrase(ru: "Прийти к компромиссу", en: "Reach a compromise", de: "Einen Kompromiss finden", uk: "Дійти до компромісу"),
-    Phrase(ru: "Сорвать сделку", en: "Break a deal", de: "Einen Deal platzen lassen", uk: "Зірвати угоду"),
-    Phrase(ru: "Заключить контракт", en: "Sign a contract", de: "Einen Vertrag unterzeichnen", uk: "Укласти контракт"),
-    Phrase(ru: "Вести переговоры", en: "Conduct negotiations", de: "Verhandlungen führen", uk: "Вести переговори"),
-    Phrase(ru: "Поддерживать отношения", en: "Maintain relations", de: "Beziehungen pflegen", uk: "Підтримувати стосунки"),
-    Phrase(ru: "Подвести черту", en: "Draw the line", de: "Eine Grenze ziehen", uk: "Провести межу"),
-    Phrase(ru: "Поделиться мыслями", en: "Share thoughts", de: "Gedanken teilen", uk: "Поділитися думками"),
-    Phrase(ru: "Взять на себя инициативу", en: "Take the initiative", de: "Die Initiative ergreifen", uk: "Взяти ініціативу на себе"),
-    Phrase(ru: "Оправдать ожидания", en: "Meet expectations", de: "Den Erwartungen entsprechen", uk: "Відповісти очікуванням"),
-    Phrase(ru: "Служебная записка", en: "Internal memo", de: "Interne Notiz", uk: "Службова записка"),
-    Phrase(ru: "Повестка дня", en: "The agenda", de: "Die Tagesordnung", uk: "Порядок денний"),
-    Phrase(ru: "Протокол встречи", en: "Minutes of the meeting", de: "Protokoll der Sitzung", uk: "Протокол зустрічі"),
-    Phrase(ru: "Кадровые перестановки", en: "Staff turnover", de: "Personalfluktuation", uk: "Кадрові перестановки"),
-    Phrase(ru: "Совет директоров", en: "Board of directors", de: "Vorstand", uk: "Рада директорів"),
-    Phrase(ru: "Годовой отчет", en: "Annual report", de: "Jahresbericht", uk: "Річний звіт"),
-    Phrase(ru: "Филиал компании", en: "Branch of the company", de: "Niederlassung des Unternehmens", uk: "Філія компанії"),
-    Phrase(ru: "Штаб-квартира", en: "Headquarters", de: "Hauptsitz", uk: "Штаб-квартира"),
-  ];
-}
+const Map<String, List<Map<String, String>>> businessPhrases = {
+    "General Business": [
+        {
+            "en": "Let's align on the next steps to ensure smooth progress.",
+            "ru": "Давайте согласуем следующие шаги, чтобы обеспечить плавное продвижение.",
+            "de": "Stimmen wir uns über die nächsten Schritte ab, um einen reibungslosen Ablauf zu gewährleisten.",
+            "uk": "Давайте узгодимо наступні кроки, щоб забезпечити плавний прогрес."
+        },
+        {
+            "en": "I appreciate your transparency, it helps us make informed decisions.",
+            "ru": "Я ценю вашу открытость, это помогает нам принимать обоснованные решения.",
+            "de": "Ich schätze Ihre Transparenz, sie hilft uns, fundierte Entscheidungen zu treffen.",
+            "uk": "Я ціную вашу відкритість, це допомагає нам приймати зважені рішення."
+        },
+        {
+            "en": "Could you clarify the key priorities for this quarter?",
+            "ru": "Не могли бы вы уточнить ключевые приоритеты на этот квартал?",
+            "de": "Könnten Sie die wichtigsten Prioritäten für dieses Quartal klären?",
+            "uk": "Чи не могли б ви уточнити ключові пріоритети на цей квартал?"
+        },
+        {
+            "en": "We need to schedule a follow-up meeting to discuss the feedback.",
+            "ru": "Нам нужно запланировать повторную встречу, чтобы обсудить отзывы.",
+            "de": "Wir müssen ein Folgetreffen vereinbaren, um das Feedback zu besprechen.",
+            "uk": "Нам потрібно запланувати наступну зустріч, щоб обговорити відгуки."
+        },
+        {
+            "en": "This approach will allow us to deliver measurable value in the short term.",
+            "ru": "Такой подход позволит нам принести измеримую ценность в краткосрочной перспективе.",
+            "de": "Dieser Ansatz wird es uns ermöglichen, kurzfristig messbare Werte zu liefern.",
+            "uk": "Такий підхід дозволить нам забезпечити вимірювану цінність у короткостроковій перспективі."
+        }
+    ],
+    "IT & Software": [
+        {
+            "en": "We need to refactor this module to improve scalability.",
+            "ru": "Нам нужно провести рефакторинг этого модуля, чтобы улучшить масштабируемость.",
+            "de": "Wir müssen dieses Modul refactorieren, um die Skalierbarkeit zu verbessern.",
+            "uk": "Нам потрібно рефакторити цей модуль, щоб покращити масштабованість."
+        },
+        {
+            "en": "The deployment was successful, and all tests passed.",
+            "ru": "Деплой прошел успешно, и все тесты были пройдены.",
+            "de": "Das Deployment war erfolgreich und alle Tests wurden bestanden.",
+            "uk": "Розгортання пройшло успішно, і всі тести були пройдені."
+        },
+        {
+            "en": "We should perform a code review before merging the pull request.",
+            "ru": "Нам следует провести проверку кода перед слиянием пул-реквеста.",
+            "de": "Wir sollten einen Code-Review durchführen, bevor wir den Pull-Request mergen.",
+            "uk": "Нам слід провести рев'ю коду перед злиттям пул-реквесту."
+        }
+    ],
+    "Sales": [
+        {
+            "en": "We need to identify the pain points of our potential customers.",
+            "ru": "Нам нужно определить болевые точки наших потенциальных клиентов.",
+            "de": "Wir müssen die Schwachstellen unserer potenziellen Kunden identifizieren.",
+            "uk": "Нам потрібно визначити «болі» наших потенційних клієнтів."
+        },
+        {
+            "en": "Our goal is to increase the conversion rate by ten percent this month.",
+            "ru": "Наша цель — увеличить коэффициент конверсии на десять процентов в этом месяце.",
+            "de": "Unser Ziel ist es, die Konversionsrate in diesem Monat um zehn Prozent zu steigern.",
+            "uk": "Наша мета — збільшити показник конверсії на десять відсотків у цьому місяці."
+        }
+    ]
+};

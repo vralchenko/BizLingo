@@ -1,101 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <base href="$FLUTTER_BASE_HREF">
     <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>BizLingo</title>
-    <link rel="manifest" href="manifest.json">
+    <title>BizLingo AI</title>
     <script src="coi-serviceworker.js"></script>
-    <style id="splash-screen-style">
-        html { height: 100% }
-        body {
-            margin: 0;
-            min-height: 100%;
-            background-color: #0B013D;
-            font-family: sans-serif;
-        }
-        .center {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        #status {
-            position: fixed;
-            bottom: 8px;
-            left: 12px;
-            color: white;
-            font-size: 14px;
-            font-family: monospace;
-            z-index: 9999;
-        }
+    <style>
+        body { background-color: #001B3D; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #ffffff; font-family: sans-serif; overflow: hidden; }
+        #custom-splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #001B3D; display: flex; z-index: 999999; flex-direction: column; align-items: center; justify-content: center; }
+        #splash-img { width: 140px; height: 140px; margin-bottom: 20px; border-radius: 30px; }
+        .progress-bar { width: 280px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+        #progress-fill { width: 0%; height: 100%; background: #4facfe; transition: width 0.3s; }
+        #status-text { font-size: 11px; margin-top: 10px; color: #00f2fe; text-align: center; }
     </style>
     <script type="module">
         import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.80/lib/index.min.js";
         window.WebLLM = webllm;
     </script>
     <script>
-        let engine = null;
-        let isReady = false;
-
-        window.removeSplashFromWeb = function() {
-            document.getElementById("splash")?.remove();
-            document.getElementById("splash-branding")?.remove();
-            document.body.style.background = "transparent";
+        window.engine = null;
+        window.isReady = false;
+        window.is_webllm_ready = function() { return window.isReady; };
+        window.webllm_validate = async function(userText, targetText) {
+            if (!window.engine) return "YES (No Engine)";
+            const out = await window.engine.chat.completions.create({
+                messages: [
+                    {
+                        role: "system",
+                        content: "You are a Business English coach. Accept any semantically correct, professional, and natural translation (formal, neutral, or friendly). Answer ONLY with 'YES' or 'NO', then start a new line with 'Reason:' and explain why briefly in Russian."
+                    },
+                    {role: "user", content: `Goal: "${targetText}" | User translation: "${userText}". Valid? YES/NO and Russian reason.`}
+                ],
+                temperature: 0.3
+            });
+            return out.choices[0].message.content;
         };
-
         async function initWebLLM() {
             try {
-                const webllm = window.WebLLM;
-                if (!webllm) return;
                 const initProgressCallback = (report) => {
-                    document.getElementById("status").textContent = report.text;
+                    document.getElementById("status-text").textContent = report.text;
+                    if (report.progress !== undefined) { document.getElementById("progress-fill").style.width = (report.progress * 100) + "%"; }
                 };
-                engine = await webllm.CreateMLCEngine(
-                    "Llama-3.2-1B-Instruct-q4f32_1-MLC",
-                    { initProgressCallback }
-                );
-                isReady = true;
-                document.getElementById("status").textContent = "✅ WebLLM ready";
-            } catch (e) {
-                console.error(e);
-                document.getElementById("status").textContent = "❌ WebLLM failed";
-            }
+                window.engine = await window.WebLLM.CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC", { initProgressCallback });
+                window.isReady = true;
+                setTimeout(() => { document.getElementById('custom-splash').remove(); }, 1000);
+            } catch (e) { document.getElementById("status-text").textContent = "Error: " + e; }
         }
-
-        window.addEventListener("load", () => {
-            setTimeout(initWebLLM, 500);
-        });
-
-        window.is_webllm_ready = function() {
-            return isReady && engine !== null;
-        };
-
-        window.webllm_chat = async function(userText, targetText) {
-            if (!engine) return "AI not ready";
-            const prompt = `Compare translations. User: "${userText}", Target: "${targetText}". Are they semantically equivalent? Answer YES or NO and explain.`;
-            try {
-                const output = await engine.chat.completions.create({
-                    messages: [{ role: "user", content: prompt }],
-                });
-                return output.choices[0].message.content;
-            } catch (e) {
-                console.error(e);
-                return "ERROR";
-            }
-        };
+        window.addEventListener("load", initWebLLM);
     </script>
 </head>
-<body style="background-color: #0B013D;">
-<picture id="splash">
-    <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
-    <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
-    <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
-</picture>
-<div id="status">⏳ WebLLM loading...</div>
+<body>
+<div id="custom-splash">
+    <img id="splash-img" src="assets/icon.png">
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <div id="status-text">Readying AI...</div>
+</div>
 <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

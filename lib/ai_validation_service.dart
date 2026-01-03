@@ -2,103 +2,54 @@
 library web_interop;
 
 import 'dart:async';
-import 'package:flutter/foundation.dart';
 import 'package:js/js.dart';
 import 'package:js/js_util.dart' as js_util;
 
-@JS('webllm_chat')
-external Object _webllmChat(String userText, String targetText);
-
+@JS('webllm_validate')
+external Object _webllmValidate(String userText, String targetText);
 @JS('is_webllm_ready')
 external bool _isWebLLMReady();
 
+class ValidationResult {
+  final bool isValid;
+  final String reason;
+  ValidationResult(this.isValid, this.reason);
+}
+
 class AiValidationService {
   bool _isInitialized = false;
-  bool _isInitializing = false;
-
-  bool get isInitializing => _isInitializing;
   bool get isInitialized => _isInitialized;
 
   Future<void> initialize() async {
-    if (_isInitialized || _isInitializing) return;
-    _isInitializing = true;
+    if (_isInitialized) return;
+    while (true) {
+      try { if (_isWebLLMReady()) { _isInitialized = true; return; } } catch (_) {}
+      await Future.delayed(const Duration(seconds: 1));
+    }
+  }
+
+  Future<ValidationResult> detailedValidate(String user, String target) async {
+    final cleanUser = user.trim().toLowerCase();
+    final cleanTarget = target.trim().toLowerCase();
+
+    if (cleanUser == cleanTarget) {
+      return ValidationResult(true, "Точное совпадение.");
+    }
 
     try {
-      if (kIsWeb) {
-        int attempts = 0;
-        while (attempts < 60) {
-          try {
-            if (_isWebLLMReady()) break;
-          } catch (_) {}
-          await Future.delayed(const Duration(seconds: 2));
-          attempts++;
-        }
+      final promise = _webllmValidate(user, target);
+      final response = await js_util.promiseToFuture(promise);
+      final String aiText = response.toString();
+
+      bool isYes = aiText.toUpperCase().contains("YES");
+      String explanation = aiText;
+      if (aiText.toLowerCase().contains("reason:")) {
+        explanation = aiText.substring(aiText.toLowerCase().indexOf("reason:") + 7).trim();
       }
-      _isInitialized = true;
+
+      return ValidationResult(isYes, explanation);
     } catch (e) {
-      _isInitialized = false;
-    } finally {
-      _isInitializing = false;
+      return ValidationResult(false, "Ошибка валидации: $e");
     }
   }
-
-  Future<ValidationResult> validateTranslation({
-    required String originalText,
-    required String userTranslation,
-    required String correctTranslation,
-    required String learningLanguage,
-    required String translationLanguage,
-  }) async {
-    if (!_isInitialized) {
-      return ValidationResult(
-        isValid: false,
-        confidence: 0.0,
-        feedback: "AI not ready",
-      );
-    }
-
-    try {
-      final response = await _callWebLLM(userTranslation, correctTranslation);
-      final normalized = response.toUpperCase();
-      final isValid = normalized.contains("YES");
-
-      return ValidationResult(
-        isValid: isValid,
-        confidence: 0.8,
-        feedback: response,
-      );
-    } catch (e) {
-      return ValidationResult(
-        isValid: false,
-        confidence: 0.0,
-        feedback: "AI error: $e",
-      );
-    }
-  }
-
-  Future<String> _callWebLLM(String userText, String targetText) async {
-    try {
-      final Object promise = _webllmChat(userText, targetText);
-      final dynamic result = await js_util.promiseToFuture(promise);
-      return result?.toString() ?? "No response";
-    } catch (e) {
-      return "JS call failed: $e";
-    }
-  }
-
-  void dispose() {
-    _isInitialized = false;
-  }
-}
-
-class ValidationResult {
-  final bool isValid;
-  final double confidence;
-  final String? feedback;
-
-  ValidationResult({
-    required this.isValid,
-    required this.confidence,
-    this.feedback,
-  });
 }
