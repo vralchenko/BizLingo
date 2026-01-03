@@ -46,3 +46,5 @@ app.*.map.json
 
 # AI Model files (too large for Git)
 assets/models/*.bin
+assets/models/
+*.gguf

@@ -1,0 +1,27 @@
+# Project Rules: BizLingo (Flutter Web)
+
+## General AI Behavior
+* **Languages**: Use English for all code comments, documentation, and commit messages. Never add comments in Russian.
+* **Preservation**: Do not delete or refactor existing functionality unless explicitly requested. Always aim to extend, not replace.
+* **State Management**: When modifying Dialogs or BottomSheets, ensure state updates are handled correctly (e.g., using `StatefulBuilder`) to reflect UI changes immediately.
+
+## Tech Stack Specifics
+* **Flutter Web**: Optimize for Web performance. Use `CanvasKit` renderer for AI-heavy tasks.
+* **Local AI**: When working with `Llama-3.2-1B.Q4_K_M.gguf`, ensure the model initialization is handled asynchronously with proper loading indicators.
+
+## Deployment Workflow
+Always follow this specific sequence for deploying to GitHub Pages to avoid build loss:
+1. `git checkout main`
+2. `flutter build web --release --base-href "/BizLingo/"`
+3. `cp -r build/web /tmp/bizlingo_build`
+4. `git checkout gh-pages`
+5. `find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +`
+6. `cp -r /tmp/bizlingo_build/. .`
+7. `git add .`
+8. `git commit -m "deploy: update"`
+9. `git push origin gh-pages --force`
+10. `git checkout main`
+
+## Code Quality
+* Ensure all `Phrase` model updates include support for `ru`, `en`, `de`, and `uk`.
+* Maintain semantic consistency in translations.
