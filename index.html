@@ -1,34 +1,54 @@
 <!DOCTYPE html><html><head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/BizLingo/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="bizlingo">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <title>bizlingo</title>
-  <link rel="manifest" href="manifest.json">
+    <base href="/BizLingo/">
+    <meta charset="UTF-8">
+    <title>BizLingo AI</title>
+    <script src="coi-serviceworker.js"></script>
+    <style>
+        body { background-color: #001B3D; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #ffffff; font-family: sans-serif; overflow: hidden; }
+        #custom-splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #001B3D; display: flex; z-index: 999999; flex-direction: column; align-items: center; justify-content: center; }
+        #splash-img { width: 140px; height: 140px; margin-bottom: 20px; border-radius: 30px; }
+        .progress-bar { width: 280px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+        #progress-fill { width: 0%; height: 100%; background: #4facfe; transition: width 0.3s; }
+        #status-text { font-size: 11px; margin-top: 10px; color: #00f2fe; text-align: center; }
+    </style>
+    <script type="module">
+        import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.80/lib/index.min.js";
+        window.WebLLM = webllm;
+    </script>
+    <script>
+        window.engine = null;
+        window.isReady = false;
+        window.is_webllm_ready = function() { return window.isReady; };
+        window.webllm_validate = async function(userText, targetText) {
+            if (!window.engine) return "YES (No Engine)";
+            const out = await window.engine.chat.completions.create({
+                messages: [
+                    {
+                        role: "system",
+                        content: "You are a Business English coach. Accept any semantically correct, professional, and natural translation (formal, neutral, or friendly). Answer ONLY with 'YES' or 'NO', then start a new line with 'Reason:' and explain why briefly in Russian."
+                    },
+                    {role: "user", content: `Goal: "${targetText}" | User translation: "${userText}". Valid? YES/NO and Russian reason.`}
+                ],
+                temperature: 0.3
+            });
+            return out.choices[0].message.content;
+        };
+        async function initWebLLM() {
+            try {
+                const initProgressCallback = (report) => {
+                    document.getElementById("status-text").textContent = report.text;
+                    if (report.progress !== undefined) { document.getElementById("progress-fill").style.width = (report.progress * 100) + "%"; }
+                };
+                window.engine = await window.WebLLM.CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC", { initProgressCallback });
+                window.isReady = true;
+                setTimeout(() => { document.getElementById('custom-splash').remove(); }, 1000);
+            } catch (e) { document.getElementById("status-text").textContent = "Error: " + e; }
+        }
+        window.addEventListener("load", initWebLLM);
+    </script>
+  
+  
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <style id="splash-screen-style">
     html {
       height: 100%
@@ -94,7 +114,6 @@
       document.body.style.background = "transparent";
     }
   </script>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 </head>
 <body>
   <picture id="splash">
@@ -102,7 +121,12 @@
       <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
       <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
   </picture>
-  <script src="flutter_bootstrap.js" async=""></script>
-
+  
+<div id="custom-splash">
+    <img id="splash-img" src="assets/icon.png">
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <div id="status-text">Readying AI...</div>
+</div>
+<script src="flutter_bootstrap.js" async=""></script>
 
 </body></html>
