@@ -1,9 +1,19 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head>
     <base href="$FLUTTER_BASE_HREF">
     <meta charset="UTF-8">
     <title>BizLingo AI</title>
+    <meta name="description" content="Master Business English and German with AI-powered feedback.">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta property="og:title" content="BizLingo AI">
+    <meta property="og:description" content="Smart Business English & German learning app powered by On-Device AI.">
+    <meta property="og:url" content="https://vralchenko.github.io/BizLingo/">
+    <meta property="og:image" content="https://vralchenko.github.io/BizLingo/icons/Icon-512.png">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
     <script src="coi-serviceworker.js"></script>
     <style>
         body { background-color: #001B3D; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #ffffff; font-family: sans-serif; overflow: hidden; }
@@ -11,7 +21,8 @@
         #splash-img { width: 140px; height: 140px; margin-bottom: 20px; border-radius: 30px; }
         .progress-bar { width: 280px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
         #progress-fill { width: 0%; height: 100%; background: #4facfe; transition: width 0.3s; }
-        #status-text { font-size: 11px; margin-top: 10px; color: #00f2fe; text-align: center; }
+        #status-text { font-size: 11px; margin-top: 10px; color: #00f2fe; text-align: center; max-width: 80%; }
+        #error-log { color: #ff4f4f; font-size: 10px; margin-top: 15px; padding: 10px; text-align: center; display: none; }
     </style>
     <script type="module">
         import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.80/lib/index.min.js";
@@ -23,112 +34,53 @@
         window.is_webllm_ready = function() { return window.isReady; };
         window.webllm_validate = async function(userText, targetText) {
             if (!window.engine) return "YES (No Engine)";
-            const out = await window.engine.chat.completions.create({
-                messages: [
-                    {
-                        role: "system",
-                        content: "You are a Business English coach. Accept any semantically correct, professional, and natural translation (formal, neutral, or friendly). Answer ONLY with 'YES' or 'NO', then start a new line with 'Reason:' and explain why briefly in Russian."
-                    },
-                    {role: "user", content: `Goal: "${targetText}" | User translation: "${userText}". Valid? YES/NO and Russian reason.`}
-                ],
-                temperature: 0.3
-            });
-            return out.choices[0].message.content;
+            try {
+                const out = await window.engine.chat.completions.create({
+                    messages: [
+                        {
+                            role: "system",
+                            content: "You are a Business English coach. Accept any semantically correct, professional, and natural translation. Answer ONLY with 'YES' or 'NO', then start a new line with 'Reason:' and explain why briefly in Russian."
+                        },
+                        {role: "user", content: `Goal: "${targetText}" | User translation: "${userText}". Valid? YES/NO and Russian reason.`}
+                    ],
+                    temperature: 0.3
+                });
+                return out.choices[0].message.content;
+            } catch (e) { return "Error during validation: " + e; }
         };
         async function initWebLLM() {
+            const statusLabel = document.getElementById("status-text");
+            const errorLabel = document.getElementById("error-log");
+            if (!navigator.gpu) {
+                statusLabel.innerHTML = "WebGPU is not supported.<br>Please use Chrome or Edge on Desktop.";
+                return;
+            }
             try {
                 const initProgressCallback = (report) => {
-                    document.getElementById("status-text").textContent = report.text;
-                    if (report.progress !== undefined) { document.getElementById("progress-fill").style.width = (report.progress * 100) + "%"; }
+                    statusLabel.textContent = report.text;
+                    if (report.progress !== undefined) {
+                        document.getElementById("progress-fill").style.width = (report.progress * 100) + "%";
+                    }
                 };
                 window.engine = await window.WebLLM.CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC", { initProgressCallback });
                 window.isReady = true;
                 setTimeout(() => { document.getElementById('custom-splash').remove(); }, 1000);
-            } catch (e) { document.getElementById("status-text").textContent = "Error: " + e; }
+            } catch (e) {
+                statusLabel.textContent = "Initialization failed.";
+                errorLabel.style.display = "block";
+                errorLabel.textContent = e.message;
+            }
         }
         window.addEventListener("load", initWebLLM);
     </script>
-  
-  
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-  <style id="splash-screen-style">
-    html {
-      height: 100%
-    }
-
-    body {
-      margin: 0;
-      min-height: 100%;
-      background-color: #001B3D;
-          background-size: 100% 100%;
-    }
-
-    .center {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    .contain {
-      display:block;
-      width:100%; height:100%;
-      object-fit: contain;
-    }
-
-    .stretch {
-      display:block;
-      width:100%; height:100%;
-    }
-
-    .cover {
-      display:block;
-      width:100%; height:100%;
-      object-fit: cover;
-    }
-
-    .bottom {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      -ms-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-    }
-
-    .bottomLeft {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-
-    .bottomRight {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-  </style>
-  <script id="splash-screen-script">
-    function removeSplashFromWeb() {
-      document.getElementById("splash")?.remove();
-      document.getElementById("splash-branding")?.remove();
-      document.body.style.background = "transparent";
-    }
-  </script>
 </head>
 <body>
-  <picture id="splash">
-      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
-      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
-      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
-  </picture>
-  
 <div id="custom-splash">
     <img id="splash-img" src="icon.png">
     <div class="progress-bar"><div id="progress-fill"></div></div>
     <div id="status-text">Readying AI...</div>
+    <div id="error-log"></div>
 </div>
-<script src="flutter_bootstrap.js" async=""></script>
-
-</body></html>
+<script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
