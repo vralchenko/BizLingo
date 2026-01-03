@@ -56,7 +56,15 @@
 
         async function initWebLLM() {
             const statusLabel = document.getElementById("status-text");
+
+            const timeoutId = setTimeout(() => {
+                if (!window.isReady) {
+                    hideSplash();
+                }
+            }, 15000);
+
             if (!navigator.gpu) {
+                clearTimeout(timeoutId);
                 hideSplash();
                 return;
             }
@@ -69,8 +77,10 @@
                 };
                 window.engine = await window.WebLLM.CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC", { initProgressCallback });
                 window.isReady = true;
+                clearTimeout(timeoutId);
                 hideSplash();
             } catch (e) {
+                clearTimeout(timeoutId);
                 hideSplash();
             }
         }
