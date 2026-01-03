@@ -145,17 +145,9 @@ class _TrainingScreenState extends State<TrainingScreen> {
         _streak++;
         _phrases[_idx].successStreak++;
         if (_phrases[_idx].successStreak >= 3) _phrases[_idx].isLearned = true;
-
         _db.updateProgress(_phrases[_idx].id, _phrases[_idx].successStreak, _phrases[_idx].isLearned);
-        _speak(_phrases[_idx].translatedText, _to);
-
-        if (result.reason.contains("Exact match") || result.reason.isEmpty) {
-          Future.delayed(const Duration(milliseconds: 2500), () {
-            if (mounted && _feedback == "Correct!") _nextPhrase();
-          });
-        }
       } else {
-        _feedback = "Not quite. Correct variant below:";
+        _feedback = "Not quite. Try again!";
         _fbColor = Colors.redAccent;
         _streak = 0;
       }
@@ -251,22 +243,10 @@ class _TrainingScreenState extends State<TrainingScreen> {
             ),
             const SizedBox(height: 40),
             if (_phrases.isNotEmpty) ...[
-              Stack(
-                alignment: Alignment.centerRight,
-                children: [
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 48),
-                    child: Text(_phrases[_idx].originalText,
-                        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.center
-                    ),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.volume_up, color: Color(0xFF001B3D)),
-                    onPressed: () => _speak(_phrases[_idx].originalText, _from),
-                  ),
-                ],
+              Text(
+                  _phrases[_idx].originalText,
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center
               ),
               const SizedBox(height: 20),
               if (_aiExplanation.isNotEmpty)
@@ -289,33 +269,33 @@ class _TrainingScreenState extends State<TrainingScreen> {
                 textAlign: TextAlign.center
             ),
             const SizedBox(height: 12),
-            if (_feedback.isNotEmpty)
+            if (_feedback.isNotEmpty) ...[
               Text(_feedback, style: TextStyle(color: _fbColor, fontWeight: FontWeight.bold)),
-
-            if (_feedback.contains("Correct variant")) ...[
               const SizedBox(height: 12),
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.amber.shade50,
+                  color: _fbColor == Colors.green ? Colors.green.shade50 : Colors.amber.shade50,
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.amber.shade200),
+                  border: Border.all(color: _fbColor == Colors.green ? Colors.green.shade200 : Colors.amber.shade200),
                 ),
                 child: Column(
                   children: [
-                    Text(_phrases[_idx].translatedText,
+                    const Text("Expected translation:", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.blueGrey)),
+                    const SizedBox(height: 4),
+                    Text(
+                      _phrases[_idx].translatedText,
                       style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black87),
                       textAlign: TextAlign.center,
                     ),
                     IconButton(
-                      icon: const Icon(Icons.volume_up, color: Colors.orange),
+                      icon: const Icon(Icons.volume_up, color: Color(0xFF001B3D)),
                       onPressed: () => _speak(_phrases[_idx].translatedText, _to),
                     ),
                   ],
                 ),
               ),
             ],
-
             const SizedBox(height: 20),
             Row(
               children: [
