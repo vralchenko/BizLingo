@@ -62,7 +62,6 @@
                 setTimeout(() => { document.getElementById('custom-splash').remove(); }, 1000);
             } catch (e) {
                 document.getElementById("status-text").textContent = "Error: " + e;
-                // При ошибке всё равно убираем заставку через 3 секунды, чтобы войти в приложение
                 setTimeout(() => { document.getElementById('custom-splash').remove(); }, 3000);
             }
         }
