@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <base href="$FLUTTER_BASE_HREF">
     <meta charset="UTF-8">
@@ -7,7 +8,7 @@
 
     <meta property="og:title" content="BizLingo AI">
     <meta property="og:description" content="Smart Business English learning app.">
-    <meta property="og:image" content="https://vralchenko.github.io/BizLingo/icons/Icon-512.png">
+    <meta property="og:image" content="https://vralchenko.github.io/BizLingo/icon.png">
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
@@ -16,64 +17,118 @@
     <script src="coi-serviceworker.js"></script>
 
     <style>
-        body { background-color: #001B3D; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #ffffff; font-family: sans-serif; overflow: hidden; }
-        #custom-splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #001B3D; display: flex; z-index: 999999; flex-direction: column; align-items: center; justify-content: center; }
-        #splash-img { width: 140px; height: 140px; margin-bottom: 20px; border-radius: 30px; }
-        .progress-bar { width: 280px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
-        #progress-fill { width: 0%; height: 100%; background: #4facfe; transition: width 0.3s; }
-        #status-text { font-size: 11px; margin-top: 10px; color: #00f2fe; text-align: center; }
+        body {
+            background-color: #001B3D;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #ffffff;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        #custom-splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #001B3D;
+            display: flex;
+            z-index: 999999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #splash-img {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 20px;
+            border-radius: 30px;
+        }
+
+        .progress-bar {
+            width: 280px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        #progress-fill {
+            width: 0%;
+            height: 100%;
+            background: #4facfe;
+            transition: width 0.3s;
+        }
+
+        #status-text {
+            font-size: 11px;
+            margin-top: 10px;
+            color: #00f2fe;
+            text-align: center;
+        }
     </style>
 
-    <script type="module">
-        import * as webllm from "https://cdn.jsdelivr.net/npm/@mlc-ai/web-llm@0.2.80/lib/index.min.js";
-        window.WebLLM = webllm;
-    </script>
-
     <script>
-        window.engine = null;
         window.isReady = false;
-        window.is_webllm_ready = function() { return window.isReady; };
+        window.is_webllm_ready = function () { return window.isReady; };
 
-        window.webllm_validate = async function(userText, targetText) {
-            if (!window.engine) return "YES (No Engine)";
-            const out = await window.engine.chat.completions.create({
-                messages: [
-                    {
-                        role: "system",
-                        content: "You are a Business English coach. Accept any semantically correct, professional, and natural translation. Answer ONLY with 'YES' or 'NO', then start a new line with 'Reason:' and explain why briefly in Russian."
+        window.webllm_validate = async function (userText, targetText) {
+            try {
+                const response = await fetch("{{GROQ_API_URL}}", {
+                    method: "POST",
+                    headers: {
+                        "Authorization": "Bearer {{GROQ_API_KEY}}",
+                        "Content-Type": "application/json"
                     },
-                    {role: "user", content: `Goal: "${targetText}" | User translation: "${userText}". Valid? YES/NO and Russian reason.`}
-                ],
-                temperature: 0.3
-            });
-            return out.choices[0].message.content;
+                    body: JSON.stringify({
+                        model: "{{AI_MODEL_NAME}}",
+                        messages: [
+                            {
+                                role: "system",
+                                content: "You are a Business English coach. Accept any semantically correct, professional, and natural translation. Answer ONLY with 'YES' or 'NO', then start a new line with 'Reason:' and explain why briefly in Russian."
+                            },
+                            { role: "user", content: `Goal: "${targetText}" | User translation: "${userText}". Valid? YES/NO and Russian reason.` }
+                        ],
+                        temperature: 0.3
+                    })
+                });
+                const out = await response.json();
+                return out.choices[0].message.content;
+            } catch (e) {
+                console.error("Groq Error:", e);
+                return "NO. Reason: Ошибка подключения к API: " + e.message;
+            }
         };
 
-        async function initWebLLM() {
-            try {
-                const initProgressCallback = (report) => {
-                    document.getElementById("status-text").textContent = report.text;
-                    if (report.progress !== undefined) {
-                        document.getElementById("progress-fill").style.width = (report.progress * 100) + "%";
-                    }
-                };
-                window.engine = await window.WebLLM.CreateMLCEngine("Llama-3.2-1B-Instruct-q4f32_1-MLC", { initProgressCallback });
-                window.isReady = true;
-                setTimeout(() => { document.getElementById('custom-splash').remove(); }, 1000);
-            } catch (e) {
-                document.getElementById("status-text").textContent = "Error: " + e;
-                setTimeout(() => { document.getElementById('custom-splash').remove(); }, 3000);
-            }
+        async function initAI() {
+            // Instant ready for presentation
+            document.getElementById("status-text").textContent = "Groq AI Engine Ready";
+            document.getElementById("progress-fill").style.width = "100%";
+            window.isReady = true;
+            setTimeout(() => {
+                const splash = document.getElementById('custom-splash');
+                if (splash) splash.remove();
+            }, 500);
         }
-        window.addEventListener("load", initWebLLM);
+        window.addEventListener("load", initAI);
     </script>
 </head>
+
 <body>
-<div id="custom-splash">
-    <img id="splash-img" src="icon.png">
-    <div class="progress-bar"><div id="progress-fill"></div></div>
-    <div id="status-text">Readying AI...</div>
-</div>
-<script src="flutter_bootstrap.js" async></script>
+    <div id="custom-splash">
+        <img id="splash-img" src="icon.png">
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+        <div id="status-text">Readying AI...</div>
+    </div>
+    <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
