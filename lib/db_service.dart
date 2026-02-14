@@ -11,8 +11,7 @@ class DbService {
     if (_isLoaded) return;
     try {
       final String response = await rootBundle.loadString('assets/phrases.json');
-      final List<dynamic> jsonList = json.decode(response);
-      _allPhrases = jsonList.cast<Map<String, dynamic>>();
+      _allPhrases = json.decode(response).cast<Map<String, dynamic>>();
 
       // Inject demo phrases if missing (Critical for Portfolio Demo)
       final List<Map<String, dynamic>> demoPhrasesData = [
