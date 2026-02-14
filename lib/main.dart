@@ -106,7 +106,9 @@ class _TrainingScreenState extends State<TrainingScreen> {
           }
           break;
         case 'RESET_PROGRESS':
-          SharedPreferences.getInstance().then((prefs) => prefs.clear().then((_) => html.window.location.reload()));
+          SharedPreferences.getInstance().then((prefs) { 
+             prefs.clear().then((_) => html.window.location.reload());
+          });
           break;
       }
     });
