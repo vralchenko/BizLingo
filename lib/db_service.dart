@@ -11,10 +11,11 @@ class DbService {
     if (_isLoaded) return;
     try {
       final String response = await rootBundle.loadString('assets/phrases.json');
-      _allPhrases = json.decode(response).cast<Map<String, dynamic>>();
+      final List<dynamic> jsonList = json.decode(response);
+      _allPhrases = jsonList.cast<Map<String, dynamic>>();
 
       // Inject demo phrases if missing (Critical for Portfolio Demo)
-      final demoPhrasesData = [
+      final List<Map<String, dynamic>> demoPhrasesData = [
         {
           "category": "IT & Software",
           "ru": "Нам следует изучить возможности больших языковых моделей для улучшения поддержки клиентов.",

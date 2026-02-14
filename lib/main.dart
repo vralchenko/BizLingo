@@ -106,10 +106,16 @@ class _TrainingScreenState extends State<TrainingScreen> {
           }
           break;
         case 'RESET_PROGRESS':
-          SharedPreferences.getInstance().then((prefs) => prefs.clear().then((_) => html.window.location.reload()));
+          _resetApp();
           break;
       }
     });
+  }
+
+  Future<void> _resetApp() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
+    html.window.location.reload();
   }
 
   Future<void> _initApp() async {
