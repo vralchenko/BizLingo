@@ -353,9 +353,18 @@ class _TrainingScreenState extends State<TrainingScreen> {
                       style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black87),
                       textAlign: TextAlign.center,
                     ),
-                    IconButton(
-                      icon: const Icon(Icons.volume_up, color: Color(0xFF001B3D)),
-                      onPressed: () => _speak(_phrases[_idx].translatedText, _to),
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: _highlightedField == 'speaker' ? Colors.amber : Colors.transparent,
+                          width: 3,
+                        ),
+                      ),
+                      child: IconButton(
+                        icon: const Icon(Icons.volume_up, color: Color(0xFF001B3D)),
+                        onPressed: () => _speak(_phrases[_idx].translatedText, _to),
+                      ),
                     ),
                   ],
                 ),
