@@ -314,11 +314,11 @@ class _TrainingScreenState extends State<TrainingScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(
-                  color: _highlightedField == 'input' ? Colors.purple : Colors.transparent,
+                  color: _highlightedField == 'input' ? Colors.amber : Colors.transparent,
                   width: 3,
                 ),
                 boxShadow: _highlightedField == 'input'
-                    ? [BoxShadow(color: Colors.purple.withOpacity(0.3), blurRadius: 10, spreadRadius: 2)]
+                    ? [BoxShadow(color: Colors.amber.withOpacity(0.3), blurRadius: 10, spreadRadius: 2)]
                     : [],
               ),
               child: TextField(
@@ -368,7 +368,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: _highlightedField == 'check' ? Colors.purple : Colors.transparent,
+                      color: _highlightedField == 'check' ? Colors.amber : Colors.transparent,
                       width: 3,
                     ),
                   ),
@@ -388,7 +388,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: _highlightedField == 'next' ? Colors.purple : Colors.transparent,
+                      color: _highlightedField == 'next' ? Colors.amber : Colors.transparent,
                       width: 3,
                     ),
                   ),
