@@ -1,14 +1,14 @@
 # BizLingo AI 🚀
 
 **BizLingo AI** is an intelligent application for mastering professional business
-English. It utilizes local neural networks to evaluate not just the text accuracy,
+English and German. It utilizes cloud-based AI to evaluate not just the text accuracy,
 but the semantic depth of your translations. It combines strict verification
 with the flexibility of real-world communication.
 
 ## ✨ Key Features
 
-* **Semantic AI Validation**: Uses the local Llama-3.2-1B model (via WebLLM)
-  to analyze the semantics of your translation. If you use
+* **Semantic AI Validation**: Uses Groq's ultra-fast cloud API with Llama models
+  to analyze the semantics of your translation in near real-time. If you use
   a synonym, the AI confirms correctness and explains the context.
 * **Two-Level Verification**: The system first performs an instant string
   comparison with the master target in the code, only engaging the AI if no
@@ -27,8 +27,8 @@ with the flexibility of real-world communication.
 ## 🛠 Tech Stack
 
 * **Flutter & Dart**: The core application engine.
-* **WebLLM (MLC-AI)**: To run neural networks directly in the browser without
-  external API dependencies.
+* **Groq Cloud API**: Ultra-fast AI inference for instant semantic validation.
+* **Vercel**: Serverless deployment platform for global availability.
 * **SharedPreferences**: For persistent cross-platform local data storage.
 * **Flutter TTS**: Synthesis for high-impact auditory learning.
 * **JSON Assets**: External storage for a library of thousands of professional
@@ -51,8 +51,7 @@ with the flexibility of real-world communication.
     ```bash
     flutter run -d chrome --web-renderer canvaskit
     ```
-    *Note: On first run, the browser will download the AI model (~800MB)
-    into the local cache.*
+    *Note: The app uses Groq's cloud API for instant AI validation.*
 
 ## 📱 Build Instructions (Android)
 
@@ -63,9 +62,8 @@ flutter build apk --release
 
 ## 🛠 Troubleshooting
 
-* **Model Loading Stuck**: Ensure your browser supports WebGPU or WebAssembly. 
-  Check the browser console (F12) for any "Out of memory" or "CORS" errors 
-  related to the model download.
+* **API Connection Issues**: Ensure you have a stable internet connection. 
+  The app requires connectivity to Groq's API for semantic validation.
 * **No Sound**: On some browsers, text-to-speech requires a user interaction 
   (like a click) before it can play audio. Ensure your system volume is 
   on and the correct language pack is installed.
