@@ -12,6 +12,38 @@ class DbService {
     try {
       final String response = await rootBundle.loadString('assets/phrases.json');
       _allPhrases = json.decode(response).cast<Map<String, dynamic>>();
+
+      // Inject demo phrases if missing (Critical for Portfolio Demo)
+      final demoPhrasesData = [
+        {
+          "category": "IT & Software",
+          "ru": "Нам следует изучить возможности больших языковых моделей для улучшения поддержки клиентов.",
+          "en": "We should explore LLM capabilities to improve customer support.",
+          "de": "Wir sollten die Möglichkeiten großer Sprachmodelle untersuchen, um den Kundensupport zu verbessern.",
+          "uk": "Нам слід вивчити можливості великих мовних моделей для покращення підтримки клієнтів."
+        },
+        {
+          "category": "IT & Software",
+          "ru": "Использование машинного обучения поможет нам предсказывать поведение пользователей.",
+          "en": "Using machine learning will help us predict user behavior.",
+          "de": "Der Einsatz von maschinellem Lernen wird uns helfen, das Nutzerverhalten vorherzusagen.",
+          "uk": "Використання машинного навчання допоможе нам передбачати поведінку користувачів."
+        },
+        {
+          "category": "IT & Software",
+          "ru": "Интеграция ИИ в наш рабочий процесс позволит автоматизировать рутинные задачи кодирования.",
+          "en": "Integrating AI into our workflow will automate routine coding tasks.",
+          "de": "Die Integration von KI in unseren Arbeitsprozess wird es ermöglichen, Routineaufgaben beim Codieren zu automatisieren.",
+          "uk": "Інтеграція ШІ в наш робочий процес дозволить автоматизувати рутинні задачі кодування."
+        }
+      ];
+
+      for (var p in demoPhrasesData) {
+        if (!_allPhrases.any((existing) => existing['ru'] == p['ru'])) {
+          _allPhrases.add(p);
+        }
+      }
+      
       _isLoaded = true;
     } catch (e) {
       print("Error loading JSON: $e");
@@ -37,7 +69,27 @@ class DbService {
 
     if (filtered.isEmpty) return [];
 
-    filtered.shuffle();
+    // filtered.shuffle(); // Disable shuffle for deterministic demo
+    
+    // Sort specific phrases to the top for the demo
+    final demoOrder = [
+      "Нам следует изучить возможности больших языковых моделей для улучшения поддержки клиентов.",
+      "Использование машинного обучения поможет нам предсказывать поведение пользователей.",
+      "Интеграция ИИ в наш рабочий процесс позволит автоматизировать рутинные задачи кодирования."
+    ];
+
+    filtered.sort((a, b) {
+      final aText = a['ru'] ?? "";
+      final bText = b['ru'] ?? "";
+      final aIdx = demoOrder.indexOf(aText);
+      final bIdx = demoOrder.indexOf(bText);
+
+      if (aIdx != -1 && bIdx != -1) return aIdx.compareTo(bIdx);
+      if (aIdx != -1) return -1;
+      if (bIdx != -1) return 1;
+      return 0;
+    });
+
     final selection = filtered.take(limit).toList();
 
     return selection.map((p) {
