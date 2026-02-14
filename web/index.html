@@ -80,14 +80,14 @@
 
         window.webllm_validate = async function (userText, targetText) {
             try {
-                const response = await fetch("{{GROQ_API_URL}}", {
+                const response = await fetch("V_GROQ_URL", {
                     method: "POST",
                     headers: {
-                        "Authorization": "Bearer {{GROQ_API_KEY}}",
+                        "Authorization": "Bearer V_GROQ_KEY",
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        model: "{{AI_MODEL_NAME}}",
+                        model: "V_AI_MODEL",
                         messages: [
                             {
                                 role: "system",

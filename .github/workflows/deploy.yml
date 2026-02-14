@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: github-pages
+    environment: gh pages
     steps:
       - uses: actions/checkout@v3
 
