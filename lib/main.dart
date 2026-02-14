@@ -3,6 +3,8 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'phrase.dart';
 import 'db_service.dart';
 import 'ai_validation_service.dart';
+import 'dart:html' as html;
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 void main() { runApp(const BizLingoApp()); }
 
@@ -50,11 +52,61 @@ class _TrainingScreenState extends State<TrainingScreen> {
   final Map<String, String> _langLabels = {"en": "EN", "ru": "RU", "de": "DE", "uk": "UK"};
   final Map<String, String> _ttsCodes = {"en": "en-US", "ru": "ru-RU", "de": "de-DE", "uk": "uk-UA"};
 
+  String? _highlightedField;
+  final ScrollController _scrollController = ScrollController();
+
   @override
   void initState() {
     super.initState();
     _tts.awaitSpeakCompletion(true);
     _initApp();
+    _setupPresentationListener();
+  }
+
+  void _setupPresentationListener() {
+    if (!kIsWeb) return;
+    // Listen for messages from the parent window (for presentations)
+    html.window.onMessage.listen((event) {
+      final data = event.data;
+      if (data is Map && data['type'] == 'PRESENTATION_COMMAND') {
+        _handleCommand(data);
+      }
+    });
+  }
+
+  void _handleCommand(Map cmd) {
+    final action = cmd['action'];
+    final payload = cmd['payload'] ?? {};
+
+    setState(() {
+      switch (action) {
+        case 'HIGHLIGHT_FIELD':
+          _highlightedField = payload['name'];
+          break;
+        case 'FILL_FIELD':
+          if (payload['name'] == 'input') {
+            _controller.text = payload['value'] ?? "";
+          }
+          break;
+        case 'SUBMIT':
+          _check();
+          break;
+        case 'NEXT':
+          _nextPhrase();
+          break;
+        case 'TOGGLE_AUDIO':
+          _speak(_phrases[_idx].translatedText, _to);
+          break;
+        case 'SCROLL':
+          final value = (payload['value'] ?? 300).toDouble();
+          if (payload['direction'] == 'down') {
+            _scrollController.animateTo(_scrollController.offset + value, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+          } else {
+            _scrollController.animateTo(0, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+          }
+          break;
+      }
+    });
   }
 
   Future<void> _initApp() async {
@@ -210,6 +262,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
         actions: [IconButton(icon: const Icon(Icons.refresh), onPressed: _refreshBatch)],
       ),
       body: SingleChildScrollView(
+        controller: _scrollController,
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
@@ -257,16 +310,28 @@ class _TrainingScreenState extends State<TrainingScreen> {
                 ),
             ],
             const SizedBox(height: 20),
-            TextField(
-                controller: _controller,
-                onSubmitted: (_) => _check(),
-                decoration: InputDecoration(
-                    hintText: "Your translation...",
-                    filled: true,
-                    fillColor: Colors.grey[50],
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none)
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: _highlightedField == 'input' ? Colors.purple : Colors.transparent,
+                  width: 3,
                 ),
-                textAlign: TextAlign.center
+                boxShadow: _highlightedField == 'input'
+                    ? [BoxShadow(color: Colors.purple.withOpacity(0.3), blurRadius: 10, spreadRadius: 2)]
+                    : [],
+              ),
+              child: TextField(
+                  controller: _controller,
+                  onSubmitted: (_) => _check(),
+                  decoration: InputDecoration(
+                      hintText: "Your translation...",
+                      filled: true,
+                      fillColor: Colors.grey[50],
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none)
+                  ),
+                  textAlign: TextAlign.center
+              ),
             ),
             const SizedBox(height: 12),
             if (_feedback.isNotEmpty) ...[
@@ -299,21 +364,41 @@ class _TrainingScreenState extends State<TrainingScreen> {
             const SizedBox(height: 20),
             Row(
               children: [
-                Expanded(flex: 2, child: SizedBox(height: 56, child: ElevatedButton(
-                    onPressed: _isChecking ? null : _check,
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF001B3D),
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))
+                Expanded(flex: 2, child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: _highlightedField == 'check' ? Colors.purple : Colors.transparent,
+                      width: 3,
                     ),
-                    child: Text(_isChecking ? "WAIT..." : (_aiExplanation.isNotEmpty && _feedback == "Correct!" ? "NEXT" : "CHECK"))
-                ))),
-                const SizedBox(width: 12),
-                SizedBox(height: 56, child: OutlinedButton(
-                    onPressed: _isChecking ? null : _nextPhrase,
-                    style: OutlinedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))),
-                    child: const Text("SKIP")
+                  ),
+                  height: 56,
+                  child: ElevatedButton(
+                      onPressed: _isChecking ? null : _check,
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF001B3D),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))
+                      ),
+                      child: Text(_isChecking ? "WAIT..." : (_aiExplanation.isNotEmpty && _feedback == "Correct!" ? "NEXT" : "CHECK"))
+                  ),
                 )),
+                const SizedBox(width: 12),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: _highlightedField == 'next' ? Colors.purple : Colors.transparent,
+                      width: 3,
+                    ),
+                  ),
+                  height: 56,
+                  child: OutlinedButton(
+                      onPressed: _isChecking ? null : _nextPhrase,
+                      style: OutlinedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14))),
+                      child: const Text("SKIP")
+                  ),
+                ),
               ],
             ),
             const SizedBox(height: 30),
