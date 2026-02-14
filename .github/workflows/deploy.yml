@@ -22,10 +22,14 @@ jobs:
         run: flutter pub get
 
       - name: Inject Environment Variables
+        env:
+          GROQ_URL: ${{ vars.GROQ_APT_URL }}
+          GROQ_KEY: ${{ vars.GROQ_APT_KEY }}
+          AI_MODEL: ${{ vars.AI_MODEL_NAME }}
         run: |
-          sed -i "s|{{GROQ_API_URL}}|${{ vars.GROQ_APT_URL }}|g" web/index.html
-          sed -i "s|{{GROQ_API_KEY}}|${{ vars.GROQ_APT_KEY }}|g" web/index.html
-          sed -i "s|{{AI_MODEL_NAME}}|${{ vars.AI_MODEL_NAME }}|g" web/index.html
+          sed -i "s|{{GROQ_API_URL}}|$GROQ_URL|g" web/index.html
+          sed -i "s|{{GROQ_API_KEY}}|$GROQ_KEY|g" web/index.html
+          sed -i "s|{{AI_MODEL_NAME}}|$AI_MODEL|g" web/index.html
 
       - name: Build Web
         run: flutter build web --release --base-href "/BizLingo/"
