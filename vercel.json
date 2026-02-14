@@ -1,7 +1,7 @@
 {
     "version": 2,
     "public": true,
-    "buildCommand": "bash build.sh",
+    "buildCommand": "chmod +x build.sh && ./build.sh",
     "outputDirectory": "build/web",
     "rewrites": [
         {
