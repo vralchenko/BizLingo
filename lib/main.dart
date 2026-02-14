@@ -105,6 +105,9 @@ class _TrainingScreenState extends State<TrainingScreen> {
             _scrollController.animateTo(0, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
           }
           break;
+        case 'RESET_PROGRESS':
+          SharedPreferences.getInstance().then((prefs) => prefs.clear().then((_) => html.window.location.reload()));
+          break;
       }
     });
   }
