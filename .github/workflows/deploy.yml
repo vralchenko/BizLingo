@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: gh-pages
+    environment: github-pages
     steps:
       - uses: actions/checkout@v3
 
@@ -23,10 +23,12 @@ jobs:
 
       - name: Inject Environment Variables
         env:
-          GROQ_URL: ${{ vars.GROQ_APT_URL }}
-          GROQ_KEY: ${{ vars.GROQ_APT_KEY }}
+          # Try to get variables from both possible names (with T and without)
+          GROQ_URL: ${{ vars.GROQ_APT_URL || vars.GROQ_API_URL }}
+          GROQ_KEY: ${{ vars.GROQ_APT_KEY || vars.GROQ_API_KEY }}
           AI_MODEL: ${{ vars.AI_MODEL_NAME }}
         run: |
+          echo "Injecting variables into index.html..."
           sed -i "s|{{GROQ_API_URL}}|$GROQ_URL|g" web/index.html
           sed -i "s|{{GROQ_API_KEY}}|$GROQ_KEY|g" web/index.html
           sed -i "s|{{AI_MODEL_NAME}}|$AI_MODEL|g" web/index.html
