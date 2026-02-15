@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'phrase.dart';
 import 'db_service.dart';
-import 'ai_validation_service.dart';
-import 'dart:html' as html;
+import 'package:web/web.dart' as web;
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:js_interop';
 
-void main() { runApp(const BizLingoApp()); }
+void main() {
+  runApp(const BizLingoApp());
+}
 
 class BizLingoApp extends StatelessWidget {
   const BizLingoApp({super.key});
@@ -65,9 +68,8 @@ class _TrainingScreenState extends State<TrainingScreen> {
 
   void _setupPresentationListener() {
     if (!kIsWeb) return;
-    // Listen for messages from the parent window (for presentations)
-    html.window.onMessage.listen((event) {
-      final data = event.data;
+    web.window.onMessage.listen((web.MessageEvent event) {
+      final data = event.data.dartify();
       if (data is Map && data['type'] == 'PRESENTATION_COMMAND') {
         _handleCommand(data);
       }
@@ -95,7 +97,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
           _nextPhrase();
           break;
         case 'TOGGLE_AUDIO':
-          _speak(_phrases[_idx].translatedText, _to);
+          if (_phrases.isNotEmpty) _speak(_phrases[_idx].translatedText, _to);
           break;
         case 'SCROLL':
           final value = (payload['value'] ?? 300).toDouble();
@@ -106,7 +108,7 @@ class _TrainingScreenState extends State<TrainingScreen> {
           }
           break;
         case 'RESET_PROGRESS':
-          SharedPreferences.getInstance().then((prefs) => prefs.clear().then((_) => html.window.location.reload()));
+          SharedPreferences.getInstance().then((prefs) => prefs.clear().then((_) => web.window.location.reload()));
           break;
       }
     });
@@ -435,5 +437,59 @@ class _TrainingScreenState extends State<TrainingScreen> {
         ),
       ),
     );
+  }
+}
+
+@JS('webllm_validate')
+external JSPromise _webllmValidate(JSString userText, JSString targetText);
+
+@JS('is_webllm_ready')
+external bool _isWebLLMReady();
+
+class ValidationResult {
+  final bool isValid;
+  final String reason;
+  ValidationResult(this.isValid, this.reason);
+}
+
+class AiValidationService {
+  bool _isInitialized = false;
+  bool get isInitialized => _isInitialized;
+
+  Future<void> initialize() async {
+    if (_isInitialized) return;
+    while (true) {
+      try {
+        if (_isWebLLMReady()) {
+          _isInitialized = true;
+          return;
+        }
+      } catch (_) {}
+      await Future.delayed(const Duration(seconds: 1));
+    }
+  }
+
+  Future<ValidationResult> detailedValidate(String user, String target) async {
+    final cleanUser = user.trim().toLowerCase();
+    final cleanTarget = target.trim().toLowerCase();
+
+    if (cleanUser == cleanTarget) {
+      return ValidationResult(true, "Exact match found.");
+    }
+
+    try {
+      final responseJS = await _webllmValidate(user.toJS, target.toJS).toDart;
+      final String aiText = responseJS.toString();
+
+      bool isYes = aiText.toUpperCase().contains("YES");
+      String explanation = aiText;
+      if (aiText.toLowerCase().contains("reason:")) {
+        explanation = aiText.substring(aiText.toLowerCase().indexOf("reason:") + 7).trim();
+      }
+
+      return ValidationResult(isYes, explanation);
+    } catch (e) {
+      return ValidationResult(false, "Validation error: $e");
+    }
   }
 }
